@@ -66,7 +66,7 @@ export default function TransferScreen({ navigation }) {
                                         width: 30,
                                         height: 30,
                                     }}
-                                    source={require('../assets/VN.png')} />
+                                    source={require('../../../assets/VN.png')} />
                                 <Ionicons name='chevron-down-outline' size={30} color='white' />
                             </View>
                             <Text style={{ color: 'white' }}> Current Balance</Text>
@@ -92,7 +92,7 @@ export default function TransferScreen({ navigation }) {
                             <View>
                                 <View style={{ paddingHorizontal: 5, paddingVertical: 20, }}>
                                     <TouchableOpacity style={{
-                                        backgroundColor: '#0540F21A',
+                                        backgroundColor: '#e3f0fa',
                                         height: 70,
                                         flexDirection: 'row',
                                         alignItems: 'center',
@@ -110,7 +110,7 @@ export default function TransferScreen({ navigation }) {
                                 </View>
                                 <View style={{ paddingHorizontal: 5, paddingVertical: 5, }}>
                                     <TouchableOpacity style={{
-                                        backgroundColor: '#0540F21A',
+                                        backgroundColor: '#e3f0fa',
                                         height: 70,
                                         flexDirection: 'row',
                                         alignItems: 'center',

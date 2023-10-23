@@ -35,7 +35,7 @@ export default function MyProfile({ navigation }) {
                     <Image style={{
                         width: 150,
                         height: 150
-                    }} source={require('../assets/UserAvatar.png')} />
+                    }} source={require('../../assets/UserAvatar.png')} />
                     <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Mogaji Olatubosun</Text>
                 </View>
                 <View>

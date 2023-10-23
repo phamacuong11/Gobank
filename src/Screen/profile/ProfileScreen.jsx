@@ -17,22 +17,22 @@ export default function ProfileScreen({ navigation, route }) {
                         <Image style={{
                             width: 150,
                             height: 150
-                        }} source={require('../assets/UserAvatar.png')} />
+                        }} source={require('../../assets/UserAvatar.png')} />
                         <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Mogaji Olatubosun</Text>
                     </View>
                     <View style={{ marginTop: 30, borderRadius: 20, paddingHorizontal: 20 }}>
                         <TouchableOpacity style={{
                             flexDirection: 'row',
-                            backgroundColor: '#e1fafa',
+                            backgroundColor: '#e3f0fa',
                             padding: 5,
                             borderRadius: 10,
                             alignItems: 'center',
                         }} onPress={() => { navigation.navigate('MyProfile') }}>
                             <View style={{ backgroundColor: '#8ebffa', justifyContent: 'center', padding: 7, borderRadius: 5, }}>
-                                <Ionicons name='person-outline' color='blue' size={20} />
+                                <Ionicons name='person-outline' color='#0540F2' size={20} />
                             </View>
                             <View style={{ paddingLeft: 10 }}>
-                                <Text style={{ fontSize: 20, color: 'blue' }}>My Profile</Text>
+                                <Text style={{ fontSize: 20, color: '#0540F2' }}>My Profile</Text>
                                 <Text>See and edit your profile details</Text>
                             </View>
                             <Ionicons style={{
@@ -48,16 +48,16 @@ export default function ProfileScreen({ navigation, route }) {
                     <View style={{ padding: 5, borderRadius: 20, paddingHorizontal: 20 }}>
                         <TouchableOpacity style={{
                             flexDirection: 'row',
-                            backgroundColor: '#e1fafa',
+                            backgroundColor: '#e3f0fa',
                             padding: 5,
                             borderRadius: 10,
                             alignItems: 'center',
                         }}>
                             <View style={{ backgroundColor: '#8ebffa', justifyContent: 'center', padding: 7, borderRadius: 5, }}>
-                                <Ionicons name='print-outline' color='blue' size={20} />
+                                <Ionicons name='print-outline' color='#0540F2' size={20} />
                             </View>
                             <View style={{ paddingLeft: 10 }}>
-                                <Text style={{ fontSize: 20, color: 'blue' }}>Account Statement</Text>
+                                <Text style={{ fontSize: 20, color: '#0540F2' }}>Account Statement</Text>
                                 <Text>Check account statements</Text>
                             </View>
                             <Ionicons style={{
@@ -70,16 +70,16 @@ export default function ProfileScreen({ navigation, route }) {
                     <View style={{ padding: 5, borderRadius: 20, paddingHorizontal: 20 }}>
                         <TouchableOpacity style={{
                             flexDirection: 'row',
-                            backgroundColor: '#e1fafa',
+                            backgroundColor: '#e3f0fa',
                             padding: 5,
                             borderRadius: 10,
                             alignItems: 'center',
                         }}>
                             <View style={{ backgroundColor: '#8ebffa', justifyContent: 'center', padding: 7, borderRadius: 5, }}>
-                                <Ionicons name='paper-plane-outline' color='blue' size={20} />
+                                <Ionicons name='paper-plane-outline' color='#0540F2' size={20} />
                             </View>
                             <View style={{ paddingLeft: 10 }}>
-                                <Text style={{ fontSize: 20, color: 'blue' }}>Transfer Limits</Text>
+                                <Text style={{ fontSize: 20, color: '#0540F2' }}>Transfer Limits</Text>
                                 <Text>Check money transfer limits</Text>
                             </View>
                             <Ionicons style={{
@@ -92,16 +92,16 @@ export default function ProfileScreen({ navigation, route }) {
                     <View style={{ padding: 5, borderRadius: 20, paddingHorizontal: 20 }}>
                         <TouchableOpacity style={{
                             flexDirection: 'row',
-                            backgroundColor: '#e1fafa',
+                            backgroundColor: '#e3f0fa',
                             padding: 5,
                             borderRadius: 10,
                             alignItems: 'center',
                         }}>
                             <View style={{ backgroundColor: '#8ebffa', justifyContent: 'center', padding: 7, borderRadius: 5, }}>
-                                <Ionicons name='person-outline' color='blue' size={20} />
+                                <Ionicons name='person-outline' color='#0540F2' size={20} />
                             </View>
                             <View style={{ paddingLeft: 10 }}>
-                                <Text style={{ fontSize: 20, color: 'blue' }}>Bank Card/Account</Text>
+                                <Text style={{ fontSize: 20, color: '#0540F2' }}>Bank Card/Account</Text>
                                 <Text>See and link bank card/account</Text>
                             </View>
                             <Ionicons style={{
@@ -114,16 +114,16 @@ export default function ProfileScreen({ navigation, route }) {
                     <View style={{ padding: 5, borderRadius: 20, paddingHorizontal: 20 }}>
                         <TouchableOpacity style={{
                             flexDirection: 'row',
-                            backgroundColor: '#e1fafa',
+                            backgroundColor: '#e3f0fa',
                             padding: 5,
                             borderRadius: 10,
                             alignItems: 'center',
                         }}>
                             <View style={{ backgroundColor: '#8ebffa', justifyContent: 'center', padding: 7, borderRadius: 5, }}>
-                                <Ionicons name='settings-outline' color='blue' size={20} />
+                                <Ionicons name='settings-outline' color='#0540F2' size={20} />
                             </View>
                             <View style={{ paddingLeft: 10 }}>
-                                <Text style={{ fontSize: 20, color: 'blue' }}>Sittings</Text>
+                                <Text style={{ fontSize: 20, color: '#0540F2' }}>Sittings</Text>
                                 <Text>Control your notification and security settings</Text>
                             </View>
                             <Ionicons style={{
@@ -136,16 +136,16 @@ export default function ProfileScreen({ navigation, route }) {
                     <View style={{ padding: 5, borderRadius: 20, paddingHorizontal: 20 }}>
                         <TouchableOpacity style={{
                             flexDirection: 'row',
-                            backgroundColor: '#e1fafa',
+                            backgroundColor: '#e3f0fa',
                             padding: 5,
                             borderRadius: 10,
                             alignItems: 'center',
                         }}>
                             <View style={{ backgroundColor: '#8ebffa', justifyContent: 'center', padding: 7, borderRadius: 5, }}>
-                                <Ionicons name='help-outline' color='blue' size={20} />
+                                <Ionicons name='help-outline' color='#0540F2' size={20} />
                             </View>
                             <View style={{ paddingLeft: 10 }}>
-                                <Text style={{ fontSize: 20, color: 'blue' }}>Spport</Text>
+                                <Text style={{ fontSize: 20, color: '#0540F2' }}>Spport</Text>
                                 <Text>Control your notification and security settings</Text>
                             </View>
                             <Ionicons style={{

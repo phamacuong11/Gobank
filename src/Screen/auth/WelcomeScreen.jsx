@@ -22,7 +22,7 @@ export default function WelcomeScreen({ navigation }) {
                 {/* iMAGE */}
                 <Image style={{
                     width: 300, height: 300, marginTop: 100,
-                }} source={require("../assets/iconWelcom.png")} ></Image>
+                }} source={require("../../assets/iconWelcom.png")} ></Image>
                 <Text style={{
                     fontSize: 30, color: 'black', fontWeight: 'bold', paddingVertical: 30
                 }}> WELCOME</Text>
@@ -41,19 +41,19 @@ export default function WelcomeScreen({ navigation }) {
                         width: 170,
                         height: 40,
                         borderWidth: 3,
-                        borderColor: '#1769ff',
+                        borderColor: '#0540F2',
                         borderRadius: 20,
                         justifyContent: 'center',
                         alignItems: 'center',
                         marginRight: 15
                     }}
                         onPress={handleClickLogin}>
-                        <Text style={{ color: '#1769ff', fontWeight: 'bold' }}> LOGIN</Text>
+                        <Text style={{ color: '#0540F2', fontWeight: 'bold' }}> LOGIN</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={{
                         width: 170,
                         height: 40,
-                        backgroundColor: '#1769ff',
+                        backgroundColor: '#0540F2',
                         borderRadius: 20,
                         justifyContent: 'center',
                         alignItems: 'center'
@@ -61,6 +61,7 @@ export default function WelcomeScreen({ navigation }) {
                         onPress={handleClickSingup}>
                         <Text style={{ color: '#ffffff', fontWeight: 'bold' }}> SIGNUP</Text>
                     </TouchableOpacity>
+
                 </View>
             </View>
         </SafeAreaView >

@@ -1,16 +1,33 @@
 import { StyleSheet, Text, View, Image, Alert, ToastAndroid, TouchableOpacity, StatusBar, TextInput } from 'react-native'
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { ScrollView } from 'react-native';
+import InputText from '../../component/InputText';
+import Button from '../../component/Button';
 
 
 export default function LoginScreen({ navigation, route }) {
 
 
+
+    const textInputEmail = useRef(null)
+    const textInputPass = useRef(null)
+    const handleForcusPass = () => {
+        if (textInputPass.current) {
+            textInputPass.current.focus();
+        } else {
+            console.error(Error);
+
+        }
+    }
+
     const [email, setEmail] = useState('')
     const [pass, setPass] = useState('')
+
+
+
     const handleCreateAccount = () => {
         navigation.navigate('Signup')
 
@@ -53,28 +70,34 @@ export default function LoginScreen({ navigation, route }) {
                     {/* iMAGE */}
                     <Image style={{
                         width: 200, height: 200, marginTop: 100,
-                    }} source={require("../assets/iconLogin.png")} ></Image>
+                    }} source={require("../../assets/iconLogin.png")} ></Image>
                     <View>
                         <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 5 }}>
-                            <Ionicons name='mail-outline' size={32} color='#1769ff' />
+                            <Ionicons name='mail-outline' size={32} color='#0540F2' />
                             <Text> Enter email</Text>
                         </View>
 
                         <TextInput style={styles.textinput}
                             value={email}
-                            onChangeText={(value) => setEmail(value)} />
+                            onChangeText={(value) => setEmail(value)}
+                            inlineImageLeft='search_icon'
+                            ref={textInputEmail}
+                            onSubmitEditing={handleForcusPass}
+                        />
 
                     </View>
                     <View style={{ marginTop: 20 }}>
                         <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 5 }}>
-                            <Ionicons name='lock-closed-outline' size={32} color='#1769ff' />
+                            <Ionicons name='lock-closed-outline' size={32} color='#0540F2' />
                             <Text> Enter pass</Text>
                         </View>
-
                         <TextInput style={styles.textinput}
                             value={pass}
                             onChangeText={(value) => setPass(value)}
-                            secureTextEntry={!passWord ? false : true} />
+                            secureTextEntry={!passWord ? false : true}
+                            ref={textInputPass}
+                            onSubmitEditing={handleClickHome} />
+
                         <TouchableOpacity style={{
                             position: 'absolute', top: 40, right: 10
                         }}
@@ -93,7 +116,10 @@ export default function LoginScreen({ navigation, route }) {
                     <View style={{
                         flex: 1, backgroundColor: 'white', paddingVertical: 50, alignItems: 'center'
                     }}>
-                        <TouchableOpacity style={{
+                        <TouchableOpacity onPress={handleClickHome}>
+                            <Button text='Login' />
+                        </TouchableOpacity>
+                        {/* <TouchableOpacity style={{
                             width: 300,
                             height: 40,
                             borderRadius: 20,
@@ -104,7 +130,7 @@ export default function LoginScreen({ navigation, route }) {
                         }}
                             onPress={handleClickHome}>
                             <Text style={{ color: 'white', fontWeight: 'bold', fontSize: 18 }}> LOGIN</Text>
-                        </TouchableOpacity>
+                        </TouchableOpacity> */}
 
                         <TouchableOpacity onPress={handleCreateAccount}>
                             <Text style={{ marginTop: 15 }}> Create Account</Text>

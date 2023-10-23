@@ -5,6 +5,8 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { StatusBar } from 'expo-status-bar'
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { ScrollView } from 'react-native';
+import Button from '../../component/Button'
+import { useRef } from 'react'
 
 
 export default function SignUpScreen({ navigation }) {
@@ -15,6 +17,24 @@ export default function SignUpScreen({ navigation }) {
     const [emailSignup, setEmailSignup] = useState('')
     const [passSignup, setPassSignup] = useState('')
     const [confirmPass, setConfirmPass] = useState('')
+
+    const fullNamefocus = useRef(null)
+    const emailfocus = useRef(null)
+    const passwordfocus = useRef(null)
+    const confirmfocus = useRef(null)
+    const SubmitEmailClick = () => {
+        emailfocus.current.focus();
+    }
+    const SubmitPassClick = () => {
+        passwordfocus.current.focus()
+
+    }
+    const SubmitConfirmPassClick = () => {
+
+        handleClickSingin()
+
+    }
+
 
 
 
@@ -71,34 +91,40 @@ export default function SignUpScreen({ navigation }) {
                         </View>
                         <View style={styles.view}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 20 }}>
-                                <Ionicons name='person-outline' size={32} color='#1769ff' />
+                                <Ionicons name='person-outline' size={32} color='#0540F2' />
                                 <Text> Full name</Text>
                             </View>
                             <View style={{ alignItems: 'center', }}>
                                 <TextInput style={styles.textinput}
                                     value={fullName}
+                                    ref={fullNamefocus}
+                                    onSubmitEditing={SubmitEmailClick}
                                     onChangeText={(value) => setFullName(value)} />
                             </View>
                         </View>
                         <View style={styles.view}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 20 }}>
-                                <Ionicons name='mail-outline' size={32} color='#1769ff' />
+                                <Ionicons name='mail-outline' size={32} color='#0540F2' />
                                 <Text> Email</Text>
                             </View>
                             <View style={{ alignItems: 'center', }}>
                                 <TextInput style={styles.textinput}
+                                    ref={emailfocus}
                                     value={emailSignup}
+                                    onSubmitEditing={SubmitPassClick}
                                     onChangeText={(value) => setEmailSignup(value)} />
                             </View>
                         </View>
                         <View style={styles.view}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 20 }}>
-                                <Ionicons name='lock-closed-outline' size={32} color='#1769ff' />
+                                <Ionicons name='lock-closed-outline' size={32} color='#0540F2' />
                                 <Text> Password</Text>
                             </View>
                             <View style={{ alignItems: 'center', }}>
                                 <TextInput style={styles.textinput}
+                                    ref={passwordfocus}
                                     value={passSignup}
+                                    onSubmitEditing={SubmitConfirmPassClick}
                                     onChangeText={(value) => setPassSignup(value)}
                                     secureTextEntry={passWord ? true : false} />
                                 <TouchableOpacity style={{
@@ -114,12 +140,14 @@ export default function SignUpScreen({ navigation }) {
                         </View>
                         <View style={styles.view}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 20 }}>
-                                <Ionicons name='lock-closed-outline' size={32} color='#1769ff' />
+                                <Ionicons name='lock-closed-outline' size={32} color='#0540F2' />
                                 <Text> Confirm password</Text>
                             </View>
                             <View style={{ alignItems: 'center', }}>
                                 <TextInput style={styles.textinput}
+                                    ref={confirmfocus}
                                     value={confirmPass}
+                                    onSubmitEditing={handleClickSingin}
                                     onChangeText={(value) => setConfirmPass(value)}
                                     secureTextEntry={passWord ? true : false} />
                                 <TouchableOpacity style={{
@@ -134,22 +162,13 @@ export default function SignUpScreen({ navigation }) {
                             </View>
                         </View>
                         <View style={{ flex: 1, marginTop: 60, justifyContent: 'center', alignItems: 'center', paddingBottom: 50 }}>
-                            <TouchableOpacity style={{
-                                width: 300,
-                                height: 40,
-                                borderRadius: 20,
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                marginRight: 15,
-                                backgroundColor: '#1769ff'
-                            }}
-                                onPress={handleClickSingin}>
-                                <Text style={{ color: 'white', fontSize: 17 }}>SIGN UP</Text>
+                            <TouchableOpacity onPress={handleClickSingin}>
+                                <Button text='Sign Up' />
                             </TouchableOpacity>
                             <View style={{ flexDirection: 'row', marginTop: 20 }}>
                                 <Text> Have an account?</Text>
                                 <TouchableOpacity onPress={() => navigation.goBack()}>
-                                    <Text style={{ color: '#1769ff', textDecorationLine: 'underline', fontWeight: 'bold' }}> Sign in</Text>
+                                    <Text style={{ color: '#0540F2', textDecorationLine: 'underline', fontWeight: 'bold' }}> Sign in</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>

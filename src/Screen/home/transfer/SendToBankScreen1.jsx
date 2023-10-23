@@ -32,7 +32,7 @@ export default function SendToBankScreen1({ navigation, route }) {
             </View>
             <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
                 <TouchableOpacity style={{
-                    backgroundColor: '#CCFFFF',
+                    backgroundColor: '#e3f0fa',
                     borderRadius: 20,
                     paddingHorizontal: 30,
                     paddingVertical: 10,
@@ -48,7 +48,7 @@ export default function SendToBankScreen1({ navigation, route }) {
             <View style={{ marginTop: 50, paddingHorizontal: 20, flexDirection: 'row', justifyContent: 'space-between' }}>
                 <Text style={{ color: '#000000', fontSize: 18 }}> Saved Beneficiary</Text>
                 <TouchableOpacity>
-                    <Text style={{ color: 'blue' }}>See all</Text>
+                    <Text style={{ color: '#0540F2' }}>See all</Text>
                 </TouchableOpacity>
             </View>
             <View style={{ flexDirection: 'row', paddingHorizontal: 25, paddingTop: 40, paddingBottom: 10, alignItems: 'center' }}>
@@ -56,10 +56,10 @@ export default function SendToBankScreen1({ navigation, route }) {
                     <Image style={{
                         width: 80,
                         height: 30
-                    }} source={require('../assets/logosacombank.png')} />
+                    }} source={require('../../../assets/logosacombank.png')} />
                 </View>
                 <View style={{ marginLeft: 30 }}>
-                    <Text style={{ fontSize: 20, color: 'blue' }}>Mogaji Olatubosun ojo</Text>
+                    <Text style={{ fontSize: 20, color: '#0540F2' }}>Mogaji Olatubosun ojo</Text>
                     <Text>9033554931</Text>
                 </View>
             </View>
@@ -68,10 +68,10 @@ export default function SendToBankScreen1({ navigation, route }) {
                     <Image style={{
                         width: 80,
                         height: 30
-                    }} source={require('../assets/logosacombank.png')} />
+                    }} source={require('../../../assets/logosacombank.png')} />
                 </View>
                 <View style={{ marginLeft: 30 }}>
-                    <Text style={{ fontSize: 20, color: 'blue' }}>Mogaji Olatubosun ojo</Text>
+                    <Text style={{ fontSize: 20, color: '#0540F2' }}>Mogaji Olatubosun ojo</Text>
                     <Text>9033554931</Text>
                 </View>
             </View>
@@ -80,10 +80,10 @@ export default function SendToBankScreen1({ navigation, route }) {
                     <Image style={{
                         width: 80,
                         height: 30
-                    }} source={require('../assets/logosacombank.png')} />
+                    }} source={require('../../../assets/logosacombank.png')} />
                 </View>
                 <View style={{ marginLeft: 30 }}>
-                    <Text style={{ fontSize: 20, color: 'blue' }}>Mogaji Olatubosun ojo</Text>
+                    <Text style={{ fontSize: 20, color: '#0540F2' }}>Mogaji Olatubosun ojo</Text>
                     <Text>9033554931</Text>
                 </View>
             </View>

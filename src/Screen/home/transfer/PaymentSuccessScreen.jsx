@@ -27,7 +27,7 @@ export default function PaymentSuccessScreen({ navigation, route }) {
                         backgroundColor: '#00FF66',
                         borderRadius: 100
                     }}>
-                        <Image style={{ width: 100, height: 100 }} source={require('../assets/correct.png')} />
+                        <Image style={{ width: 100, height: 100 }} source={require('../../../assets/correct.png')} />
                     </View>
                 </View>
                 <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>

@@ -107,7 +107,7 @@ export default function AddNewCardScreen({ navigation }) {
                             justifyContent: 'center',
                             alignItems: 'center',
                             borderWidth: 1,
-                            borderColor: 'blue',
+                            borderColor: '#0540F2',
                             borderRadius: 30,
                             padding: 10,
                             backgroundColor: 'blue'

@@ -34,7 +34,7 @@ export default function SelectProviderScreen({ navigation, route }) {
                         <View style={{
                             width: '100%',
                             flexDirection: 'row',
-                            backgroundColor: '#CCFFFF',
+                            backgroundColor: '#e3f0fa',
                             padding: 10,
                             borderRadius: 20
                         }}>
@@ -53,12 +53,12 @@ export default function SelectProviderScreen({ navigation, route }) {
                                 alignItems: 'center',
                                 paddingVertical: 20
                             }}
-                                onPress={() => handleSelect('NH sài gòn Thương tín Sacombank', require('../assets/logosacombank.png'))}
+                                onPress={() => handleSelect('NH sài gòn Thương tín Sacombank', require('../../../assets/logosacombank.png'))}
                             >
                                 <Image style={{
                                     width: 80,
                                     height: 30
-                                }} source={require('../assets/logosacombank.png')} />
+                                }} source={require('../../../assets/logosacombank.png')} />
                                 <Text style={{ fontSize: 16, paddingLeft: 30 }}>
                                     NH sài gòn Thương tín Sacombank
                                 </Text>
@@ -67,11 +67,11 @@ export default function SelectProviderScreen({ navigation, route }) {
                                 flexDirection: 'row',
                                 alignItems: 'center',
                                 paddingVertical: 20
-                            }} onPress={() => handleSelect('NH việt Nam thịnh Vượng', require('../assets/logovpbank.png'))}>
+                            }} onPress={() => handleSelect('NH việt Nam thịnh Vượng', require('../../../assets/logovpbank.png'))}>
                                 <Image style={{
                                     width: 80,
                                     height: 15
-                                }} source={require('../assets/logovpbank.png')} />
+                                }} source={require('../../../assets/logovpbank.png')} />
                                 <Text style={{ fontSize: 16, paddingLeft: 30 }}>
                                     NH Việt Nam thịnh vượng
                                 </Text>
@@ -80,11 +80,11 @@ export default function SelectProviderScreen({ navigation, route }) {
                                 flexDirection: 'row',
                                 alignItems: 'center',
                                 paddingVertical: 20
-                            }} onPress={() => handleSelect('Ngân hàng Quân Đội', require('../assets/logonganhangMB.png'))}>
+                            }} onPress={() => handleSelect('Ngân hàng Quân Đội', require('../../../assets/logonganhangMB.png'))}>
                                 <Image style={{
                                     width: 80,
                                     height: 20
-                                }} source={require('../assets/logonganhangMB.png')} />
+                                }} source={require('../../../assets/logonganhangMB.png')} />
                                 <Text style={{ fontSize: 16, paddingLeft: 30 }}>
                                     Ngân hàng Quân Đội
                                 </Text>
@@ -93,11 +93,11 @@ export default function SelectProviderScreen({ navigation, route }) {
                                 flexDirection: 'row',
                                 alignItems: 'center',
                                 paddingVertical: 20
-                            }} onPress={() => handleSelect('Ngân hàng Tiên phong', require('../assets/logonganhangTPbank.png'))}>
+                            }} onPress={() => handleSelect('Ngân hàng Tiên phong', require('../../../assets/logonganhangTPbank.png'))}>
                                 <Image style={{
                                     width: 80,
                                     height: 30
-                                }} source={require('../assets/logonganhangTPbank.png')} />
+                                }} source={require('../../../assets/logonganhangTPbank.png')} />
                                 <Text style={{ fontSize: 16, paddingLeft: 30 }}>
                                     Ngân hàng Tiên Phong
                                 </Text>
@@ -107,12 +107,12 @@ export default function SelectProviderScreen({ navigation, route }) {
                                 alignItems: 'center',
                                 paddingVertical: 20
                             }}
-                                onPress={() => handleSelect('NH sài gòn Thương tín Sacombank', require('../assets/logosacombank.png'))}
+                                onPress={() => handleSelect('NH sài gòn Thương tín Sacombank', require('../../../assets/logosacombank.png'))}
                             >
                                 <Image style={{
                                     width: 80,
                                     height: 30
-                                }} source={require('../assets/logosacombank.png')} />
+                                }} source={require('../../../assets/logosacombank.png')} />
                                 <Text style={{ fontSize: 16, paddingLeft: 30 }}>
                                     NH sài gòn Thương tín Sacombank
                                 </Text>
@@ -121,11 +121,11 @@ export default function SelectProviderScreen({ navigation, route }) {
                                 flexDirection: 'row',
                                 alignItems: 'center',
                                 paddingVertical: 20
-                            }} onPress={() => handleSelect('NH việt Nam thịnh Vượng', require('../assets/logovpbank.png'))}>
+                            }} onPress={() => handleSelect('NH việt Nam thịnh Vượng', require('../../../assets/logovpbank.png'))}>
                                 <Image style={{
                                     width: 80,
                                     height: 15
-                                }} source={require('../assets/logovpbank.png')} />
+                                }} source={require('../../../assets/logovpbank.png')} />
                                 <Text style={{ fontSize: 16, paddingLeft: 30 }}>
                                     NH Việt Nam thịnh vượng
                                 </Text>
@@ -134,11 +134,11 @@ export default function SelectProviderScreen({ navigation, route }) {
                                 flexDirection: 'row',
                                 alignItems: 'center',
                                 paddingVertical: 20
-                            }} onPress={() => handleSelect('Ngân hàng Quân Đội', require('../assets/logonganhangMB.png'))}>
+                            }} onPress={() => handleSelect('Ngân hàng Quân Đội', require('../../../assets/logonganhangMB.png'))}>
                                 <Image style={{
                                     width: 80,
                                     height: 20
-                                }} source={require('../assets/logonganhangMB.png')} />
+                                }} source={require('../../../assets/logonganhangMB.png')} />
                                 <Text style={{ fontSize: 16, paddingLeft: 30 }}>
                                     Ngân hàng Quân Đội
                                 </Text>
@@ -147,11 +147,11 @@ export default function SelectProviderScreen({ navigation, route }) {
                                 flexDirection: 'row',
                                 alignItems: 'center',
                                 paddingVertical: 20
-                            }} onPress={() => handleSelect('Ngân hàng Tiên phong', require('../assets/logonganhangTPbank.png'))}>
+                            }} onPress={() => handleSelect('Ngân hàng Tiên phong', require('../../../assets/logonganhangTPbank.png'))}>
                                 <Image style={{
                                     width: 80,
                                     height: 30
-                                }} source={require('../assets/logonganhangTPbank.png')} />
+                                }} source={require('../../../assets/logonganhangTPbank.png')} />
                                 <Text style={{ fontSize: 16, paddingLeft: 30 }}>
                                     Ngân hàng Tiên Phong
                                 </Text>
@@ -161,12 +161,12 @@ export default function SelectProviderScreen({ navigation, route }) {
                                 alignItems: 'center',
                                 paddingVertical: 20
                             }}
-                                onPress={() => handleSelect('NH sài gòn Thương tín Sacombank', require('../assets/logosacombank.png'))}
+                                onPress={() => handleSelect('NH sài gòn Thương tín Sacombank', require('../../../assets/logosacombank.png'))}
                             >
                                 <Image style={{
                                     width: 80,
                                     height: 30
-                                }} source={require('../assets/logosacombank.png')} />
+                                }} source={require('../../../assets/logosacombank.png')} />
                                 <Text style={{ fontSize: 16, paddingLeft: 30 }}>
                                     NH sài gòn Thương tín Sacombank
                                 </Text>
@@ -175,11 +175,11 @@ export default function SelectProviderScreen({ navigation, route }) {
                                 flexDirection: 'row',
                                 alignItems: 'center',
                                 paddingVertical: 20
-                            }} onPress={() => handleSelect('NH việt Nam thịnh Vượng', require('../assets/logovpbank.png'))}>
+                            }} onPress={() => handleSelect('NH việt Nam thịnh Vượng', require('../../../assets/logovpbank.png'))}>
                                 <Image style={{
                                     width: 80,
                                     height: 15
-                                }} source={require('../assets/logovpbank.png')} />
+                                }} source={require('../../../assets/logovpbank.png')} />
                                 <Text style={{ fontSize: 16, paddingLeft: 30 }}>
                                     NH Việt Nam thịnh vượng
                                 </Text>
@@ -188,11 +188,11 @@ export default function SelectProviderScreen({ navigation, route }) {
                                 flexDirection: 'row',
                                 alignItems: 'center',
                                 paddingVertical: 20
-                            }} onPress={() => handleSelect('Ngân hàng Quân Đội', require('../assets/logonganhangMB.png'))}>
+                            }} onPress={() => handleSelect('Ngân hàng Quân Đội', require('../../../assets/logonganhangMB.png'))}>
                                 <Image style={{
                                     width: 80,
                                     height: 20
-                                }} source={require('../assets/logonganhangMB.png')} />
+                                }} source={require('../../../assets/logonganhangMB.png')} />
                                 <Text style={{ fontSize: 16, paddingLeft: 30 }}>
                                     Ngân hàng Quân Đội
                                 </Text>
@@ -201,11 +201,11 @@ export default function SelectProviderScreen({ navigation, route }) {
                                 flexDirection: 'row',
                                 alignItems: 'center',
                                 paddingVertical: 20
-                            }} onPress={() => handleSelect('Ngân hàng Tiên phong', require('../assets/logonganhangTPbank.png'))}>
+                            }} onPress={() => handleSelect('Ngân hàng Tiên phong', require('../../../assets/logonganhangTPbank.png'))}>
                                 <Image style={{
                                     width: 80,
                                     height: 30
-                                }} source={require('../assets/logonganhangTPbank.png')} />
+                                }} source={require('../../../assets/logonganhangTPbank.png')} />
                                 <Text style={{ fontSize: 16, paddingLeft: 30 }}>
                                     Ngân hàng Tiên Phong
                                 </Text>

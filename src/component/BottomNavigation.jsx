@@ -3,9 +3,9 @@ import { BottomTabBar, createBottomTabNavigator } from '@react-navigation/bottom
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Ionicons from '@expo/vector-icons/Ionicons';
-import HomeScreen from '../Screen/HomeScreen';
-import CardsScreen from '../Screen/CardsScreen';
-import ProfileScreen from '../Screen/ProfileScreen';
+import HomeScreen from '../Screen/home/HomeScreen';
+import CardsScreen from '../Screen/card/CardsScreen';
+import ProfileScreen from '../Screen/profile/ProfileScreen';
 
 const Tab = createBottomTabNavigator();
 

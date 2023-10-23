@@ -33,7 +33,7 @@ export default function HomeScreen({ navigation, route }) {
                         zIndex: 1,
                         width: 160,
                         height: 90,
-                        backgroundColor: '#0540F21A',
+                        backgroundColor: '#e3f0fa',
                         borderBottomRightRadius: 80,
                         borderBottomLeftRadius: 80,
                         marignRight: 20
@@ -43,7 +43,7 @@ export default function HomeScreen({ navigation, route }) {
                             zIndex: 1,
                             width: 160,
                             height: 90,
-                            backgroundColor: '#0540F21A',
+                            backgroundColor: '#e3f0fa',
                             borderBottomRightRadius: 80,
                             borderBottomLeftRadius: 80,
                             marginLeft: 250
@@ -67,7 +67,7 @@ export default function HomeScreen({ navigation, route }) {
                         paddingHorizontal: 20
                     }}>
 
-                        <Text style={{ fontSize: 25, color: '#10142E' }}>Hi,Fitsbyfunmi</Text>
+                        <Text style={{ fontSize: 25, color: '#10142E', zIndex: 100 }}>Hi,Fitsbyfunmi</Text>
                         <View style={{ flexDirection: 'row', alignItems: 'center', zIndex: 1000 }}>
 
                             <Image
@@ -75,7 +75,7 @@ export default function HomeScreen({ navigation, route }) {
                                     right: 20,
                                     width: 50,
                                     height: 50
-                                }} source={require('../assets/UserAvatar.png')} />
+                                }} source={require('../../assets/UserAvatar.png')} />
                             <TouchableOpacity onPress={Notifi}>
 
                                 <Ionicons style={{ right: 0 }} name='notifications-outline' size={21} color="black" />
@@ -99,7 +99,7 @@ export default function HomeScreen({ navigation, route }) {
                                         width: 30,
                                         height: 30,
                                     }}
-                                    source={require('../assets/VN.png')} />
+                                    source={require('../../assets/VN.png')} />
                                 <Ionicons name='chevron-down-outline' size={30} color='white' />
                             </View>
                             <Text style={{ color: 'white' }}> Current Balance</Text>
@@ -129,7 +129,7 @@ export default function HomeScreen({ navigation, route }) {
                     {/* Transfer */}
                     <View style={{ alignItems: 'center' }}>
                         <TouchableOpacity style={{
-                            backgroundColor: '#0540F21A',
+                            backgroundColor: '#e3f0fa',
                             width: 50, height: 50,
                             borderRadius: 30,
                             alignItems: 'center',
@@ -137,27 +137,27 @@ export default function HomeScreen({ navigation, route }) {
                         }} onPress={() => {
                             navigation.navigate('Transfer')
                         }}>
-                            <Ionicons name='swap-horizontal-outline' size={25} color='blue' fontWeight='bold' />
+                            <Ionicons name='swap-horizontal-outline' size={25} color='#0540F2' fontWeight='bold' />
                         </TouchableOpacity>
                         <Text style={{ fontSize: 16, color: '#000000' }}> Transfer</Text>
                     </View>
                     {/* Airtime */}
                     <View style={{ alignItems: 'center' }}>
                         <TouchableOpacity style={{
-                            backgroundColor: '#0540F21A',
+                            backgroundColor: '#e3f0fa',
                             width: 50, height: 50,
                             borderRadius: 30,
                             alignItems: 'center',
                             justifyContent: 'center'
                         }}>
-                            <Ionicons name='call-outline' size={25} color='blue' fontWeight='bold' />
+                            <Ionicons name='call-outline' size={25} color='#0540F2' fontWeight='bold' />
                         </TouchableOpacity>
                         <Text style={{ fontSize: 16, color: '#000000' }}> Airtime</Text>
                     </View>
                     {/* Data */}
                     <View style={{ alignItems: 'center' }}>
                         <TouchableOpacity style={{
-                            backgroundColor: '#0540F21A',
+                            backgroundColor: '#e3f0fa',
                             width: 50, height: 50,
                             borderRadius: 30,
                             alignItems: 'center',
@@ -165,14 +165,14 @@ export default function HomeScreen({ navigation, route }) {
                         }} onPress={() => {
                             navigation.navigate('Data')
                         }}>
-                            <Ionicons name='trending-up-outline' size={25} color='blue' fontWeight='bold' />
+                            <Ionicons name='trending-up-outline' size={25} color='#0540F2' fontWeight='bold' />
                         </TouchableOpacity>
                         <Text style={{ fontSize: 16, color: '#000000' }}> Data</Text>
                     </View>
                     {/* Bills */}
                     <View style={{ alignItems: 'center' }}>
                         <TouchableOpacity style={{
-                            backgroundColor: '#0540F21A',
+                            backgroundColor: '#e3f0fa',
                             width: 50, height: 50,
                             borderRadius: 30,
                             alignItems: 'center',
@@ -180,14 +180,14 @@ export default function HomeScreen({ navigation, route }) {
                         }} onPress={() => {
                             navigation.navigate('Bils')
                         }}>
-                            <Ionicons name='clipboard-outline' size={25} color='blue' fontWeight='bold' />
+                            <Ionicons name='clipboard-outline' size={25} color='#0540F2' fontWeight='bold' />
                         </TouchableOpacity>
                         <Text style={{ fontSize: 16, color: '#000000' }}> Bills</Text>
                     </View>
                     {/* More */}
                     <View style={{ alignItems: 'center' }}>
                         <TouchableOpacity style={{
-                            backgroundColor: '#0540F21A',
+                            backgroundColor: '#e3f0fa',
                             width: 50, height: 50,
                             borderRadius: 30,
                             alignItems: 'center',
@@ -195,7 +195,7 @@ export default function HomeScreen({ navigation, route }) {
                         }} onPress={() => {
                             navigation.navigate('More')
                         }}>
-                            <Ionicons name='arrow-forward-outline' size={25} color='blue' fontWeight='bold' />
+                            <Ionicons name='arrow-forward-outline' size={25} color='#0540F2' fontWeight='bold' />
                         </TouchableOpacity>
                         <Text style={{ fontSize: 16, color: '#000000' }}> More</Text>
                     </View>
@@ -206,7 +206,7 @@ export default function HomeScreen({ navigation, route }) {
                 <View>
                     <View style={{ paddingHorizontal: 30, paddingVertical: 10 }}>
                         <TouchableOpacity style={{
-                            backgroundColor: '#0540F21A',
+                            backgroundColor: '#e3f0fa',
                             height: 70,
                             flexDirection: 'row',
                             alignItems: 'center',
@@ -214,10 +214,10 @@ export default function HomeScreen({ navigation, route }) {
                             paddingHorizontal: 10
                         }} onPress={TransactionHistory}>
                             <View>
-                                <Ionicons name='reload-outline' color='blue' size={30} fontWeight='bold' />
+                                <Ionicons name='reload-outline' color='#0540F2' size={30} fontWeight='bold' />
                             </View>
                             <View style={{ justifyContent: 'center', }}>
-                                <Text style={{ fontSize: 20, color: 'blue', fontWeight: 'bold' }}>  Transaction History</Text>
+                                <Text style={{ fontSize: 20, color: '#0540F2', fontWeight: 'bold' }}>  Transaction History</Text>
                                 <Text style={{ marginLeft: 10, color: 'black' }}> See your recent transactions </Text>
                             </View>
                         </TouchableOpacity>
@@ -226,7 +226,7 @@ export default function HomeScreen({ navigation, route }) {
                 <View>
                     <View style={{ paddingHorizontal: 30, paddingVertical: 10 }}>
                         <TouchableOpacity style={{
-                            backgroundColor: '#0540F21A',
+                            backgroundColor: '#e3f0fa',
                             height: 70,
                             flexDirection: 'row',
                             alignItems: 'center',
@@ -234,10 +234,10 @@ export default function HomeScreen({ navigation, route }) {
                             paddingHorizontal: 10
                         }}>
                             <View>
-                                <Ionicons name='analytics-outline' color='blue' size={30} fontWeight='bold' />
+                                <Ionicons name='analytics-outline' color='#0540F2' size={30} fontWeight='bold' />
                             </View>
                             <View style={{}}>
-                                <Text style={{ fontSize: 20, color: 'blue', fontWeight: 'bold' }}>  Savings Investment</Text>
+                                <Text style={{ fontSize: 20, color: '#0540F2', fontWeight: 'bold' }}>  Savings Investment</Text>
                                 <Text style={{ color: 'black' }}> See how you've invest and earn </Text>
                             </View>
                         </TouchableOpacity>
@@ -246,7 +246,7 @@ export default function HomeScreen({ navigation, route }) {
                 <View style={{ paddingBottom: 50 }}>
                     <View style={{ paddingHorizontal: 30, paddingVertical: 10, }}>
                         <TouchableOpacity style={{
-                            backgroundColor: '#0540F21A',
+                            backgroundColor: '#e3f0fa',
                             height: 70,
                             flexDirection: 'row',
                             alignItems: 'center',
@@ -254,10 +254,10 @@ export default function HomeScreen({ navigation, route }) {
                             paddingHorizontal: 10
                         }}>
                             <View>
-                                <Ionicons name='nuclear-outline' color='blue' size={30} fontWeight='bold' />
+                                <Ionicons name='nuclear-outline' color='#0540F2' size={30} fontWeight='bold' />
                             </View>
                             <View style={{ justifyContent: 'center', }}>
-                                <Text style={{ fontSize: 20, color: 'blue', fontWeight: 'bold' }}>  Savings Goals</Text>
+                                <Text style={{ fontSize: 20, color: '#0540F2', fontWeight: 'bold' }}>  Savings Goals</Text>
                                 <Text style={{ color: 'black' }}> See the goals you set yourself </Text>
                             </View>
                         </TouchableOpacity>

@@ -2,6 +2,7 @@ import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'reac
 import React, { useEffect, useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Ionicons } from '@expo/vector-icons'
+import Button from '../../../component/Button'
 
 export default function SendToBankScreen({ navigation, route }) {
 
@@ -43,7 +44,7 @@ export default function SendToBankScreen({ navigation, route }) {
             </View>
             <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
                 <View style={{
-                    backgroundColor: '#CCFFFF',
+                    backgroundColor: '#e3f0fa',
                     borderRadius: 20,
                     paddingHorizontal: 30,
                     paddingVertical: 10,
@@ -64,7 +65,7 @@ export default function SendToBankScreen({ navigation, route }) {
             </View>
             <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
                 <View style={{
-                    backgroundColor: '#CCFFFF',
+                    backgroundColor: '#e3f0fa',
                     borderRadius: 20,
                     paddingHorizontal: 30,
                     paddingVertical: 10,
@@ -82,13 +83,10 @@ export default function SendToBankScreen({ navigation, route }) {
                 <View style={{ borderBottomWidth: 1, paddingVertical: 10 }}></View>
                 <View style={{ paddingVertical: 40 }} >
                     <TouchableOpacity style={{
-                        backgroundColor: '#0000CC',
-                        borderRadius: 30,
-                        paddingVertical: 10,
                         alignItems: 'center',
                         justifyContent: 'center'
                     }} onPress={hanldeClicknextSendtoBank}>
-                        <Text style={{ color: 'white', fontSize: 20 }}> Next</Text>
+                        <Button text="Next" />
                     </TouchableOpacity>
                 </View>
             </View>

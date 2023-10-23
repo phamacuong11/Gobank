@@ -66,7 +66,7 @@ export default function DataScreen({ navigation }) {
                                         width: 30,
                                         height: 30,
                                     }}
-                                    source={require('../assets/VN.png')} />
+                                    source={require('../../assets/VN.png')} />
                                 <Ionicons name='chevron-down-outline' size={30} color='white' />
                             </View>
                             <Text style={{ color: 'white' }}> Current Balance</Text>
@@ -92,7 +92,7 @@ export default function DataScreen({ navigation }) {
                             <View>
                                 <View style={{ paddingHorizontal: 5, paddingVertical: 20, }}>
                                     <TouchableOpacity style={{
-                                        backgroundColor: '#0540F21A',
+                                        backgroundColor: '#e3f0fa',
                                         height: 70,
                                         flexDirection: 'row',
                                         alignItems: 'center',
@@ -100,17 +100,17 @@ export default function DataScreen({ navigation }) {
                                         paddingHorizontal: 10
                                     }} >
                                         <View>
-                                            <Ionicons name='reload-outline' color='blue' size={30} fontWeight='bold' />
+                                            <Ionicons name='reload-outline' color='#0540F2' size={30} fontWeight='bold' />
                                         </View>
                                         <View style={{ justifyContent: 'center', }}>
-                                            <Text style={{ fontSize: 20, color: 'blue', fontWeight: 'bold' }}>  Send to GBG</Text>
+                                            <Text style={{ fontSize: 20, color: '#0540F2', fontWeight: 'bold' }}>  Send to GBG</Text>
                                             <Text style={{ marginLeft: 10, color: 'black' }}> Send money to GBG account </Text>
                                         </View>
                                     </TouchableOpacity>
                                 </View>
                                 <View style={{ paddingHorizontal: 5, paddingVertical: 5, }}>
                                     <TouchableOpacity style={{
-                                        backgroundColor: '#0540F21A',
+                                        backgroundColor: '#e3f0fa',
                                         height: 70,
                                         flexDirection: 'row',
                                         alignItems: 'center',
@@ -118,10 +118,10 @@ export default function DataScreen({ navigation }) {
                                         paddingHorizontal: 10
                                     }}>
                                         <View>
-                                            <Ionicons name='reload-outline' color='blue' size={30} fontWeight='bold' />
+                                            <Ionicons name='reload-outline' color='#0540F2' size={30} fontWeight='bold' />
                                         </View>
                                         <View style={{ justifyContent: 'center', }}>
-                                            <Text style={{ fontSize: 20, color: 'blue', fontWeight: 'bold' }}>  Send to Go Other Bank</Text>
+                                            <Text style={{ fontSize: 20, color: '#0540F2', fontWeight: 'bold' }}>  Send to Go Other Bank</Text>
                                             <Text style={{ marginLeft: 10, color: 'black' }}> Send money to Other banks </Text>
                                         </View>
                                     </TouchableOpacity>

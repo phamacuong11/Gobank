@@ -21,8 +21,8 @@ export default function SelectPackageScreen({ navigation }) {
                     }}> Select Package</Text>
                 </View>
                 <View style={{ padding: 20 }}>
-                    <View style={{ padding: 5, backgroundColor: '#d7eafa', borderRadius: 10, flexDirection: 'row', alignItems: 'center' }}>
-                        <Ionicons name='search' color='blue' size={20} />
+                    <View style={{ padding: 5, backgroundColor: '#e3f0fa', borderRadius: 10, flexDirection: 'row', alignItems: 'center' }}>
+                        <Ionicons name='search' color='#0540F2' size={20} />
                         <TextInput
                             placeholder='Search here for package'
                             style={{ color: 'grey', paddingLeft: 5 }} />
@@ -40,7 +40,9 @@ export default function SelectPackageScreen({ navigation }) {
                     </View>
                     <View style={{ paddingHorizontal: 20, paddingVertical: 15 }}>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between', }}>
-                            <Text style={{ fontSize: 16, color: 'blue' }}> DSTV Compact Plus</Text>
+                            <Text style={{
+                                fontSize: 16, color: '#0540F2'
+                            }}> DSTV Compact Plus</Text>
                             <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
                                 <Text style={{ paddingRight: 5, fontSize: 16, color: 'blue' }}>N24,500</Text>
                                 <Ionicons name='ellipse-outline' color='blue' size={15} />

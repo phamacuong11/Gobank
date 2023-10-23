@@ -1,7 +1,7 @@
 import { BottomTabBar, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Image, Text, View, Picker, TouchableOpacity } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import BottomNavigation from '../component/BottomNavigation';
+import BottomNavigation from '../../component/BottomNavigation';
 import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { ScrollView } from 'react-native';
@@ -209,7 +209,7 @@ export default function CardsScreen({ navigation }) {
                         <View style={{
                             width: 190,
                             height: 140,
-                            backgroundColor: '#FF00FF',
+                            backgroundColor: '#dd75f0',
                             borderRadius: 30,
                             paddingHorizontal: 10
                         }}>
@@ -255,12 +255,12 @@ export default function CardsScreen({ navigation }) {
                         justifyContent: 'center',
                         alignItems: 'center',
                         borderWidth: 1,
-                        borderColor: 'blue',
+                        borderColor: '#0540F2',
                         borderRadius: 30,
                         padding: 2
                     }} onPress={() => { navigation.navigate('AddNewCard') }}>
-                        <Ionicons name='add-outline' color='blue' size={40} />
-                        <Text style={{ fontSize: 20, color: 'blue' }}> Add New Cards</Text>
+                        <Ionicons name='add-outline' color='#0540F2' size={40} />
+                        <Text style={{ fontSize: 20, color: '#0540F2' }}> Add New Cards</Text>
                     </TouchableOpacity>
                 </View>
             </ScrollView>
