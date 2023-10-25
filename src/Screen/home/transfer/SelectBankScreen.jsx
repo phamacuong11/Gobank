@@ -22,12 +22,16 @@ export default function SelectBankScreen({ navigation, route }) {
                             }}>
                                 <Ionicons name='close' color='black' size={30} />
                             </TouchableOpacity>
-                            <Text style={{
-                                fontSize: 22,
-                                color: 'black',
-                                marginLeft: 100,
-                                fontWeight: 'bold'
-                            }}> Select Bank</Text>
+                            <View style={{
+                                alignItems: 'center',
+                                width: '100%', paddingRight: 40, justifyContent: 'center'
+                            }}>
+                                <Text style={{
+                                    fontSize: 22,
+                                    color: 'black',
+                                    fontWeight: 'bold'
+                                }}> Select Bank</Text>
+                            </View>
                         </View>
                     </View>
                     {/* ******Search Bar*********** */}
@@ -95,172 +99,171 @@ export default function SelectBankScreen({ navigation, route }) {
                             </View>
                         </View>
                     </View>
-                    <View>
-                        <View style={{ paddingVertical: 30, paddingHorizontal: 20 }} >
-                            <TouchableOpacity style={{
-                                flexDirection: 'row',
-                                alignItems: 'center',
-                                paddingVertical: 10
-                            }}
-                                onPress={() => handleSelect('NH sài gòn Thương tín Sacombank', require('../../../assets/logosacombank.png'))}
-                            >
-                                <Image style={{
-                                    width: 80,
-                                    height: 30
-                                }} source={require('../../../assets/logosacombank.png')} />
-                                <Text style={{ fontSize: 16, paddingLeft: 30 }}>
-                                    NH sài gòn Thương tín Sacombank
-                                </Text>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={{
-                                flexDirection: 'row',
-                                alignItems: 'center',
-                                paddingVertical: 10
-                            }} onPress={() => handleSelect('NH việt Nam thịnh Vượng', require('../../../assets/logovpbank.png'))}>
-                                <Image style={{
-                                    width: 80,
-                                    height: 15
-                                }} source={require('../../../assets/logovpbank.png')} />
-                                <Text style={{ fontSize: 16, paddingLeft: 30 }}>
-                                    NH Việt Nam thịnh vượng
-                                </Text>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={{
-                                flexDirection: 'row',
-                                alignItems: 'center',
-                                paddingVertical: 10
-                            }} onPress={() => handleSelect('Ngân hàng Quân Đội', require('../../../assets/logonganhangMB.png'))}>
-                                <Image style={{
-                                    width: 80,
-                                    height: 20
-                                }} source={require('../../../assets/logonganhangMB.png')} />
-                                <Text style={{ fontSize: 16, paddingLeft: 30 }}>
-                                    Ngân hàng Quân Đội
-                                </Text>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={{
-                                flexDirection: 'row',
-                                alignItems: 'center',
-                                paddingVertical: 10
-                            }} onPress={() => handleSelect('Ngân hàng Tiên phong', require('../../../assets/logonganhangTPbank.png'))}>
-                                <Image style={{
-                                    width: 80,
-                                    height: 30
-                                }} source={require('../../../assets/logonganhangTPbank.png')} />
-                                <Text style={{ fontSize: 16, paddingLeft: 30 }}>
-                                    Ngân hàng Tiên Phong
-                                </Text>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={{
-                                flexDirection: 'row',
-                                alignItems: 'center',
-                                paddingVertical: 10
-                            }}
-                                onPress={() => handleSelect('NH sài gòn Thương tín Sacombank', require('../../../assets/logosacombank.png'))}
-                            >
-                                <Image style={{
-                                    width: 80,
-                                    height: 30
-                                }} source={require('../../../assets/logosacombank.png')} />
-                                <Text style={{ fontSize: 16, paddingLeft: 30 }}>
-                                    NH sài gòn Thương tín Sacombank
-                                </Text>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={{
-                                flexDirection: 'row',
-                                alignItems: 'center',
-                                paddingVertical: 10
-                            }} onPress={() => handleSelect('NH việt Nam thịnh Vượng', require('../../../assets/logovpbank.png'))}>
-                                <Image style={{
-                                    width: 80,
-                                    height: 15
-                                }} source={require('../../../assets/logovpbank.png')} />
-                                <Text style={{ fontSize: 16, paddingLeft: 30 }}>
-                                    NH Việt Nam thịnh vượng
-                                </Text>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={{
-                                flexDirection: 'row',
-                                alignItems: 'center',
-                                paddingVertical: 10
-                            }} onPress={() => handleSelect('Ngân hàng Quân Đội', require('../../../assets/logonganhangMB.png'))}>
-                                <Image style={{
-                                    width: 80,
-                                    height: 20
-                                }} source={require('../../../assets/logonganhangMB.png')} />
-                                <Text style={{ fontSize: 16, paddingLeft: 30 }}>
-                                    Ngân hàng Quân Đội
-                                </Text>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={{
-                                flexDirection: 'row',
-                                alignItems: 'center',
-                                paddingVertical: 10
-                            }} onPress={() => handleSelect('Ngân hàng Tiên phong', require('../../../assets/logonganhangTPbank.png'))}>
-                                <Image style={{
-                                    width: 80,
-                                    height: 30
-                                }} source={require('../../../assets/logonganhangTPbank.png')} />
-                                <Text style={{ fontSize: 16, paddingLeft: 30 }}>
-                                    Ngân hàng Tiên Phong
-                                </Text>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={{
-                                flexDirection: 'row',
-                                alignItems: 'center',
-                                paddingVertical: 10
-                            }}
-                                onPress={() => handleSelect('NH sài gòn Thương tín Sacombank', require('../../../assets/logosacombank.png'))}
-                            >
-                                <Image style={{
-                                    width: 80,
-                                    height: 30
-                                }} source={require('../../../assets/logosacombank.png')} />
-                                <Text style={{ fontSize: 16, paddingLeft: 30 }}>
-                                    NH sài gòn Thương tín Sacombank
-                                </Text>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={{
-                                flexDirection: 'row',
-                                alignItems: 'center',
-                                paddingVertical: 10
-                            }} onPress={() => handleSelect('NH việt Nam thịnh Vượng', require('../../../assets/logovpbank.png'))}>
-                                <Image style={{
-                                    width: 80,
-                                    height: 15
-                                }} source={require('../../../assets/logovpbank.png')} />
-                                <Text style={{ fontSize: 16, paddingLeft: 30 }}>
-                                    NH Việt Nam thịnh vượng
-                                </Text>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={{
-                                flexDirection: 'row',
-                                alignItems: 'center',
-                                paddingVertical: 10
-                            }} onPress={() => handleSelect('Ngân hàng Quân Đội', require('../../../assets/logonganhangMB.png'))}>
-                                <Image style={{
-                                    width: 80,
-                                    height: 20
-                                }} source={require('../../../assets/logonganhangMB.png')} />
-                                <Text style={{ fontSize: 16, paddingLeft: 30 }}>
-                                    Ngân hàng Quân Đội
-                                </Text>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={{
-                                flexDirection: 'row',
-                                alignItems: 'center',
-                                paddingVertical: 10
-                            }} onPress={() => handleSelect('Ngân hàng Tiên phong', require('../../../assets/logonganhangTPbank.png'))}>
-                                <Image style={{
-                                    width: 80,
-                                    height: 30
-                                }} source={require('../../../assets/logonganhangTPbank.png')} />
-                                <Text style={{ fontSize: 16, paddingLeft: 30 }}>
-                                    Ngân hàng Tiên Phong
-                                </Text>
-                            </TouchableOpacity>
+                    <View style={{ paddingVertical: 30, paddingHorizontal: 20 }} >
+                        <TouchableOpacity style={{
+                            width: '90%',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            paddingVertical: 10
+                        }}
+                            onPress={() => handleSelect('NH SG Thương tín Sacombank', require('../../../assets/logosacombank.png'))}
+                        >
+                            <Image style={{
+                                width: 80,
+                                height: 30
+                            }} source={require('../../../assets/logosacombank.png')} />
+                            <Text style={{ fontSize: 16, paddingLeft: 30 }}>
+                                NH SG Thương tín Sacombank
+                            </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            paddingVertical: 10
+                        }} onPress={() => handleSelect('NH việt Nam thịnh Vượng', require('../../../assets/logovpbank.png'))}>
+                            <Image style={{
+                                width: 80,
+                                height: 15
+                            }} source={require('../../../assets/logovpbank.png')} />
+                            <Text style={{ fontSize: 16, paddingLeft: 30 }}>
+                                NH Việt Nam thịnh vượng
+                            </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            paddingVertical: 10
+                        }} onPress={() => handleSelect('Ngân hàng Quân Đội', require('../../../assets/logonganhangMB.png'))}>
+                            <Image style={{
+                                width: 80,
+                                height: 20
+                            }} source={require('../../../assets/logonganhangMB.png')} />
+                            <Text style={{ fontSize: 16, paddingLeft: 30 }}>
+                                Ngân hàng Quân Đội
+                            </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            paddingVertical: 10
+                        }} onPress={() => handleSelect('Ngân hàng Tiên phong', require('../../../assets/logonganhangTPbank.png'))}>
+                            <Image style={{
+                                width: 80,
+                                height: 30
+                            }} source={require('../../../assets/logonganhangTPbank.png')} />
+                            <Text style={{ fontSize: 16, paddingLeft: 30 }}>
+                                Ngân hàng Tiên Phong
+                            </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            paddingVertical: 10
+                        }}
+                            onPress={() => handleSelect('NH SG Thương tín Sacombank', require('../../../assets/logosacombank.png'))}
+                        >
+                            <Image style={{
+                                width: 80,
+                                height: 30
+                            }} source={require('../../../assets/logosacombank.png')} />
+                            <Text style={{ fontSize: 16, paddingLeft: 30 }}>
+                                NH SG Thương tín Sacombank
+                            </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            paddingVertical: 10
+                        }} onPress={() => handleSelect('NH việt Nam thịnh Vượng', require('../../../assets/logovpbank.png'))}>
+                            <Image style={{
+                                width: 80,
+                                height: 15
+                            }} source={require('../../../assets/logovpbank.png')} />
+                            <Text style={{ fontSize: 16, paddingLeft: 30 }}>
+                                NH Việt Nam thịnh vượng
+                            </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            paddingVertical: 10
+                        }} onPress={() => handleSelect('Ngân hàng Quân Đội', require('../../../assets/logonganhangMB.png'))}>
+                            <Image style={{
+                                width: 80,
+                                height: 20
+                            }} source={require('../../../assets/logonganhangMB.png')} />
+                            <Text style={{ fontSize: 16, paddingLeft: 30 }}>
+                                Ngân hàng Quân Đội
+                            </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            paddingVertical: 10
+                        }} onPress={() => handleSelect('Ngân hàng Tiên phong', require('../../../assets/logonganhangTPbank.png'))}>
+                            <Image style={{
+                                width: 80,
+                                height: 30
+                            }} source={require('../../../assets/logonganhangTPbank.png')} />
+                            <Text style={{ fontSize: 16, paddingLeft: 30 }}>
+                                Ngân hàng Tiên Phong
+                            </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            paddingVertical: 10
+                        }}
+                            onPress={() => handleSelect('NH SG Thương tín Sacombank', require('../../../assets/logosacombank.png'))}
+                        >
+                            <Image style={{
+                                width: 80,
+                                height: 30
+                            }} source={require('../../../assets/logosacombank.png')} />
+                            <Text style={{ fontSize: 16, paddingLeft: 30 }}>
+                                NH SG Thương tín Sacombank
+                            </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            paddingVertical: 10
+                        }} onPress={() => handleSelect('NH việt Nam thịnh Vượng', require('../../../assets/logovpbank.png'))}>
+                            <Image style={{
+                                width: 80,
+                                height: 15
+                            }} source={require('../../../assets/logovpbank.png')} />
+                            <Text style={{ fontSize: 16, paddingLeft: 30 }}>
+                                NH Việt Nam thịnh vượng
+                            </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            paddingVertical: 10
+                        }} onPress={() => handleSelect('Ngân hàng Quân Đội', require('../../../assets/logonganhangMB.png'))}>
+                            <Image style={{
+                                width: 80,
+                                height: 20
+                            }} source={require('../../../assets/logonganhangMB.png')} />
+                            <Text style={{ fontSize: 16, paddingLeft: 30 }}>
+                                Ngân hàng Quân Đội
+                            </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            paddingVertical: 10
+                        }} onPress={() => handleSelect('Ngân hàng Tiên phong', require('../../../assets/logonganhangTPbank.png'))}>
+                            <Image style={{
+                                width: 80,
+                                height: 30
+                            }} source={require('../../../assets/logonganhangTPbank.png')} />
+                            <Text style={{ fontSize: 16, paddingLeft: 30 }}>
+                                Ngân hàng Tiên Phong
+                            </Text>
+                        </TouchableOpacity>
 
-                        </View>
                     </View>
                 </View>
             </ScrollView>

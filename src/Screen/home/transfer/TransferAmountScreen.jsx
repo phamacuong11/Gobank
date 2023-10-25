@@ -4,12 +4,22 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { Ionicons } from '@expo/vector-icons'
 import Button from '../../../component/Button'
 import { ScrollView } from 'react-native'
+import { StatusBar } from 'expo-status-bar'
 
 export default function TransferAmountScreen({ navigation, route }) {
 
     const [ilogo, setLogo] = useState('')
     const [remark, steRemark] = useState('')
     const [enterAmount, setEnterAmount] = useState('')
+    const handleAmountChange = (text) => {
+        // Loại bỏ dấu phẩy và dấu chấm cũ
+        const formattedText = text.replace(/[,|.]/g, '');
+
+        // Chèn dấu chấm ngăn cách hàng nghìn
+        const formattedAmount = formattedText.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+        setEnterAmount(formattedAmount, enterAmount);
+    };
 
     const { balance } = route.params.account
     const hanldeClickConfirm = () => {
@@ -27,6 +37,7 @@ export default function TransferAmountScreen({ navigation, route }) {
     return (
         <SafeAreaView>
             <ScrollView>
+                <StatusBar barStyle='dark-content' />
                 <View>
                     <View>
                         <View style={{ paddingHorizontal: 10, flexDirection: 'row', alignItems: 'center', marginTop: 20 }}>
@@ -35,12 +46,16 @@ export default function TransferAmountScreen({ navigation, route }) {
                             }}>
                                 <Ionicons name='chevron-back' color='black' size={30} />
                             </TouchableOpacity>
-                            <Text style={{
-                                fontSize: 22,
-                                color: 'black',
-                                marginLeft: 100,
-                                fontWeight: 'bold'
-                            }}> Transfer Amount</Text>
+                            <View style={{
+                                alignItems: 'center',
+                                width: '100%', paddingRight: 40, justifyContent: 'center'
+                            }}>
+                                <Text style={{
+                                    fontSize: 22,
+                                    color: 'black',
+                                    fontWeight: 'bold'
+                                }}> Transfer Amount</Text>
+                            </View>
                         </View>
                     </View>
                     <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
@@ -94,8 +109,10 @@ export default function TransferAmountScreen({ navigation, route }) {
 
                                 }}
                                     value={enterAmount}
-                                    onChangeText={(value) => setEnterAmount(value)}
+                                    onChangeText={handleAmountChange}
                                     placeholder='10.000'
+                                    keyboardType='numeric'
+
                                     placeholderTextColor='#000000' />
                             </View>
                             <View style={{ borderBottomWidth: 1, paddingVertical: 10 }}></View>

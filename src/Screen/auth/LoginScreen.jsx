@@ -57,69 +57,67 @@ export default function LoginScreen({ navigation, route }) {
 
     const [passWord, setPassWord] = useState(true)
     return (
-        <SafeAreaView style={{
-            flex: 1, backgroundColor: 'white',
-        }}>
+        <SafeAreaView style={{ flex: 1 }} >
             <ScrollView>
                 <StatusBar barStyle='dark-content' backgroundColor="white" style='dark-content' />
                 <View style={{
-                    flex: 2,
                     alignItems: 'center',
                     backgroundColor: 'white',
                 }}>
                     {/* iMAGE */}
                     <Image style={{
-                        width: 200, height: 200, marginTop: 100,
+                        width: 200, height: 200,
                     }} source={require("../../assets/iconLogin.png")} ></Image>
-                    <View>
-                        <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 5 }}>
-                            <Ionicons name='mail-outline' size={32} color='#0540F2' />
-                            <Text> Enter email</Text>
+
+                    <View style={{ flex: 1 }}>
+                        <View style={styles.view}>
+                            <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 20 }}>
+                                <Ionicons name='mail-outline' size={32} color='#0540F2' />
+                                <Text> Email</Text>
+                            </View>
+                            <View style={{ alignItems: 'center', paddingHorizontal: 10 }}>
+                                <TextInput style={styles.textinput}
+                                    value={email}
+                                    ref={textInputEmail}
+                                    onSubmitEditing={handleForcusPass}
+                                    onChangeText={(value) => setEmail(value)} />
+                            </View>
                         </View>
+                        <View style={styles.view}>
+                            <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 20 }}>
+                                <Ionicons name='lock-closed-outline' size={32} color='#0540F2' />
+                                <Text> Password</Text>
+                            </View>
+                            <View style={{ alignItems: 'center', paddingHorizontal: 10 }}>
+                                <TextInput style={styles.textinput}
+                                    ref={textInputPass}
+                                    value={pass}
+                                    onChangeText={(value) => setPass(value)}
+                                    onSubmitEditing={handleClickHome}
+                                    secureTextEntry={passWord ? true : false} />
+                            </View>
+                            <TouchableOpacity style={{
+                                position: 'absolute', top: 45, right: 20
+                            }}
+                                onPress={() => {
+                                    setPassWord(!passWord)
+                                }}>
+                                {passWord ? <Ionicons name='eye-outline' size={32} color='black' /> : <Ionicons name='eye-off-outline' size={32} color='black' />}
 
-                        <TextInput style={styles.textinput}
-                            value={email}
-                            onChangeText={(value) => setEmail(value)}
-                            inlineImageLeft='search_icon'
-                            ref={textInputEmail}
-                            onSubmitEditing={handleForcusPass}
-                        />
+                            </TouchableOpacity>
+                            <TouchableOpacity>
 
-                    </View>
-                    <View style={{ marginTop: 20 }}>
-                        <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 5 }}>
-                            <Ionicons name='lock-closed-outline' size={32} color='#0540F2' />
-                            <Text> Enter pass</Text>
+                                <Text style={{ marginTop: 10, marginLeft: 5, color: '#000000' }}> Forgot Password?</Text>
+                            </TouchableOpacity>
                         </View>
-                        <TextInput style={styles.textinput}
-                            value={pass}
-                            onChangeText={(value) => setPass(value)}
-                            secureTextEntry={!passWord ? false : true}
-                            ref={textInputPass}
-                            onSubmitEditing={handleClickHome} />
-
-                        <TouchableOpacity style={{
-                            position: 'absolute', top: 40, right: 10
-                        }}
-                            onPress={() => {
-                                setPassWord(!passWord)
-                            }}>
-                            {passWord ? <Ionicons name='eye-outline' size={32} color='black' /> : <Ionicons name='eye-off-outline' size={32} color='black' />}
-
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-
-                            <Text style={{ marginTop: 10, marginLeft: 5, color: '#000000' }}> Forgot Password?</Text>
-                        </TouchableOpacity>
-
-                    </View>
-                    <View style={{
-                        flex: 1, backgroundColor: 'white', paddingVertical: 50, alignItems: 'center'
-                    }}>
-                        <TouchableOpacity onPress={handleClickHome}>
-                            <Button text='Login' />
-                        </TouchableOpacity>
-                        {/* <TouchableOpacity style={{
+                        {/* Button Login */}
+                        <View style={{
+                            flex: 1, paddingVertical: 50, alignItems: 'center'
+                        }}>
+                            <TouchableOpacity onPress={handleClickHome}>
+                                <Button text='Login' />
+                            </TouchableOpacity>
+                            {/* <TouchableOpacity style={{
                             width: 300,
                             height: 40,
                             borderRadius: 20,
@@ -132,12 +130,12 @@ export default function LoginScreen({ navigation, route }) {
                             <Text style={{ color: 'white', fontWeight: 'bold', fontSize: 18 }}> LOGIN</Text>
                         </TouchableOpacity> */}
 
-                        <TouchableOpacity onPress={handleCreateAccount}>
-                            <Text style={{ marginTop: 15 }}> Create Account</Text>
-                        </TouchableOpacity>
+                            <TouchableOpacity onPress={handleCreateAccount}>
+                                <Text style={{ marginTop: 15 }}> Create Account</Text>
+                            </TouchableOpacity>
+                        </View>
                     </View>
                 </View>
-
             </ScrollView>
         </SafeAreaView>
     )
@@ -145,11 +143,14 @@ export default function LoginScreen({ navigation, route }) {
 
 const styles = StyleSheet.create({
     textinput: {
-        width: 350,
+        width: '100%',
         borderWidth: 1,
         height: 40,
-        borderRadius: 15,
+        borderRadius: 20,
         marginTop: 4,
         paddingLeft: 15
+    },
+    view: {
+        padding: 5,
     }
 })

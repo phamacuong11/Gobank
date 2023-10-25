@@ -12,46 +12,48 @@ export default function WelcomeScreen({ navigation }) {
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
             <StatusBar barStyle='dark-content' backgroundColor="white" style='dark-content' />
-
+            {/* Header */}
             <View style={{
-                flex: 2,
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: 'white'
+                flex: 1,
             }}>
-                {/* iMAGE */}
-                <Image style={{
-                    width: 300, height: 300, marginTop: 100,
-                }} source={require("../../assets/iconWelcom.png")} ></Image>
-                <Text style={{
-                    fontSize: 30, color: 'black', fontWeight: 'bold', paddingVertical: 30
-                }}> WELCOME</Text>
-                <Text style={{ paddingHorizontal: 30, color: '#000000' }}> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, ullam accusantium.</Text>
-            </View>
-            <View style={{ flex: 1, }}>
+                <View style={{
+                    flex: 4,
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    backgroundColor: 'white'
+                }}>
+                    {/* iMAGE */}
+                    <Image style={{
+                        width: 200, height: 200, marginTop: 100,
+                    }} source={require("../../assets/iconWelcom.png")} ></Image>
+                    <Text style={{
+                        fontSize: 30, color: 'black', fontWeight: 'bold', paddingVertical: 30
+                    }}> WELCOME</Text>
+                    <Text style={{ paddingHorizontal: 30, color: '#000000' }}> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, ullam accusantium.</Text>
+                </View>
+
                 <View style={{
                     flex: 1,
                     flexDirection: 'row',
-                    backgroundColor: 'white',
-                    justifyContent: 'center',
-                    marginTop: 60,
+                    justifyContent: 'space-between',
+                    paddingVertical: 60,
+                    paddingHorizontal: 20
 
                 }}>
                     <TouchableOpacity style={{
-                        width: 170,
+                        width: 155,
                         height: 40,
                         borderWidth: 3,
                         borderColor: '#0540F2',
                         borderRadius: 20,
                         justifyContent: 'center',
                         alignItems: 'center',
-                        marginRight: 15
                     }}
                         onPress={handleClickLogin}>
                         <Text style={{ color: '#0540F2', fontWeight: 'bold' }}> LOGIN</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={{
-                        width: 170,
+                        width: 155,
                         height: 40,
                         backgroundColor: '#0540F2',
                         borderRadius: 20,
@@ -61,9 +63,9 @@ export default function WelcomeScreen({ navigation }) {
                         onPress={handleClickSingup}>
                         <Text style={{ color: '#ffffff', fontWeight: 'bold' }}> SIGNUP</Text>
                     </TouchableOpacity>
-
                 </View>
             </View>
+
         </SafeAreaView >
     )
 }

@@ -21,12 +21,16 @@ export default function SelectProviderScreen({ navigation, route }) {
                             }}>
                                 <Ionicons name='close' color='black' size={30} />
                             </TouchableOpacity>
-                            <Text style={{
-                                fontSize: 22,
-                                color: 'black',
-                                marginLeft: 90,
-                                fontWeight: 'bold'
-                            }}> Select Provider</Text>
+                            <View style={{
+                                alignItems: 'center',
+                                width: '100%', paddingRight: 50, justifyContent: 'center'
+                            }}>
+                                <Text style={{
+                                    fontSize: 22,
+                                    color: 'black',
+                                    fontWeight: 'bold'
+                                }}> Select Provider</Text>
+                            </View>
                         </View>
                     </View>
                     {/* ******Search Bar*********** */}
@@ -53,14 +57,14 @@ export default function SelectProviderScreen({ navigation, route }) {
                                 alignItems: 'center',
                                 paddingVertical: 20
                             }}
-                                onPress={() => handleSelect('NH sài gòn Thương tín Sacombank', require('../../../assets/logosacombank.png'))}
+                                onPress={() => handleSelect('NH SG Thương tín Sacombank', require('../../../assets/logosacombank.png'))}
                             >
                                 <Image style={{
                                     width: 80,
                                     height: 30
                                 }} source={require('../../../assets/logosacombank.png')} />
                                 <Text style={{ fontSize: 16, paddingLeft: 30 }}>
-                                    NH sài gòn Thương tín Sacombank
+                                    NH SG Thương tín Sacombank
                                 </Text>
                             </TouchableOpacity>
                             <TouchableOpacity style={{
@@ -107,14 +111,14 @@ export default function SelectProviderScreen({ navigation, route }) {
                                 alignItems: 'center',
                                 paddingVertical: 20
                             }}
-                                onPress={() => handleSelect('NH sài gòn Thương tín Sacombank', require('../../../assets/logosacombank.png'))}
+                                onPress={() => handleSelect('NH SG Thương tín Sacombank', require('../../../assets/logosacombank.png'))}
                             >
                                 <Image style={{
                                     width: 80,
                                     height: 30
                                 }} source={require('../../../assets/logosacombank.png')} />
                                 <Text style={{ fontSize: 16, paddingLeft: 30 }}>
-                                    NH sài gòn Thương tín Sacombank
+                                    NH SG Thương tín Sacombank
                                 </Text>
                             </TouchableOpacity>
                             <TouchableOpacity style={{
@@ -161,14 +165,14 @@ export default function SelectProviderScreen({ navigation, route }) {
                                 alignItems: 'center',
                                 paddingVertical: 20
                             }}
-                                onPress={() => handleSelect('NH sài gòn Thương tín Sacombank', require('../../../assets/logosacombank.png'))}
+                                onPress={() => handleSelect('NH SG Thương tín Sacombank', require('../../../assets/logosacombank.png'))}
                             >
                                 <Image style={{
                                     width: 80,
                                     height: 30
                                 }} source={require('../../../assets/logosacombank.png')} />
                                 <Text style={{ fontSize: 16, paddingLeft: 30 }}>
-                                    NH sài gòn Thương tín Sacombank
+                                    NH SG Thương tín Sacombank
                                 </Text>
                             </TouchableOpacity>
                             <TouchableOpacity style={{

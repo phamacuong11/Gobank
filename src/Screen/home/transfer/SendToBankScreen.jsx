@@ -8,6 +8,15 @@ export default function SendToBankScreen({ navigation, route }) {
 
     const [ilogo, setLogo] = useState('')
     const [accountNumber, setAccountNumber] = useState('')
+    const handleAmountChange = (text) => {
+        // Loại bỏ dấu phẩy và dấu chấm cũ
+        const formattedText = text.replace(/[,|.]/g, '');
+
+        // Chèn dấu chấm ngăn cách hàng nghìn
+        const formattedAmount = formattedText.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+        setAccountNumber(formattedAmount, accountNumber);
+    };
 
 
     const { bankName, logo, balance } = route.params.account
@@ -31,22 +40,26 @@ export default function SendToBankScreen({ navigation, route }) {
                     }}>
                         <Ionicons name='chevron-back' color='black' size={30} />
                     </TouchableOpacity>
-                    <Text style={{
-                        fontSize: 22,
-                        color: 'black',
-                        marginLeft: 100,
-                        fontWeight: 'bold'
-                    }}> Send to Bank</Text>
+                    <View style={{
+                        alignItems: 'center',
+                        width: '100%', paddingRight: 40, justifyContent: 'center'
+                    }}>
+                        <Text style={{
+                            fontSize: 22,
+                            color: 'black',
+                            fontWeight: 'bold'
+                        }}> Send to Bank</Text>
+                    </View>
                 </View>
             </View>
             <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
                 <Text style={{ fontSize: 20 }}> Select Bank</Text>
             </View>
-            <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
+            <View style={{ marginTop: 20, paddingHorizontal: 10 }}>
                 <View style={{
                     backgroundColor: '#e3f0fa',
                     borderRadius: 20,
-                    paddingHorizontal: 30,
+                    paddingHorizontal: 20,
                     paddingVertical: 10,
                     flexDirection: 'row',
                     alignItems: 'center',
@@ -77,8 +90,10 @@ export default function SendToBankScreen({ navigation, route }) {
                         placeholder='Enter 10 digit numbers'
                         placeholderTextColor='grey'
                         value={accountNumber}
-                        onChangeText={(value) => setAccountNumber(value)}
+                        keyboardType='numeric'
+                        onChangeText={(value) => { setAccountNumber(value) }}
                     />
+
                 </View>
                 <View style={{ borderBottomWidth: 1, paddingVertical: 10 }}></View>
                 <View style={{ paddingVertical: 40 }} >

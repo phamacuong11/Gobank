@@ -57,11 +57,15 @@ export default function BillsScreen({ navigation }) {
                         }}>
                             <Ionicons name='chevron-back' color='white' size={30} />
                         </TouchableOpacity>
-                        <Text style={{
-                            fontSize: 20,
-                            color: 'white',
-                            marginLeft: 140
-                        }}> Bills</Text>
+                        <View style={{
+                            alignItems: 'center',
+                            width: '100%', paddingRight: 60, justifyContent: 'center'
+                        }}>
+                            <Text style={{
+                                fontSize: 20,
+                                color: 'white',
+                            }}> Bills</Text>
+                        </View>
                     </View>
                     <View style={{ paddingHorizontal: 20 }}>
 
@@ -276,7 +280,7 @@ export default function BillsScreen({ navigation }) {
                                 </TouchableOpacity>
                             </View>
                             <View style={{
-                                paddingHorizontal: 5, paddingVertical: 10,
+                                paddingHorizontal: 5, paddingVertical: 10, paddingBottom: 60
                             }}>
                                 <TouchableOpacity style={{
                                     backgroundColor: '#e3f0fa',

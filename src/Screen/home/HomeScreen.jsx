@@ -86,7 +86,7 @@ export default function HomeScreen({ navigation, route }) {
                     <View style={{ alignItems: 'center', paddingVertical: 20 }}>
 
                         <View style={{
-                            width: 380,
+                            width: '100%',
                             height: 210,
                             backgroundColor: '#10142E',
                             borderRadius: 30,

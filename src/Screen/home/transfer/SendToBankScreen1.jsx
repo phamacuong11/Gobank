@@ -19,12 +19,16 @@ export default function SendToBankScreen1({ navigation, route }) {
                     }}>
                         <Ionicons name='chevron-back' color='black' size={30} />
                     </TouchableOpacity>
-                    <Text style={{
-                        fontSize: 22,
-                        color: 'black',
-                        marginLeft: 100,
-                        fontWeight: 'bold'
-                    }}> Send to Bank</Text>
+                    <View style={{
+                        alignItems: 'center',
+                        width: '100%', paddingRight: 40, justifyContent: 'center'
+                    }}>
+                        <Text style={{
+                            fontSize: 22,
+                            color: 'black',
+                            fontWeight: 'bold'
+                        }}> Send to Bank</Text>
+                    </View>
                 </View>
             </View>
             <View style={{ marginTop: 20, paddingHorizontal: 20 }}>

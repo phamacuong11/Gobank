@@ -31,9 +31,10 @@ export default function SignUpScreen({ navigation }) {
     }
     const SubmitConfirmPassClick = () => {
 
-        handleClickSingin()
+        confirmfocus.current.focus()
 
     }
+
 
 
 
@@ -49,7 +50,13 @@ export default function SignUpScreen({ navigation }) {
         const saveEmail = await AsyncStorage.getItem('email')
 
         if (fullName === '' || emailSignup === '' || passSignup === '' || confirmPass === '') {
-            alert('Vui lòng nhập đầy đủ thông tin')
+            ToastAndroid.showWithGravityAndOffset(
+                'Vui lòng điền đầy đủ thông tin',
+                ToastAndroid.LONG,
+                ToastAndroid.TOP,
+                25,
+                50
+            );
 
         } else if (passSignup != confirmPass) {
             ToastAndroid.show('Mật khẩu không giống nhau', ToastAndroid.SHORT);
@@ -76,6 +83,7 @@ export default function SignUpScreen({ navigation }) {
                 <View style={{
                     flex: 1, backgroundColor: 'white'
                 }}>
+
                     <View style={{ flex: 1, }}>
 
                         <TouchableOpacity style={{
@@ -89,12 +97,14 @@ export default function SignUpScreen({ navigation }) {
                         }}>
                             <Text style={{ fontSize: 30 }}>Sign Up</Text>
                         </View>
+                    </View>
+                    <View >
                         <View style={styles.view}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 20 }}>
                                 <Ionicons name='person-outline' size={32} color='#0540F2' />
                                 <Text> Full name</Text>
                             </View>
-                            <View style={{ alignItems: 'center', }}>
+                            <View style={{ alignItems: 'center', paddingHorizontal: 10 }}>
                                 <TextInput style={styles.textinput}
                                     value={fullName}
                                     ref={fullNamefocus}
@@ -107,7 +117,7 @@ export default function SignUpScreen({ navigation }) {
                                 <Ionicons name='mail-outline' size={32} color='#0540F2' />
                                 <Text> Email</Text>
                             </View>
-                            <View style={{ alignItems: 'center', }}>
+                            <View style={{ alignItems: 'center', paddingHorizontal: 10 }}>
                                 <TextInput style={styles.textinput}
                                     ref={emailfocus}
                                     value={emailSignup}
@@ -120,7 +130,7 @@ export default function SignUpScreen({ navigation }) {
                                 <Ionicons name='lock-closed-outline' size={32} color='#0540F2' />
                                 <Text> Password</Text>
                             </View>
-                            <View style={{ alignItems: 'center', }}>
+                            <View style={{ alignItems: 'center', paddingHorizontal: 10 }}>
                                 <TextInput style={styles.textinput}
                                     ref={passwordfocus}
                                     value={passSignup}
@@ -143,7 +153,7 @@ export default function SignUpScreen({ navigation }) {
                                 <Ionicons name='lock-closed-outline' size={32} color='#0540F2' />
                                 <Text> Confirm password</Text>
                             </View>
-                            <View style={{ alignItems: 'center', }}>
+                            <View style={{ alignItems: 'center', paddingHorizontal: 10 }}>
                                 <TextInput style={styles.textinput}
                                     ref={confirmfocus}
                                     value={confirmPass}
@@ -161,19 +171,19 @@ export default function SignUpScreen({ navigation }) {
                                 </TouchableOpacity>
                             </View>
                         </View>
-                        <View style={{ flex: 1, marginTop: 60, justifyContent: 'center', alignItems: 'center', paddingBottom: 50 }}>
-                            <TouchableOpacity onPress={handleClickSingin}>
-                                <Button text='Sign Up' />
+                    </View>
+                    <View style={{ flex: 1, marginTop: 60, justifyContent: 'center', alignItems: 'center', paddingBottom: 50 }}>
+                        <TouchableOpacity onPress={handleClickSingin}>
+                            <Button text='Sign Up' />
+                        </TouchableOpacity>
+                        <View style={{ flexDirection: 'row', marginTop: 20 }}>
+                            <Text> Have an account?</Text>
+                            <TouchableOpacity onPress={() => navigation.goBack()}>
+                                <Text style={{ color: '#0540F2', textDecorationLine: 'underline', fontWeight: 'bold' }}> Sign in</Text>
                             </TouchableOpacity>
-                            <View style={{ flexDirection: 'row', marginTop: 20 }}>
-                                <Text> Have an account?</Text>
-                                <TouchableOpacity onPress={() => navigation.goBack()}>
-                                    <Text style={{ color: '#0540F2', textDecorationLine: 'underline', fontWeight: 'bold' }}> Sign in</Text>
-                                </TouchableOpacity>
-                            </View>
                         </View>
                     </View>
-                </View >
+                </View>
             </ScrollView>
         </SafeAreaView >
     )
@@ -181,7 +191,7 @@ export default function SignUpScreen({ navigation }) {
 
 const styles = StyleSheet.create({
     textinput: {
-        width: 370,
+        width: '100%',
         borderWidth: 1,
         height: 40,
         borderRadius: 20,
@@ -189,6 +199,6 @@ const styles = StyleSheet.create({
         paddingLeft: 15
     },
     view: {
-        padding: 5
+        padding: 5,
     }
 })

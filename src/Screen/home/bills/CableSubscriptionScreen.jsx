@@ -56,11 +56,15 @@ export default function CableSubscriptionScreen({ navigation, route }) {
                         }}>
                             <Ionicons name='chevron-back' color='white' size={30} />
                         </TouchableOpacity>
-                        <Text style={{
-                            fontSize: 20,
-                            color: 'white',
-                            marginLeft: 80
-                        }}> Cable Subscription</Text>
+                        <View style={{
+                            alignItems: 'center',
+                            width: '100%', paddingRight: 40, justifyContent: 'center'
+                        }}>
+                            <Text style={{
+                                fontSize: 20,
+                                color: 'white',
+                            }}> Cable Subscription</Text>
+                        </View>
                     </View>
 
 

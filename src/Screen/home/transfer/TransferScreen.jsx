@@ -50,11 +50,15 @@ export default function TransferScreen({ navigation }) {
                             }}>
                                 <Ionicons name='chevron-back' color='white' size={30} />
                             </TouchableOpacity>
-                            <Text style={{
-                                fontSize: 20,
-                                color: 'white',
-                                marginLeft: 130
-                            }}> Tranfer</Text>
+                            <View style={{
+                                alignItems: 'center',
+                                width: '100%', paddingRight: 40, justifyContent: 'center'
+                            }}>
+                                <Text style={{
+                                    fontSize: 20,
+                                    color: 'white',
+                                }}> Tranfer</Text>
+                            </View>
                         </View>
 
 
