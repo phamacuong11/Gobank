@@ -172,13 +172,13 @@ export default function SignUpScreen({ navigation }) {
                             </View>
                         </View>
                     </View>
-                    <View style={{ flex: 1, marginTop: 60, justifyContent: 'center', alignItems: 'center', paddingBottom: 50 }}>
+                    <View style={styles.viewBottom}>
                         <TouchableOpacity onPress={handleClickSingin}>
                             <Button text='Sign Up' />
                         </TouchableOpacity>
                         <View style={{ flexDirection: 'row', marginTop: 20 }}>
                             <Text> Have an account?</Text>
-                            <TouchableOpacity onPress={() => navigation.goBack()}>
+                            <TouchableOpacity onPress={() => navigation.navigate("Login")}>
                                 <Text style={{ color: '#0540F2', textDecorationLine: 'underline', fontWeight: 'bold' }}> Sign in</Text>
                             </TouchableOpacity>
                         </View>
@@ -200,5 +200,12 @@ const styles = StyleSheet.create({
     },
     view: {
         padding: 5,
+    },
+    viewBottom: {
+        flex: 1,
+        marginTop: 60,
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingBottom: 50
     }
 })
