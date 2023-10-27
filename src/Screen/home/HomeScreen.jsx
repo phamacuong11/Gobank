@@ -1,5 +1,5 @@
 import { BottomTabBar, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Image, Text, View, Picker, TouchableOpacity, ScrollView } from 'react-native';
+import { Image, Text, View, Picker, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
@@ -29,26 +29,8 @@ export default function HomeScreen({ navigation, route }) {
             <ScrollView>
                 <View style={{ flexDirection: "row", justifyContent: 'space-between', zIndex: 1, position: 'absolute', }}>
 
-                    <View style={{
-                        zIndex: 1,
-                        width: 160,
-                        height: 90,
-                        backgroundColor: '#e3f0fa',
-                        borderBottomRightRadius: 80,
-                        borderBottomLeftRadius: 80,
-                        marignRight: 20
-
-                    }}>
-                        <View style={{
-                            zIndex: 1,
-                            width: 160,
-                            height: 90,
-                            backgroundColor: '#e3f0fa',
-                            borderBottomRightRadius: 80,
-                            borderBottomLeftRadius: 80,
-                            marginLeft: 250
-
-                        }}>
+                    <View style={styles.viewImage1}>
+                        <View style={styles.viewImage2}>
 
                         </View>
 
@@ -58,14 +40,7 @@ export default function HomeScreen({ navigation, route }) {
                 </View>
                 {/* Cards */}
                 <View  >
-                    <View style={{
-                        position: 'relative',
-                        flexDirection: 'row',
-                        paddingTop: 40,
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        paddingHorizontal: 20
-                    }}>
+                    <View style={styles.cardHeader}>
 
                         <Text style={{ fontSize: 25, color: '#10142E', zIndex: 100 }}>Hi,Fitsbyfunmi</Text>
                         <View style={{ flexDirection: 'row', alignItems: 'center', zIndex: 1000 }}>
@@ -85,13 +60,7 @@ export default function HomeScreen({ navigation, route }) {
                     </View>
                     <View style={{ alignItems: 'center', paddingVertical: 20 }}>
 
-                        <View style={{
-                            width: '100%',
-                            height: 210,
-                            backgroundColor: '#10142E',
-                            borderRadius: 30,
-                            paddingHorizontal: 20
-                        }}>
+                        <View style={styles.viewCardBody}>
 
                             <View style={{ paddingHorizontal: 10, flexDirection: 'row', paddingVertical: 20 }}>
                                 <Image
@@ -103,11 +72,7 @@ export default function HomeScreen({ navigation, route }) {
                                 <Ionicons name='chevron-down-outline' size={30} color='white' />
                             </View>
                             <Text style={{ color: 'white' }}> Current Balance</Text>
-                            <View style={{
-                                flexDirection: 'row',
-                                justifyContent: 'space-between',
-                                paddingVertical: 10
-                            }}>
+                            <View style={styles.viewCurrentBalance}>
                                 {showBalance ? <Text
                                     style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} >N155,600.24</Text> : <Text
                                         style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} >***********</Text>}
@@ -128,13 +93,7 @@ export default function HomeScreen({ navigation, route }) {
                 <View style={{ flexDirection: 'row', paddingHorizontal: 25, justifyContent: 'space-between', paddingVertical: 20 }}>
                     {/* Transfer */}
                     <View style={{ alignItems: 'center' }}>
-                        <TouchableOpacity style={{
-                            backgroundColor: '#e3f0fa',
-                            width: 50, height: 50,
-                            borderRadius: 30,
-                            alignItems: 'center',
-                            justifyContent: 'center'
-                        }} onPress={() => {
+                        <TouchableOpacity style={styles.viewButton} onPress={() => {
                             navigation.navigate('Transfer')
                         }}>
                             <Ionicons name='swap-horizontal-outline' size={25} color='#0540F2' fontWeight='bold' />
@@ -143,26 +102,14 @@ export default function HomeScreen({ navigation, route }) {
                     </View>
                     {/* Airtime */}
                     <View style={{ alignItems: 'center' }}>
-                        <TouchableOpacity style={{
-                            backgroundColor: '#e3f0fa',
-                            width: 50, height: 50,
-                            borderRadius: 30,
-                            alignItems: 'center',
-                            justifyContent: 'center'
-                        }}>
+                        <TouchableOpacity style={styles.viewButton}>
                             <Ionicons name='call-outline' size={25} color='#0540F2' fontWeight='bold' />
                         </TouchableOpacity>
                         <Text style={{ fontSize: 16, color: '#000000' }}> Airtime</Text>
                     </View>
                     {/* Data */}
                     <View style={{ alignItems: 'center' }}>
-                        <TouchableOpacity style={{
-                            backgroundColor: '#e3f0fa',
-                            width: 50, height: 50,
-                            borderRadius: 30,
-                            alignItems: 'center',
-                            justifyContent: 'center'
-                        }} onPress={() => {
+                        <TouchableOpacity style={styles.viewButton} onPress={() => {
                             navigation.navigate('Data')
                         }}>
                             <Ionicons name='trending-up-outline' size={25} color='#0540F2' fontWeight='bold' />
@@ -171,13 +118,7 @@ export default function HomeScreen({ navigation, route }) {
                     </View>
                     {/* Bills */}
                     <View style={{ alignItems: 'center' }}>
-                        <TouchableOpacity style={{
-                            backgroundColor: '#e3f0fa',
-                            width: 50, height: 50,
-                            borderRadius: 30,
-                            alignItems: 'center',
-                            justifyContent: 'center'
-                        }} onPress={() => {
+                        <TouchableOpacity style={styles.viewButton} onPress={() => {
                             navigation.navigate('Bils')
                         }}>
                             <Ionicons name='clipboard-outline' size={25} color='#0540F2' fontWeight='bold' />
@@ -186,13 +127,7 @@ export default function HomeScreen({ navigation, route }) {
                     </View>
                     {/* More */}
                     <View style={{ alignItems: 'center' }}>
-                        <TouchableOpacity style={{
-                            backgroundColor: '#e3f0fa',
-                            width: 50, height: 50,
-                            borderRadius: 30,
-                            alignItems: 'center',
-                            justifyContent: 'center'
-                        }} onPress={() => {
+                        <TouchableOpacity style={styles.viewButton} onPress={() => {
                             navigation.navigate('More')
                         }}>
                             <Ionicons name='arrow-forward-outline' size={25} color='#0540F2' fontWeight='bold' />
@@ -205,14 +140,7 @@ export default function HomeScreen({ navigation, route }) {
                 </View>
                 <View>
                     <View style={{ paddingHorizontal: 30, paddingVertical: 10 }}>
-                        <TouchableOpacity style={{
-                            backgroundColor: '#e3f0fa',
-                            height: 70,
-                            flexDirection: 'row',
-                            alignItems: 'center',
-                            borderRadius: 20,
-                            paddingHorizontal: 10
-                        }} onPress={TransactionHistory}>
+                        <TouchableOpacity style={styles.button} onPress={TransactionHistory}>
                             <View>
                                 <Ionicons name='reload-outline' color='#0540F2' size={30} fontWeight='bold' />
                             </View>
@@ -225,14 +153,7 @@ export default function HomeScreen({ navigation, route }) {
                 </View>
                 <View>
                     <View style={{ paddingHorizontal: 30, paddingVertical: 10 }}>
-                        <TouchableOpacity style={{
-                            backgroundColor: '#e3f0fa',
-                            height: 70,
-                            flexDirection: 'row',
-                            alignItems: 'center',
-                            borderRadius: 20,
-                            paddingHorizontal: 10
-                        }}>
+                        <TouchableOpacity style={styles.button}>
                             <View>
                                 <Ionicons name='analytics-outline' color='#0540F2' size={30} fontWeight='bold' />
                             </View>
@@ -245,14 +166,7 @@ export default function HomeScreen({ navigation, route }) {
                 </View>
                 <View style={{ paddingBottom: 50 }}>
                     <View style={{ paddingHorizontal: 30, paddingVertical: 10, }}>
-                        <TouchableOpacity style={{
-                            backgroundColor: '#e3f0fa',
-                            height: 70,
-                            flexDirection: 'row',
-                            alignItems: 'center',
-                            borderRadius: 20,
-                            paddingHorizontal: 10
-                        }}>
+                        <TouchableOpacity style={styles.button}>
                             <View>
                                 <Ionicons name='nuclear-outline' color='#0540F2' size={30} fontWeight='bold' />
                             </View>
@@ -267,3 +181,60 @@ export default function HomeScreen({ navigation, route }) {
         </View >
     )
 }
+const styles = StyleSheet.create({
+    viewImage1: {
+        zIndex: 1,
+        width: 160,
+        height: 90,
+        backgroundColor: '#e3f0fa',
+        borderBottomRightRadius: 80,
+        borderBottomLeftRadius: 80,
+        marignRight: 20
+
+    },
+    viewImage2: {
+        zIndex: 1,
+        width: 160,
+        height: 90,
+        backgroundColor: '#e3f0fa',
+        borderBottomRightRadius: 80,
+        borderBottomLeftRadius: 80,
+        marginLeft: 250
+
+    },
+    cardHeader: {
+        position: 'relative',
+        flexDirection: 'row',
+        paddingTop: 40,
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingHorizontal: 20
+    },
+    viewCardBody: {
+        width: '100%',
+        height: 210,
+        backgroundColor: '#10142E',
+        borderRadius: 30,
+        paddingHorizontal: 20
+    },
+    viewCurrentBalance: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingVertical: 10
+    },
+    viewButton: {
+        backgroundColor: '#e3f0fa',
+        width: 50, height: 50,
+        borderRadius: 30,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    button: {
+        backgroundColor: '#e3f0fa',
+        height: 70,
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderRadius: 20,
+        paddingHorizontal: 10
+    }
+})

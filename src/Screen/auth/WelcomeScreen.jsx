@@ -30,19 +30,12 @@ export default function WelcomeScreen({ navigation }) {
                         width: 200, height: 200, marginTop: 100,
                     }} source={inconWelcome} ></Image>
                     <Text style={{
-                        fontSize: 30, color: 'black', fontWeight: 'bold', paddingVertical: 30
+                        fontSize: 30, color: 'black', fontWeight: 'bold', paddingVertical: 10
                     }}> WELCOME</Text>
-                    <Text style={{ paddingHorizontal: 30, color: '#000000' }}> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, ullam accusantium.</Text>
+                    <Text style={{ paddingHorizontal: 30, color: '#000000', paddingBottom: 50 }}> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, ullam accusantium.</Text>
                 </View>
 
-                <View style={{
-                    flex: 1,
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    paddingVertical: 60,
-                    paddingHorizontal: 20
-
-                }}>
+                <View style={styles.viewmain}>
                     <View style={{ width: '50%', paddingLeft: 5 }}>
                         <TouchableOpacity style={styles.buttonLogin}
                             onPress={handleClickLogin}>
@@ -63,6 +56,14 @@ export default function WelcomeScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+    viewmain: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingVertical: 40,
+        paddingHorizontal: 20,
+        backgroundColor: 'white'
+
+    },
     buttonLogin: {
         height: 40,
         borderWidth: 3,
