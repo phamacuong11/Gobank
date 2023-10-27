@@ -60,7 +60,7 @@ export default function SendToBankScreen1({ navigation, route }) {
                     <Image style={{
                         width: 80,
                         height: 30
-                    }} source={require('../../../assets/logosacombank.png')} />
+                    }} source={require('../../../../assets/logosacombank.png')} />
                 </View>
                 <View style={{ marginLeft: 30 }}>
                     <Text style={{ fontSize: 20, color: '#0540F2' }}>Mogaji Olatubosun ojo</Text>
@@ -72,7 +72,7 @@ export default function SendToBankScreen1({ navigation, route }) {
                     <Image style={{
                         width: 80,
                         height: 30
-                    }} source={require('../../../assets/logosacombank.png')} />
+                    }} source={require('../../../../assets/logosacombank.png')} />
                 </View>
                 <View style={{ marginLeft: 30 }}>
                     <Text style={{ fontSize: 20, color: '#0540F2' }}>Mogaji Olatubosun ojo</Text>
@@ -84,7 +84,7 @@ export default function SendToBankScreen1({ navigation, route }) {
                     <Image style={{
                         width: 80,
                         height: 30
-                    }} source={require('../../../assets/logosacombank.png')} />
+                    }} source={require('../../../../assets/logosacombank.png')} />
                 </View>
                 <View style={{ marginLeft: 30 }}>
                     <Text style={{ fontSize: 20, color: '#0540F2' }}>Mogaji Olatubosun ojo</Text>

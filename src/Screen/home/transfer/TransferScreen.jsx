@@ -16,31 +16,9 @@ export default function TransferScreen({ navigation }) {
                     barStyle='light-content'
                 />
                 <View style={{ flexDirection: "row", justifyContent: 'space-between', position: 'absolute', }}>
-                    <View style={{
-                        width: '100%',
-                        height: 250,
-                        backgroundColor: '#10142E',
-                        borderBottomLeftRadius: 30,
-                        borderBottomRightRadius: 30
-                    }}>
-                        <View style={{
-                            width: 160,
-                            height: 90,
-                            backgroundColor: '#000055',
-                            borderBottomRightRadius: 80,
-                            borderBottomLeftRadius: 80,
-                            marignRight: 20
-
-                        }}>
-                            <View style={{
-                                width: 160,
-                                height: 90,
-                                backgroundColor: '#000099',
-                                borderBottomRightRadius: 80,
-                                borderBottomLeftRadius: 80,
-                                marginLeft: 250
-
-                            }}>
+                    <View style={styles.view1}>
+                        <View style={styles.view2}>
+                            <View style={styles.view3}>
 
                             </View>
                         </View>
@@ -70,7 +48,7 @@ export default function TransferScreen({ navigation }) {
                                         width: 30,
                                         height: 30,
                                     }}
-                                    source={require('../../../assets/VN.png')} />
+                                    source={require('../../../../assets/VN.png')} />
                                 <Ionicons name='chevron-down-outline' size={30} color='white' />
                             </View>
                             <Text style={{ color: 'white' }}> Current Balance</Text>
@@ -80,8 +58,8 @@ export default function TransferScreen({ navigation }) {
                                 paddingVertical: 10
                             }}>
                                 {showBalance ? <Text
-                                    style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} >{balance}</Text> : <Text
-                                        style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} >***********</Text>}
+                                    style={styles.textbalance} >{balance}</Text> : <Text
+                                        style={styles.textbalance} >***********</Text>}
 
                                 <TouchableOpacity onPress={() => {
                                     setShowBalance(!showBalance)
@@ -95,37 +73,23 @@ export default function TransferScreen({ navigation }) {
                             </View>
                             <View>
                                 <View style={{ paddingHorizontal: 5, paddingVertical: 20, }}>
-                                    <TouchableOpacity style={{
-                                        backgroundColor: '#e3f0fa',
-                                        height: 70,
-                                        flexDirection: 'row',
-                                        alignItems: 'center',
-                                        borderRadius: 30,
-                                        paddingHorizontal: 10
-                                    }} onPress={Selectbank}>
+                                    <TouchableOpacity style={styles.button} onPress={Selectbank}>
                                         <View>
                                             <Ionicons name='reload-outline' color='blue' size={30} fontWeight='bold' />
                                         </View>
                                         <View style={{ justifyContent: 'center', }}>
-                                            <Text style={{ fontSize: 20, color: 'blue', fontWeight: 'bold' }}>  Send to Go Bank</Text>
+                                            <Text style={styles.text}>  Send to Go Bank</Text>
                                             <Text style={{ marginLeft: 10, color: 'black' }}> Send money to GBG account </Text>
                                         </View>
                                     </TouchableOpacity>
                                 </View>
                                 <View style={{ paddingHorizontal: 5, paddingVertical: 5, }}>
-                                    <TouchableOpacity style={{
-                                        backgroundColor: '#e3f0fa',
-                                        height: 70,
-                                        flexDirection: 'row',
-                                        alignItems: 'center',
-                                        borderRadius: 30,
-                                        paddingHorizontal: 10
-                                    }}>
+                                    <TouchableOpacity style={styles.button}>
                                         <View>
                                             <Ionicons name='reload-outline' color='blue' size={30} fontWeight='bold' />
                                         </View>
                                         <View style={{ justifyContent: 'center', }}>
-                                            <Text style={{ fontSize: 20, color: 'blue', fontWeight: 'bold' }}>  Send to Go Other Bank</Text>
+                                            <Text style={styles.text}>  Send to Go Other Bank</Text>
                                             <Text style={{ marginLeft: 10, color: 'black' }}> Send money to Other banks </Text>
                                         </View>
                                     </TouchableOpacity>
@@ -139,4 +103,46 @@ export default function TransferScreen({ navigation }) {
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    button: {
+        backgroundColor: '#e3f0fa',
+        height: 70,
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderRadius: 30,
+        paddingHorizontal: 10
+    },
+    text: {
+        fontSize: 20,
+        color: 'blue',
+        fontWeight: 'bold'
+    },
+    textbalance: {
+        color: 'white',
+        fontSize: 25,
+        fontWeight: 'bold'
+    },
+    view1: {
+        width: '100%',
+        height: 250,
+        backgroundColor: '#10142E',
+        borderBottomLeftRadius: 30,
+        borderBottomRightRadius: 30
+    },
+    view2: {
+        width: 160,
+        height: 90,
+        backgroundColor: '#000055',
+        borderBottomRightRadius: 80,
+        borderBottomLeftRadius: 80,
+        marignRight: 20
+    },
+    view3: {
+        width: 160,
+        height: 90,
+        backgroundColor: '#000099',
+        borderBottomRightRadius: 80,
+        borderBottomLeftRadius: 80,
+        marginLeft: 250
+    }
+})

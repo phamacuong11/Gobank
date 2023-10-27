@@ -2,7 +2,10 @@ import { StyleSheet, Text, View, Image, Touchable, TouchableOpacity, StatusBar }
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
+
+
 export default function WelcomeScreen({ navigation }) {
+    const inconWelcome = require('../../../assets/iconWelcom.png')
     const handleClickSingup = () => {
         navigation.push('Signup')
     }
@@ -25,7 +28,7 @@ export default function WelcomeScreen({ navigation }) {
                     {/* iMAGE */}
                     <Image style={{
                         width: 200, height: 200, marginTop: 100,
-                    }} source={require("../../assets/iconWelcom.png")} ></Image>
+                    }} source={inconWelcome} ></Image>
                     <Text style={{
                         fontSize: 30, color: 'black', fontWeight: 'bold', paddingVertical: 30
                     }}> WELCOME</Text>
@@ -40,29 +43,18 @@ export default function WelcomeScreen({ navigation }) {
                     paddingHorizontal: 20
 
                 }}>
-                    <TouchableOpacity style={{
-                        width: 155,
-                        height: 40,
-                        borderWidth: 3,
-                        borderColor: '#0540F2',
-                        borderRadius: 20,
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                    }}
-                        onPress={handleClickLogin}>
-                        <Text style={{ color: '#0540F2', fontWeight: 'bold' }}> LOGIN</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={{
-                        width: 155,
-                        height: 40,
-                        backgroundColor: '#0540F2',
-                        borderRadius: 20,
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}
-                        onPress={handleClickSingup}>
-                        <Text style={{ color: '#ffffff', fontWeight: 'bold' }}> SIGNUP</Text>
-                    </TouchableOpacity>
+                    <View style={{ width: '50%', paddingLeft: 5 }}>
+                        <TouchableOpacity style={styles.buttonLogin}
+                            onPress={handleClickLogin}>
+                            <Text style={{ color: '#0540F2', fontWeight: 'bold' }}> LOGIN</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View style={{ width: '50%', paddingLeft: 5 }}>
+                        <TouchableOpacity style={styles.buttonSignup}
+                            onPress={handleClickSingup}>
+                            <Text style={{ color: '#ffffff', fontWeight: 'bold' }}> SIGNUP</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
             </View>
 
@@ -70,4 +62,20 @@ export default function WelcomeScreen({ navigation }) {
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    buttonLogin: {
+        height: 40,
+        borderWidth: 3,
+        borderColor: '#0540F2',
+        borderRadius: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    buttonSignup: {
+        height: 40,
+        backgroundColor: '#0540F2',
+        borderRadius: 20,
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
+})

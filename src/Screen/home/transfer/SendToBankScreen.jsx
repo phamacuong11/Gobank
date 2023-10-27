@@ -34,21 +34,14 @@ export default function SendToBankScreen({ navigation, route }) {
     return (
         <SafeAreaView>
             <View>
-                <View style={{ paddingHorizontal: 10, flexDirection: 'row', alignItems: 'center', marginTop: 20 }}>
+                <View style={styles.header}>
                     <TouchableOpacity onPress={() => {
                         navigation.goBack()
                     }}>
                         <Ionicons name='chevron-back' color='black' size={30} />
                     </TouchableOpacity>
-                    <View style={{
-                        alignItems: 'center',
-                        width: '100%', paddingRight: 40, justifyContent: 'center'
-                    }}>
-                        <Text style={{
-                            fontSize: 22,
-                            color: 'black',
-                            fontWeight: 'bold'
-                        }}> Send to Bank</Text>
+                    <View style={styles.viewtext}>
+                        <Text style={styles.textheader}> Send to Bank</Text>
                     </View>
                 </View>
             </View>
@@ -56,35 +49,19 @@ export default function SendToBankScreen({ navigation, route }) {
                 <Text style={{ fontSize: 20 }}> Select Bank</Text>
             </View>
             <View style={{ marginTop: 20, paddingHorizontal: 10 }}>
-                <View style={{
-                    backgroundColor: '#e3f0fa',
-                    borderRadius: 20,
-                    paddingHorizontal: 20,
-                    paddingVertical: 10,
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                }}>
-                    <Image style={{
-                        width: 80,
-                        height: 30
-                    }} source={logo} />
+                <View style={styles.viewmain}>
+                    <Image style={{ width: 80, height: 30 }}
+                        source={logo} />
 
                     <Text style={{ paddingLeft: 10, fontSize: 15 }}>{bankName} </Text>
                 </View>
             </View>
-            <View style={{ marginTop: 50, paddingHorizontal: 20, flexDirection: 'row', justifyContent: 'space-between' }}>
+            <View style={styles.view}>
                 <Text style={{ color: '#000000', fontSize: 18 }}> Enter Account Number</Text>
 
             </View>
             <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
-                <View style={{
-                    backgroundColor: '#e3f0fa',
-                    borderRadius: 20,
-                    paddingHorizontal: 30,
-                    paddingVertical: 10,
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                }}>
+                <View style={styles.view1}>
                     <Ionicons name='person-outline' size={30} color='blue' />
                     <TextInput style={{ paddingHorizontal: 10 }}
                         placeholder='Enter 10 digit numbers'
@@ -109,4 +86,47 @@ export default function SendToBankScreen({ navigation, route }) {
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    // header
+    header: {
+        paddingHorizontal: 10,
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginTop: 20
+    },
+    viewtext: {
+        alignItems: 'center',
+        width: '100%',
+        paddingRight: 40,
+        justifyContent: 'center'
+    },
+    textheader: {
+        fontSize: 22,
+        color: 'black',
+        fontWeight: 'bold'
+    },
+    // select bank
+    viewmain: {
+        backgroundColor: '#e3f0fa',
+        borderRadius: 20,
+        paddingHorizontal: 20,
+        paddingVertical: 10,
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    // Enter account number
+    view: {
+        marginTop: 50,
+        paddingHorizontal: 20,
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+    view1: {
+        backgroundColor: '#e3f0fa',
+        borderRadius: 20,
+        paddingHorizontal: 30,
+        paddingVertical: 10,
+        flexDirection: 'row',
+        alignItems: 'center',
+    }
+})

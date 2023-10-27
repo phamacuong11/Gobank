@@ -75,7 +75,7 @@ export default function HomeScreen({ navigation, route }) {
                                     right: 20,
                                     width: 50,
                                     height: 50
-                                }} source={require('../../assets/UserAvatar.png')} />
+                                }} source={require('../../../assets/UserAvatar.png')} />
                             <TouchableOpacity onPress={Notifi}>
 
                                 <Ionicons style={{ right: 0 }} name='notifications-outline' size={21} color="black" />
@@ -99,7 +99,7 @@ export default function HomeScreen({ navigation, route }) {
                                         width: 30,
                                         height: 30,
                                     }}
-                                    source={require('../../assets/VN.png')} />
+                                    source={require('../../../assets/VN.png')} />
                                 <Ionicons name='chevron-down-outline' size={30} color='white' />
                             </View>
                             <Text style={{ color: 'white' }}> Current Balance</Text>

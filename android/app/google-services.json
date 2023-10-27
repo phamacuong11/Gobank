@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "915330058210",
+    "project_id": "gobank-2f0f5",
+    "storage_bucket": "gobank-2f0f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:915330058210:android:233af6d61d2aa2582b5bbb",
+        "android_client_info": {
+          "package_name": "com.phamacuongag.chungKhoanProject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZ_oowwht88L-ZTd0Z02XUhsHsQ2LSXM0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

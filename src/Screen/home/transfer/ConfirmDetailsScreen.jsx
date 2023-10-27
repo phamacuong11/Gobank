@@ -75,7 +75,7 @@ export default function ConfirmDetailsScreen({ navigation, route }) {
                         <View style={{ alignItems: 'center' }}>
                             <Text style={{ fontSize: 30, fontWeight: 'bold' }}>{enterAmount}</Text>
                         </View>
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20, marginTop: 20, paddingTop: 10 }}>
+                        <View style={styles.viewmain}>
                             <View>
                                 <Text style={{ fontSize: 16 }}> Bank</Text>
                             </View>
@@ -85,39 +85,39 @@ export default function ConfirmDetailsScreen({ navigation, route }) {
                                     height: 20
                                 }}
                                     source={logo} />
-                                <Text style={{ fontSize: 16, fontWeight: 'bold' }}> {bankName}</Text>
+                                <Text style={styles.text}> {bankName}</Text>
                             </View>
                         </View>
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20, marginTop: 20, paddingTop: 10 }}>
+                        <View style={styles.viewmain}>
                             <View>
                                 <Text style={{ fontSize: 16 }}> Account Number</Text>
                             </View>
                             <View style={{ flexDirection: 'row' }}>
-                                <Text style={{ fontSize: 16, fontWeight: 'bold' }}> {accountNumber}</Text>
+                                <Text style={styles.text}> {accountNumber}</Text>
                             </View>
                         </View>
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20, marginTop: 20, paddingTop: 10 }}>
+                        <View style={styles.viewmain}>
                             <View>
                                 <Text style={{ fontSize: 16 }}> Name</Text>
                             </View>
                             <View style={{ flexDirection: 'row' }}>
-                                <Text style={{ fontSize: 16, fontWeight: 'bold' }}> MogaJi Olatubosun Oji</Text>
+                                <Text style={styles.text}> MogaJi Olatubosun Oji</Text>
                             </View>
                         </View>
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20, marginTop: 20, paddingTop: 10 }}>
+                        <View style={styles.viewmain}>
                             <View>
                                 <Text style={{ fontSize: 16 }}> Amount</Text>
                             </View>
                             <View style={{ flexDirection: 'row' }}>
-                                <Text style={{ fontSize: 16, fontWeight: 'bold' }}> {accountNumber}</Text>
+                                <Text style={styles.text}> {accountNumber}</Text>
                             </View>
                         </View>
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20, marginTop: 20, paddingTop: 10 }}>
+                        <View style={styles.viewmain}>
                             <View>
                                 <Text style={{ fontSize: 16 }}> Transaction Fee</Text>
                             </View>
                             <View style={{ flexDirection: 'row' }}>
-                                <Text style={{ fontSize: 16, fontWeight: 'bold' }}> 10.000</Text>
+                                <Text style={styles.text}> 10.000</Text>
                             </View>
                         </View>
                         <View style={{ paddingHorizontal: 20, marginTop: 30 }}>
@@ -127,13 +127,8 @@ export default function ConfirmDetailsScreen({ navigation, route }) {
                             </View>
                         </View>
                         <View style={{ paddingHorizontal: 20, paddingVertical: 30 }} >
-                            <TouchableOpacity style={{
-                                backgroundColor: 'blue',
-                                padding: 15,
-                                borderRadius: 20,
-                                alignItems: 'center',
-                                justifyContent: 'center'
-                            }} onPress={handleClickEnterYourCode}>
+                            <TouchableOpacity style={styles.buttonPay}
+                                onPress={handleClickEnterYourCode}>
                                 <Text style={{ color: 'white', fontSize: 20 }}> Pay</Text>
                             </TouchableOpacity>
                         </View>
@@ -144,4 +139,23 @@ export default function ConfirmDetailsScreen({ navigation, route }) {
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    viewmain: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingHorizontal: 20,
+        marginTop: 20,
+        paddingTop: 10
+    },
+    text: {
+        fontSize: 16,
+        fontWeight: 'bold'
+    },
+    buttonPay: {
+        backgroundColor: 'blue',
+        padding: 15,
+        borderRadius: 20,
+        alignItems: 'center',
+        justifyContent: 'center'
+    }
+})

@@ -24,59 +24,22 @@ export default function PinAddNewCardScreen({ navigation }) {
                     <Text style={{ width: '90%', fontWeight: 'bold', paddingVertical: 5 }}> Please enter your four digit pin that we confirm its you</Text>
                 </View>
                 <View style={{ justifyContent: 'space-between', flexDirection: 'row', paddingHorizontal: 40, marginTop: 50 }}>
-                    <View style={{
-                        width: '20%',
-                        borderWidth: 1,
-                        borderRadius: 5,
-                        padding: 15,
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}>
+                    <View style={styles.viewEllipse}>
                         <Ionicons name='ellipse' color='grey' size={25} />
                     </View>
-                    <View style={{
-                        width: '20%',
-                        borderWidth: 1,
-                        borderRadius: 5,
-                        padding: 15,
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}>
+                    <View style={styles.viewEllipse}>
                         <Ionicons name='ellipse' color='grey' size={25} />
                     </View>
-                    <View style={{
-                        width: '20%',
-                        borderWidth: 1,
-                        borderRadius: 5,
-                        padding: 15,
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}>
+                    <View style={styles.viewEllipse}>
                         <Ionicons name='ellipse' color='grey' size={25} />
                     </View>
-                    <View style={{
-                        width: '20%',
-                        borderWidth: 1,
-                        borderRadius: 5,
-                        padding: 15,
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}>
+                    <View style={styles.viewEllipse}>
                         <Ionicons name='ellipse' color='grey' size={25} />
                     </View>
                 </View>
                 <View style={{ paddingHorizontal: 20, marginTop: 100 }}>
                     <TouchableOpacity
-                        style={{
-                            flexDirection: 'row',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            borderWidth: 1,
-                            borderColor: 'blue',
-                            borderRadius: 30,
-                            padding: 10,
-                            backgroundColor: 'blue'
-                        }}>
+                        style={styles.buttonConfirm}>
                         <Text style={{ color: 'white', fontSize: 20 }}>Confirm</Text>
                     </TouchableOpacity>
                 </View>
@@ -85,4 +48,23 @@ export default function PinAddNewCardScreen({ navigation }) {
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    viewEllipse: {
+        width: '20%',
+        borderWidth: 1,
+        borderRadius: 5,
+        padding: 15,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    buttonConfirm: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderWidth: 1,
+        borderColor: 'blue',
+        borderRadius: 30,
+        padding: 10,
+        backgroundColor: 'blue'
+    }
+})

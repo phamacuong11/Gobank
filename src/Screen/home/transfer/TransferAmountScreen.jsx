@@ -62,14 +62,7 @@ export default function TransferAmountScreen({ navigation, route }) {
                         <Text style={{ fontSize: 20 }}> Select Bank</Text>
                     </View>
                     <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
-                        <View style={{
-                            backgroundColor: '#e3f0fa',
-                            borderRadius: 20,
-                            paddingHorizontal: 30,
-                            paddingVertical: 10,
-                            flexDirection: 'row',
-                            alignItems: 'center',
-                        }}>
+                        <View style={styles.view}>
 
                             <View style={{
 
@@ -94,14 +87,7 @@ export default function TransferAmountScreen({ navigation, route }) {
 
                         </View>
                         <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
-                            <View style={{
-                                backgroundColor: '#e3f0fa',
-                                borderRadius: 20,
-                                paddingHorizontal: 30,
-                                paddingVertical: 10,
-                                flexDirection: 'row',
-                                alignItems: 'center',
-                            }}>
+                            <View style={styles.view}>
                                 <TextInput style={{
                                     paddingHorizontal: 10,
                                     fontWeight: 'bold',
@@ -124,14 +110,7 @@ export default function TransferAmountScreen({ navigation, route }) {
 
                         </View>
                         <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
-                            <View style={{
-                                backgroundColor: '#e3f0fa',
-                                borderRadius: 20,
-                                paddingHorizontal: 30,
-                                paddingVertical: 10,
-                                flexDirection: 'row',
-                                alignItems: 'center',
-                            }}>
+                            <View style={styles.view}>
                                 <TextInput style={{ paddingHorizontal: 10 }}
                                     placeholder='Transaction remark(Optional)'
                                     placeholderTextColor='grey'
@@ -158,4 +137,13 @@ export default function TransferAmountScreen({ navigation, route }) {
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    view: {
+        backgroundColor: '#e3f0fa',
+        borderRadius: 20,
+        paddingHorizontal: 30,
+        paddingVertical: 10,
+        flexDirection: 'row',
+        alignItems: 'center',
+    }
+})

@@ -31,13 +31,7 @@ export default function AddNewCardScreen({ navigation }) {
                         fontSize: 14,
                         fontWeight: 'bold'
                     }}> Carholder Name</Text>
-                    <View style={{
-                        borderWidth: 1,
-                        borderRadius: 10,
-                        padding: 5,
-                        backgroundColor: '#DDDDDD',
-                        marginTop: 10
-                    }}>
+                    <View style={styles.viewTextinput1}>
                         <TextInput />
                     </View>
                 </View>
@@ -47,18 +41,10 @@ export default function AddNewCardScreen({ navigation }) {
                             fontSize: 14,
                             fontWeight: 'bold'
                         }}> Expiry Date</Text>
-                        <View style={{
-                            width: 180,
-                            borderWidth: 1,
-                            borderRadius: 10,
-                            padding: 5,
-                            backgroundColor: '#DDDDDD',
-                            marginTop: 10,
-                            flexDirection: 'row',
-                        }}>
+                        <View style={styles.viewTextinput2}>
                             <TextInput style={{ width: '100%', paddingRight: 30 }} />
                             <TouchableOpacity>
-                                <Ionicons style={{ position: 'absolute', top: 0, right: 0 }} name='alert-circle-outline' color='grey' size={30} />
+                                <Ionicons style={styles.icon} name='alert-circle-outline' color='grey' size={30} />
 
                             </TouchableOpacity>
 
@@ -69,18 +55,10 @@ export default function AddNewCardScreen({ navigation }) {
                             fontSize: 14,
                             fontWeight: 'bold'
                         }}> CVV</Text>
-                        <View style={{
-                            width: 180,
-                            borderWidth: 1,
-                            borderRadius: 10,
-                            padding: 5,
-                            backgroundColor: '#DDDDDD',
-                            marginTop: 10,
-                            flexDirection: 'row',
-                        }}>
+                        <View style={styles.viewTextinput3}>
                             <TextInput style={{ width: '100%', paddingRight: 30 }} />
                             <TouchableOpacity>
-                                <Ionicons style={{ position: 'absolute', top: 0, right: 0 }} name='alert-circle-outline' color='grey' size={30} />
+                                <Ionicons style={styles.icon} name='alert-circle-outline' color='grey' size={30} />
                             </TouchableOpacity>
                         </View>
                     </View>
@@ -90,28 +68,13 @@ export default function AddNewCardScreen({ navigation }) {
                         fontSize: 14,
                         fontWeight: 'bold'
                     }}> Card Number</Text>
-                    <View style={{
-                        borderWidth: 1,
-                        borderRadius: 10,
-                        padding: 5,
-                        backgroundColor: '#DDDDDD',
-                        marginTop: 10
-                    }}>
+                    <View style={styles.viewTextinput4}>
                         <TextInput />
                     </View>
                 </View>
                 <View style={{ paddingHorizontal: 20, marginTop: 30 }}>
                     <TouchableOpacity
-                        style={{
-                            flexDirection: 'row',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            borderWidth: 1,
-                            borderColor: '#0540F2',
-                            borderRadius: 30,
-                            padding: 10,
-                            backgroundColor: 'blue'
-                        }} onPress={ClickNextEnterYourPin}>
+                        style={styles.button} onPress={ClickNextEnterYourPin}>
                         <Text style={{ color: 'white', fontSize: 20 }}> Confirm</Text>
                     </TouchableOpacity>
                 </View>
@@ -120,4 +83,52 @@ export default function AddNewCardScreen({ navigation }) {
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    viewTextinput1: {
+        borderWidth: 1,
+        borderRadius: 10,
+        padding: 5,
+        backgroundColor: '#DDDDDD',
+        marginTop: 10
+    },
+    viewTextinput2: {
+        width: 180,
+        borderWidth: 1,
+        borderRadius: 10,
+        padding: 5,
+        backgroundColor: '#DDDDDD',
+        marginTop: 10,
+        flexDirection: 'row',
+    },
+    viewTextinput3: {
+        width: 180,
+        borderWidth: 1,
+        borderRadius: 10,
+        padding: 5,
+        backgroundColor: '#DDDDDD',
+        marginTop: 10,
+        flexDirection: 'row',
+    },
+    viewTextinput4: {
+        borderWidth: 1,
+        borderRadius: 10,
+        padding: 5,
+        backgroundColor: '#DDDDDD',
+        marginTop: 10
+    },
+    button: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderWidth: 1,
+        borderColor: '#0540F2',
+        borderRadius: 30,
+        padding: 10,
+        backgroundColor: 'blue'
+    },
+    icon: {
+        position: 'absolute',
+        top: 0,
+        right: 0
+    }
+})

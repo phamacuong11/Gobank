@@ -8,6 +8,9 @@ import { ScrollView } from 'react-native'
 import { useState } from 'react'
 
 export default function BillsScreen({ navigation }) {
+
+    const logovn = require('../../../../assets/VN.png')
+
     const [showBalance, setShowBalance] = useState(true)
     const [balance] = useState('N155,600.24')
 
@@ -22,31 +25,9 @@ export default function BillsScreen({ navigation }) {
                 <View>
                     <StatusBar barStyle='light-content' />
                     <View style={{ flexDirection: "row", justifyContent: 'space-between', position: 'absolute', }}>
-                        <View style={{
-                            width: '100%',
-                            height: 250,
-                            backgroundColor: '#10142E',
-                            borderBottomLeftRadius: 30,
-                            borderBottomRightRadius: 30
-                        }}>
-                            <View style={{
-                                width: 160,
-                                height: 90,
-                                backgroundColor: '#000055',
-                                borderBottomRightRadius: 80,
-                                borderBottomLeftRadius: 80,
-                                marignRight: 20
-
-                            }}>
-                                <View style={{
-                                    width: 160,
-                                    height: 90,
-                                    backgroundColor: '#000099',
-                                    borderBottomRightRadius: 80,
-                                    borderBottomLeftRadius: 80,
-                                    marginLeft: 250
-
-                                }}>
+                        <View style={styles.view1}>
+                            <View style={styles.view2}>
+                                <View style={styles.view3}>
                                 </View>
                             </View>
                         </View>
@@ -62,28 +43,21 @@ export default function BillsScreen({ navigation }) {
                             width: '100%', paddingRight: 60, justifyContent: 'center'
                         }}>
                             <Text style={{
-                                fontSize: 20,
-                                color: 'white',
+                                fontSize: 20, color: 'white',
                             }}> Bills</Text>
                         </View>
                     </View>
                     <View style={{ paddingHorizontal: 20 }}>
 
                         <View style={{ paddingHorizontal: 5, flexDirection: 'row', marginTop: 40 }}>
-                            <Image
-                                style={{
-                                    width: 30,
-                                    height: 30,
-                                }}
-                                source={require('../../../assets/VN.png')} />
+                            <Image style={{
+                                width: 30, height: 30,
+                            }}
+                                source={logovn} />
                             <Ionicons name='chevron-down-outline' size={30} color='white' />
                         </View>
                         <Text style={{ color: 'white' }}> Current Balance</Text>
-                        <View style={{
-                            flexDirection: 'row',
-                            justifyContent: 'space-between',
-                            paddingVertical: 10
-                        }}>
+                        <View style={styles.viewCurrentBalance}>
                             {showBalance ? <Text
                                 style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} >{balance}</Text> : <Text
                                     style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} >***********</Text>}
@@ -102,210 +76,82 @@ export default function BillsScreen({ navigation }) {
                             <View style={{
                                 paddingHorizontal: 5, paddingVertical: 5, marginTop: 30
                             }}>
-                                <TouchableOpacity style={{
-                                    backgroundColor: '#e3f0fa',
-                                    height: 50,
-                                    flexDirection: 'row',
-                                    alignItems: 'center',
-                                    borderRadius: 30,
-                                    paddingHorizontal: 10
-                                }} onPress={NextBills} >
-                                    <View style={{
-                                        width: 50,
-                                        height: 25,
-                                        borderWidth: 2,
-                                        borderRadius: 50,
-                                        justifyContent: 'center',
-                                        alignItems: 'center'
-                                    }}>
+                                <TouchableOpacity style={styles.button} onPress={NextBills} >
+                                    <View style={styles.viewbutton}>
                                         <Text style={{ fontWeight: 'bold' }}>MTN</Text>
                                     </View>
                                     <View style={{ justifyContent: 'center', }}>
-                                        <Text style={{
-                                            fontSize: 16,
-                                            color: '#000000',
-                                            fontWeight: 'bold'
-                                        }}>  Cable Subscription </Text>
+                                        <Text style={styles.text}>  Cable Subscription </Text>
+                                    </View>
+                                </TouchableOpacity>
+                            </View>
+                            <View style={{ paddingHorizontal: 5, paddingVertical: 10, }}>
+                                <TouchableOpacity style={styles.button} >
+                                    <View style={styles.viewbutton}>
+                                        <Text style={{ fontWeight: 'bold' }}>MTN</Text>
+                                    </View>
+                                    <View style={{ justifyContent: 'center', }}>
+                                        <Text style={styles.text}>  Betting, Lottery and Gaming</Text>
                                     </View>
                                 </TouchableOpacity>
                             </View>
                             <View style={{
                                 paddingHorizontal: 5, paddingVertical: 10,
                             }}>
-                                <TouchableOpacity style={{
-                                    backgroundColor: '#e3f0fa',
-                                    height: 50,
-                                    flexDirection: 'row',
-                                    alignItems: 'center',
-                                    borderRadius: 30,
-                                    paddingHorizontal: 10
-                                }} >
-                                    <View style={{
-                                        width: 50,
-                                        height: 25,
-                                        borderWidth: 2,
-                                        borderRadius: 50,
-                                        justifyContent: 'center',
-                                        alignItems: 'center'
-                                    }}>
+                                <TouchableOpacity style={styles.button} >
+                                    <View style={styles.viewbutton}>
                                         <Text style={{ fontWeight: 'bold' }}>MTN</Text>
                                     </View>
                                     <View style={{ justifyContent: 'center', }}>
-                                        <Text style={{
-                                            fontSize: 16,
-                                            color: '#000000',
-                                            fontWeight: 'bold'
-                                        }}>  Betting, Lottery and Gaming</Text>
+                                        <Text style={styles.text}>  Electricty </Text>
                                     </View>
                                 </TouchableOpacity>
                             </View>
                             <View style={{
                                 paddingHorizontal: 5, paddingVertical: 10,
                             }}>
-                                <TouchableOpacity style={{
-                                    backgroundColor: '#e3f0fa',
-                                    height: 50,
-                                    flexDirection: 'row',
-                                    alignItems: 'center',
-                                    borderRadius: 30,
-                                    paddingHorizontal: 10
-                                }} >
-                                    <View style={{
-                                        width: 50,
-                                        height: 25,
-                                        borderWidth: 2,
-                                        borderRadius: 50,
-                                        justifyContent: 'center',
-                                        alignItems: 'center'
-                                    }}>
+                                <TouchableOpacity style={styles.button} >
+                                    <View style={styles.viewbutton}>
                                         <Text style={{ fontWeight: 'bold' }}>MTN</Text>
                                     </View>
                                     <View style={{ justifyContent: 'center', }}>
-                                        <Text style={{
-                                            fontSize: 16,
-                                            color: '#000000',
-                                            fontWeight: 'bold'
-                                        }}>  Electricty </Text>
+                                        <Text style={styles.text}>  Event Tickets </Text>
                                     </View>
                                 </TouchableOpacity>
                             </View>
                             <View style={{
                                 paddingHorizontal: 5, paddingVertical: 10,
                             }}>
-                                <TouchableOpacity style={{
-                                    backgroundColor: '#e3f0fa',
-                                    height: 50,
-                                    flexDirection: 'row',
-                                    alignItems: 'center',
-                                    borderRadius: 30,
-                                    paddingHorizontal: 10
-                                }} >
-                                    <View style={{
-                                        width: 50,
-                                        height: 25,
-                                        borderWidth: 2,
-                                        borderRadius: 50,
-                                        justifyContent: 'center',
-                                        alignItems: 'center'
-                                    }}>
+                                <TouchableOpacity style={styles.button} >
+                                    <View style={styles.viewbutton}>
                                         <Text style={{ fontWeight: 'bold' }}>MTN</Text>
                                     </View>
                                     <View style={{ justifyContent: 'center', }}>
-                                        <Text style={{
-                                            fontSize: 16,
-                                            color: '#000000',
-                                            fontWeight: 'bold'
-                                        }}>  Event Tickets </Text>
+                                        <Text style={styles.text}>  Government Payment </Text>
                                     </View>
                                 </TouchableOpacity>
                             </View>
                             <View style={{
                                 paddingHorizontal: 5, paddingVertical: 10,
                             }}>
-                                <TouchableOpacity style={{
-                                    backgroundColor: '#e3f0fa',
-                                    height: 50,
-                                    flexDirection: 'row',
-                                    alignItems: 'center',
-                                    borderRadius: 30,
-                                    paddingHorizontal: 10
-                                }} >
-                                    <View style={{
-                                        width: 50,
-                                        height: 25,
-                                        borderWidth: 2,
-                                        borderRadius: 50,
-                                        justifyContent: 'center',
-                                        alignItems: 'center'
-                                    }}>
+                                <TouchableOpacity style={styles.button} >
+                                    <View style={styles.viewbutton}>
                                         <Text style={{ fontWeight: 'bold' }}>MTN</Text>
                                     </View>
                                     <View style={{ justifyContent: 'center', }}>
-                                        <Text style={{
-                                            fontSize: 16,
-                                            color: '#000000',
-                                            fontWeight: 'bold'
-                                        }}>  Government Payment </Text>
-                                    </View>
-                                </TouchableOpacity>
-                            </View>
-                            <View style={{
-                                paddingHorizontal: 5, paddingVertical: 10,
-                            }}>
-                                <TouchableOpacity style={{
-                                    backgroundColor: '#e3f0fa',
-                                    height: 50,
-                                    flexDirection: 'row',
-                                    alignItems: 'center',
-                                    borderRadius: 30,
-                                    paddingHorizontal: 10
-                                }} >
-                                    <View style={{
-                                        width: 50,
-                                        height: 25,
-                                        borderWidth: 2,
-                                        borderRadius: 50,
-                                        justifyContent: 'center',
-                                        alignItems: 'center'
-                                    }}>
-                                        <Text style={{ fontWeight: 'bold' }}>MTN</Text>
-                                    </View>
-                                    <View style={{ justifyContent: 'center', }}>
-                                        <Text style={{
-                                            fontSize: 16,
-                                            color: '#000000',
-                                            fontWeight: 'bold'
-                                        }}>  Remita </Text>
+                                        <Text style={styles.text}>  Remita </Text>
                                     </View>
                                 </TouchableOpacity>
                             </View>
                             <View style={{
                                 paddingHorizontal: 5, paddingVertical: 10, paddingBottom: 60
                             }}>
-                                <TouchableOpacity style={{
-                                    backgroundColor: '#e3f0fa',
-                                    height: 50,
-                                    flexDirection: 'row',
-                                    alignItems: 'center',
-                                    borderRadius: 30,
-                                    paddingHorizontal: 10
-                                }} >
-                                    <View style={{
-                                        width: 50,
-                                        height: 25,
-                                        borderWidth: 2,
-                                        borderRadius: 50,
-                                        justifyContent: 'center',
-                                        alignItems: 'center'
-                                    }}>
+                                <TouchableOpacity style={styles.button} >
+                                    <View style={styles.viewbutton}>
                                         <Text style={{ fontWeight: 'bold' }}>MTN</Text>
                                     </View>
                                     <View style={{ justifyContent: 'center', }}>
-                                        <Text style={{
-                                            fontSize: 16,
-                                            color: '#000000',
-                                            fontWeight: 'bold'
-                                        }}>  Travel and Hotel </Text>
+                                        <Text style={styles.text}>  Travel and Hotel </Text>
                                     </View>
                                 </TouchableOpacity>
                             </View>
@@ -319,4 +165,55 @@ export default function BillsScreen({ navigation }) {
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    view1: {
+        width: '100%',
+        height: 250,
+        backgroundColor: '#10142E',
+        borderBottomLeftRadius: 30,
+        borderBottomRightRadius: 30
+    },
+    view2: {
+        width: 160,
+        height: 90,
+        backgroundColor: '#000055',
+        borderBottomRightRadius: 80,
+        borderBottomLeftRadius: 80,
+        marignRight: 20
+    },
+    view3: {
+        width: 160,
+        height: 90,
+        backgroundColor: '#000099',
+        borderBottomRightRadius: 80,
+        borderBottomLeftRadius: 80,
+        marginLeft: 250
+    },
+    button: {
+        backgroundColor: '#e3f0fa',
+        height: 50,
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderRadius: 30,
+        paddingHorizontal: 10
+    },
+    viewbutton: {
+        width: 50,
+        height: 25,
+        borderWidth: 2,
+        borderRadius: 50,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    text: {
+        fontSize: 16,
+        color: '#000000',
+        fontWeight: 'bold'
+    },
+    viewCurrentBalance: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingVertical: 10
+    }
+
+})

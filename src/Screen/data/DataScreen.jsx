@@ -16,31 +16,9 @@ export default function DataScreen({ navigation }) {
                     barStyle='light-content'
                 />
                 <View style={{ flexDirection: "row", justifyContent: 'space-between', position: 'absolute', }}>
-                    <View style={{
-                        width: '100%',
-                        height: 250,
-                        backgroundColor: '#10142E',
-                        borderBottomLeftRadius: 30,
-                        borderBottomRightRadius: 30
-                    }}>
-                        <View style={{
-                            width: 160,
-                            height: 90,
-                            backgroundColor: '#000055',
-                            borderBottomRightRadius: 80,
-                            borderBottomLeftRadius: 80,
-                            marignRight: 20
-
-                        }}>
-                            <View style={{
-                                width: 160,
-                                height: 90,
-                                backgroundColor: '#000099',
-                                borderBottomRightRadius: 80,
-                                borderBottomLeftRadius: 80,
-                                marginLeft: 250
-
-                            }}>
+                    <View style={styles.view1}>
+                        <View style={styles.view2}>
+                            <View style={styles.view3}>
 
                             </View>
                         </View>
@@ -50,11 +28,7 @@ export default function DataScreen({ navigation }) {
                             }}>
                                 <Ionicons name='chevron-back' color='white' size={30} />
                             </TouchableOpacity>
-                            <Text style={{
-                                fontSize: 20,
-                                color: 'white',
-                                marginLeft: 130
-                            }}> Data</Text>
+                            <Text style={styles.textData}> Data</Text>
                         </View>
 
 
@@ -66,15 +40,11 @@ export default function DataScreen({ navigation }) {
                                         width: 30,
                                         height: 30,
                                     }}
-                                    source={require('../../assets/VN.png')} />
+                                    source={require('../../../assets/VN.png')} />
                                 <Ionicons name='chevron-down-outline' size={30} color='white' />
                             </View>
                             <Text style={{ color: 'white' }}> Current Balance</Text>
-                            <View style={{
-                                flexDirection: 'row',
-                                justifyContent: 'space-between',
-                                paddingVertical: 10
-                            }}>
+                            <View style={styles.view4}>
                                 {showBalance ? <Text
                                     style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} >{balance}</Text> : <Text
                                         style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} >***********</Text>}
@@ -91,37 +61,23 @@ export default function DataScreen({ navigation }) {
                             </View>
                             <View>
                                 <View style={{ paddingHorizontal: 5, paddingVertical: 20, }}>
-                                    <TouchableOpacity style={{
-                                        backgroundColor: '#e3f0fa',
-                                        height: 70,
-                                        flexDirection: 'row',
-                                        alignItems: 'center',
-                                        borderRadius: 30,
-                                        paddingHorizontal: 10
-                                    }} >
+                                    <TouchableOpacity style={styles.button} >
                                         <View>
                                             <Ionicons name='reload-outline' color='#0540F2' size={30} fontWeight='bold' />
                                         </View>
                                         <View style={{ justifyContent: 'center', }}>
-                                            <Text style={{ fontSize: 20, color: '#0540F2', fontWeight: 'bold' }}>  Send to GBG</Text>
+                                            <Text style={styles.textSendto}>  Send to GBG</Text>
                                             <Text style={{ marginLeft: 10, color: 'black' }}> Send money to GBG account </Text>
                                         </View>
                                     </TouchableOpacity>
                                 </View>
                                 <View style={{ paddingHorizontal: 5, paddingVertical: 5, }}>
-                                    <TouchableOpacity style={{
-                                        backgroundColor: '#e3f0fa',
-                                        height: 70,
-                                        flexDirection: 'row',
-                                        alignItems: 'center',
-                                        borderRadius: 30,
-                                        paddingHorizontal: 10
-                                    }}>
+                                    <TouchableOpacity style={styles.button}>
                                         <View>
                                             <Ionicons name='reload-outline' color='#0540F2' size={30} fontWeight='bold' />
                                         </View>
                                         <View style={{ justifyContent: 'center', }}>
-                                            <Text style={{ fontSize: 20, color: '#0540F2', fontWeight: 'bold' }}>  Send to Go Other Bank</Text>
+                                            <Text style={styles.textSendto}>  Send to Go Other Bank</Text>
                                             <Text style={{ marginLeft: 10, color: 'black' }}> Send money to Other banks </Text>
                                         </View>
                                     </TouchableOpacity>
@@ -135,4 +91,53 @@ export default function DataScreen({ navigation }) {
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    view1: {
+        width: '100%',
+        height: 250,
+        backgroundColor: '#10142E',
+        borderBottomLeftRadius: 30,
+        borderBottomRightRadius: 30
+    },
+    view2: {
+        width: 160,
+        height: 90,
+        backgroundColor: '#000055',
+        borderBottomRightRadius: 80,
+        borderBottomLeftRadius: 80,
+        marignRight: 20
+
+    },
+    view3: {
+        width: 160,
+        height: 90,
+        backgroundColor: '#000099',
+        borderBottomRightRadius: 80,
+        borderBottomLeftRadius: 80,
+        marginLeft: 250
+
+    },
+    textData: {
+        fontSize: 20,
+        color: 'white',
+        marginLeft: 130
+    },
+    view4: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingVertical: 10
+    },
+    button: {
+        backgroundColor: '#e3f0fa',
+        height: 70,
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderRadius: 30,
+        paddingHorizontal: 10
+    },
+    textSendto: {
+        fontSize: 20,
+        color: '#0540F2',
+        fontWeight: 'bold'
+    }
+})

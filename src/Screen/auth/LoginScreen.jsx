@@ -11,7 +11,6 @@ import Button from '../../component/Button';
 export default function LoginScreen({ navigation, route }) {
 
 
-
     const textInputEmail = useRef(null)
     const textInputPass = useRef(null)
     const handleForcusPass = () => {
@@ -57,7 +56,7 @@ export default function LoginScreen({ navigation, route }) {
 
     const [passWord, setPassWord] = useState(true)
     return (
-        <SafeAreaView style={{ flex: 1 }} >
+        <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }} >
             <ScrollView>
                 <StatusBar barStyle='dark-content' backgroundColor="white" style='dark-content' />
                 <View style={{
@@ -65,11 +64,13 @@ export default function LoginScreen({ navigation, route }) {
                     backgroundColor: 'white',
                 }}>
                     {/* iMAGE */}
-                    <Image style={{
-                        width: 200, height: 200,
-                    }} source={require("../../assets/iconLogin.png")} ></Image>
+                    <View style={{ height: 300, justifyContent: 'center', alignItems: 'center' }}>
+                        <Image style={{
+                            width: 200, height: 200,
+                        }} source={require("../../../assets/iconLogin.png")} ></Image>
+                    </View>
 
-                    <View style={{ flex: 1 }}>
+                    <View style={{ flex: 1, width: '100%' }}>
                         <View style={styles.view}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 20 }}>
                                 <Ionicons name='mail-outline' size={32} color='#0540F2' />
@@ -88,7 +89,7 @@ export default function LoginScreen({ navigation, route }) {
                                 <Ionicons name='lock-closed-outline' size={32} color='#0540F2' />
                                 <Text> Password</Text>
                             </View>
-                            <View style={{ alignItems: 'center', paddingHorizontal: 10 }}>
+                            <View style={{ alignItems: 'center', paddingHorizontal: 10, }}>
                                 <TextInput style={styles.textinput}
                                     ref={textInputPass}
                                     value={pass}
@@ -117,19 +118,6 @@ export default function LoginScreen({ navigation, route }) {
                             <TouchableOpacity onPress={handleClickHome}>
                                 <Button text='Login' />
                             </TouchableOpacity>
-                            {/* <TouchableOpacity style={{
-                            width: 300,
-                            height: 40,
-                            borderRadius: 20,
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            marginRight: 15,
-                            backgroundColor: '#1769ff'
-                        }}
-                            onPress={handleClickHome}>
-                            <Text style={{ color: 'white', fontWeight: 'bold', fontSize: 18 }}> LOGIN</Text>
-                        </TouchableOpacity> */}
-
                             <TouchableOpacity onPress={handleCreateAccount}>
                                 <Text style={{ marginTop: 15 }}> Create Account</Text>
                             </TouchableOpacity>

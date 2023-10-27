@@ -19,33 +19,10 @@ export default function CableSubscriptionScreen({ navigation, route }) {
                     <StatusBar
                         barStyle='light-content'
                     />
-                    <View style={{
-                        position: 'absolute',
-                        width: '100%',
-                        height: 250,
-                        backgroundColor: '#10142E',
-                        borderBottomLeftRadius: 30,
-                        borderBottomRightRadius: 30
-                    }}>
+                    <View style={styles.view1}>
                     </View>
-                    <View style={{
-                        width: 160,
-                        height: 90,
-                        backgroundColor: '#000055',
-                        borderBottomRightRadius: 80,
-                        borderBottomLeftRadius: 80,
-                        marignRight: 20
-
-                    }}>
-                        <View style={{
-                            width: 160,
-                            height: 90,
-                            backgroundColor: '#000099',
-                            borderBottomRightRadius: 80,
-                            borderBottomLeftRadius: 80,
-                            marginLeft: 250
-
-                        }}>
+                    <View style={styles.view2}>
+                        <View style={styles.view3}>
                         </View>
 
                     </View>
@@ -76,7 +53,7 @@ export default function CableSubscriptionScreen({ navigation, route }) {
                                     width: 30,
                                     height: 30,
                                 }}
-                                source={require('../../../assets/VN.png')} />
+                                source={require('../../../../assets/VN.png')} />
                             <Ionicons name='chevron-down-outline' size={30} color='white' />
                         </View>
                         <Text style={{ color: 'white' }}> Current Balance</Text>
@@ -103,14 +80,8 @@ export default function CableSubscriptionScreen({ navigation, route }) {
                             <View style={{
                                 paddingHorizontal: 5, paddingVertical: 5, marginTop: 30
                             }}>
-                                <TouchableOpacity style={{
-                                    backgroundColor: '#e3f0fa',
-                                    height: 50,
-                                    flexDirection: 'row',
-                                    alignItems: 'center',
-                                    borderRadius: 30,
-                                    paddingHorizontal: 10
-                                }} onPress={() => { navigation.navigate('SelectProvider') }} >
+                                <TouchableOpacity style={styles.buttonbank}
+                                    onPress={() => { navigation.navigate('SelectProvider') }} >
                                     <Image style={{
                                         width: 70,
                                         height: 30
@@ -119,82 +90,39 @@ export default function CableSubscriptionScreen({ navigation, route }) {
                                     <Ionicons style={{ position: 'absolute', right: 10 }} name='chevron-forward' size={30} color='grey' />
                                 </TouchableOpacity>
                             </View>
-                            <View style={{
-                                flexDirection: 'row',
-                                justifyContent: 'space-between',
-                                paddingHorizontal: 20,
-                                marginTop: 20,
-                                alignItems: 'center',
-                                paddingBottom: 10
-                            }}>
+                            <View style={styles.viewtextinput}>
                                 <Text style={{ fontWeight: 'bold', fontSize: 16 }}> Smartcard Number</Text>
                                 <Text> Beneficiaries</Text>
                             </View>
                             <View style={{
                                 paddingHorizontal: 5, paddingVertical: 10,
                             }}>
-                                <View style={{
-                                    backgroundColor: '#e3f0fa',
-                                    height: 50,
-                                    flexDirection: 'row',
-                                    alignItems: 'center',
-                                    borderRadius: 30,
-                                    paddingHorizontal: 20
-                                }} >
+                                <View style={styles.viewsmartcardnumber} >
 
                                     <TextInput placeholder='Enter DSTV smartcard Number' />
 
                                 </View>
                             </View>
-                            <View style={{
-                                flexDirection: 'row',
-                                justifyContent: 'space-between',
-                                paddingHorizontal: 20,
-                                marginTop: 20,
-                                alignItems: 'center',
-                                paddingBottom: 10
-                            }}>
+                            <View style={styles.viewtextinput}>
                                 <Text style={{ fontWeight: 'bold', fontSize: 16 }}> Smartcard Number</Text>
                             </View>
                             <View style={{
                                 paddingHorizontal: 5, paddingVertical: 10,
                             }}>
-                                <TouchableOpacity style={{
-                                    backgroundColor: '#e3f0fa',
-                                    width: 100,
-                                    height: 50,
-                                    flexDirection: 'row',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    borderRadius: 30,
-                                    paddingHorizontal: 20,
-                                }} >
+                                <TouchableOpacity style={styles.button30day} >
 
                                     <Text style={{ fontWeight: 'bold', fontSize: 16, color: '#0540F2' }}>30 Days</Text>
 
                                 </TouchableOpacity>
                             </View>
-                            <View style={{
-                                flexDirection: 'row',
-                                justifyContent: 'space-between',
-                                paddingHorizontal: 20,
-                                marginTop: 10,
-                                alignItems: 'center',
-                                paddingBottom: 10
-                            }}>
+                            <View style={styles.viewsmartcardnumber1}>
                                 <Text style={{ fontWeight: 'bold', fontSize: 16 }}> Smartcard Number</Text>
                             </View>
                             <View style={{
                                 paddingHorizontal: 5, paddingVertical: 10,
                             }}>
-                                <TouchableOpacity style={{
-                                    backgroundColor: '#e3f0fa',
-                                    height: 50,
-                                    flexDirection: 'row',
-                                    alignItems: 'center',
-                                    borderRadius: 30,
-                                    paddingHorizontal: 20
-                                }} onPress={() => { navigation.navigate('SelectPackage') }} >
+                                <TouchableOpacity style={styles.buttonplease}
+                                    onPress={() => { navigation.navigate('SelectPackage') }} >
 
                                     <Text style={{ color: 'grey' }}> Please select your package</Text>
                                     <Ionicons style={{ position: 'absolute', right: 10 }} name='chevron-forward' size={30} color='grey' />
@@ -203,14 +131,7 @@ export default function CableSubscriptionScreen({ navigation, route }) {
                             </View>
                             <View style={{ paddingVertical: 20 }}>
                                 <TouchableOpacity
-                                    style={{
-                                        backgroundColor: '#0540F2',
-                                        height: 50,
-                                        flexDirection: 'row',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        borderRadius: 30,
-                                    }}>
+                                    style={styles.buttonconfirm}>
                                     <Text style={{ color: 'white', fontSize: 20 }}>
                                         Confirm
                                     </Text>
@@ -227,4 +148,90 @@ export default function CableSubscriptionScreen({ navigation, route }) {
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    // header
+    view1: {
+        position: 'absolute',
+        width: '100%',
+        height: 250,
+        backgroundColor: '#10142E',
+        borderBottomLeftRadius: 30,
+        borderBottomRightRadius: 30
+    },
+    view2: {
+        width: 160,
+        height: 90,
+        backgroundColor: '#000055',
+        borderBottomRightRadius: 80,
+        borderBottomLeftRadius: 80,
+        marignRight: 20
+
+    },
+    view3: {
+        width: 160,
+        height: 90,
+        backgroundColor: '#000099',
+        borderBottomRightRadius: 80,
+        borderBottomLeftRadius: 80,
+        marginLeft: 250
+    },
+    // body
+    buttonbank: {
+        backgroundColor: '#e3f0fa',
+        height: 50,
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderRadius: 30,
+        paddingHorizontal: 10
+    },
+    viewtextinput: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingHorizontal: 20,
+        marginTop: 20,
+        alignItems: 'center',
+        paddingBottom: 10
+    },
+    viewsmartcardnumber: {
+        backgroundColor: '#e3f0fa',
+        height: 50,
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderRadius: 30,
+        paddingHorizontal: 20
+    },
+    button30day: {
+        backgroundColor: '#e3f0fa',
+        width: 100,
+        height: 50,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 30,
+        paddingHorizontal: 20,
+    },
+    viewsmartcardnumber1: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingHorizontal: 20,
+        marginTop: 10,
+        alignItems: 'center',
+        paddingBottom: 10
+    },
+    buttonplease: {
+        backgroundColor: '#e3f0fa',
+        height: 50,
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderRadius: 30,
+        paddingHorizontal: 20
+    },
+    buttonconfirm: {
+        backgroundColor: '#0540F2',
+        height: 50,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 30,
+    }
+})
