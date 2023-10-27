@@ -26,14 +26,14 @@ export default function SelectBankScreen({ navigation, route }) {
                             <TouchableOpacity onPress={() => {
                                 navigation.goBack()
                             }}>
-                                <Ionicons name='close' color='black' size={30} />
+                                <Ionicons name='close' color='black' size={20} />
                             </TouchableOpacity>
                             <View style={{
                                 alignItems: 'center',
                                 width: '100%', paddingRight: 40, justifyContent: 'center'
                             }}>
                                 <Text style={{
-                                    fontSize: 22,
+                                    fontSize: 16,
                                     color: 'black',
                                     fontWeight: 'bold'
                                 }}> Select Bank</Text>
@@ -50,8 +50,8 @@ export default function SelectBankScreen({ navigation, route }) {
                             borderRadius: 20
                         }}>
 
-                            <Ionicons name='search' color='blue' size={30} />
-                            <TextInput placeholder='Search here for Bank' placeholderTextColor='grey' fontSize={16} />
+                            <Ionicons name='search' color='blue' size={20} />
+                            <TextInput placeholder='Search here for Bank' placeholderTextColor='grey' fontSize={15} />
                         </View>
                     </View>
                     <View style={{ paddingHorizontal: 15 }}>
@@ -209,13 +209,15 @@ export default function SelectBankScreen({ navigation, route }) {
 };
 const styles = StyleSheet.create({
     button: {
+        width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
-        paddingVertical: 10
+        paddingVertical: 10,
+
     },
     textNH: {
-        fontSize: 16,
-        paddingLeft: 30
+        fontSize: 14,
+        paddingLeft: 10
     },
     iamge1: {
         width: 80,

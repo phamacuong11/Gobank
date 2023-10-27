@@ -5,25 +5,27 @@ import { StatusBar } from 'expo-status-bar'
 
 
 export default function NotificationsScreen({ navigation }) {
-    const sizes = 20
+    const sizes = 15
     return (
         <SafeAreaView>
             <StatusBar barStyle='dark-content' />
             <ScrollView>
                 <View>
-                    <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 60, paddingHorizontal: 20 }}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 30, width: '100%' }}>
                         <TouchableOpacity onPress={() => {
                             navigation.goBack()
                         }} >
-                            <Ionicons name='arrow-back-outline' color='black' size={40} />
+                            <Ionicons style={{ paddingLeft: 10 }} name='arrow-back-outline' color='black' size={30} />
                         </TouchableOpacity>
-                        <Text style={{ fontSize: 25, fontWeight: 'bold', paddingLeft: 80 }}>Notifycation</Text>
+                        <View style={{ width: '100%', alignItems: 'center', justifyContent: 'center' }}>
+                            <Text style={{ fontSize: 20, fontWeight: 'bold', marginRight: 85 }}>Notifycation</Text>
+                        </View>
                     </View>
                     <View>
                         <View style={{ paddingHorizontal: 10, }}>
                             <View style={{ justifyContent: 'center', alignItems: 'center' }}>
 
-                                <Text style={{ paddingVertical: 20, fontSize: 18 }}>2023-09-16 22:03</Text>
+                                <Text style={{ paddingVertical: 20, fontSize: 15 }}>2023-09-16 22:03</Text>
                             </View>
                             <TouchableOpacity style={{ backgroundColor: '#C6E2FF', borderRadius: 10, padding: 10 }}>
                                 <View style={{ alignItems: 'center', flexDirection: 'row' }}>
@@ -31,7 +33,7 @@ export default function NotificationsScreen({ navigation }) {
                                     <Text> Account Credited Successfully</Text>
                                 </View>
                                 <View style={styles.viewnotify}>
-                                    <Text style={{ fontSize: 12 }}> Your GBG Account has been credited wid
+                                    <Text style={{ fontSize: 10 }}> Your GBG Account has been credited wid
                                         {'\n'}
                                         N25,000.00 from MOGAJI, OLATUNBONSUN
                                     </Text>
@@ -42,7 +44,7 @@ export default function NotificationsScreen({ navigation }) {
                         <View style={{ paddingHorizontal: 10, }}>
                             <View style={{ justifyContent: 'center', alignItems: 'center' }}>
 
-                                <Text style={{ paddingVertical: 20, fontSize: 18 }}>2023-09-16 22:03</Text>
+                                <Text style={{ paddingVertical: 20, fontSize: 15 }}>2023-09-16 22:03</Text>
                             </View>
                             <TouchableOpacity style={{ backgroundColor: '#C6E2FF', borderRadius: 10, padding: 10 }}>
                                 <View style={{ alignItems: 'center', flexDirection: 'row' }}>
@@ -50,7 +52,7 @@ export default function NotificationsScreen({ navigation }) {
                                     <Text> Account Credited Successfully</Text>
                                 </View>
                                 <View style={styles.viewnotify}>
-                                    <Text style={{ fontSize: 12 }}> Your GBG Account has been credited wid
+                                    <Text style={{ fontSize: 10 }}> Your GBG Account has been credited wid
                                         {'\n'}
                                         N25,000.00 from MOGAJI, OLATUNBONSUN
                                     </Text>
@@ -61,7 +63,7 @@ export default function NotificationsScreen({ navigation }) {
                         <View style={{ paddingHorizontal: 10, }}>
                             <View style={{ justifyContent: 'center', alignItems: 'center' }}>
 
-                                <Text style={{ paddingVertical: 20, fontSize: 18 }}>2023-09-16 22:03</Text>
+                                <Text style={{ paddingVertical: 20, fontSize: 15 }}>2023-09-16 22:03</Text>
                             </View>
                             <TouchableOpacity style={{ backgroundColor: '#C6E2FF', borderRadius: 10, padding: 10 }}>
                                 <View style={{ alignItems: 'center', flexDirection: 'row' }}>
@@ -69,7 +71,7 @@ export default function NotificationsScreen({ navigation }) {
                                     <Text> Account Credited Successfully</Text>
                                 </View>
                                 <View style={styles.viewnotify}>
-                                    <Text style={{ fontSize: 12 }}> Your GBG Account has been credited wid
+                                    <Text style={{ fontSize: 10 }}> Your GBG Account has been credited wid
                                         {'\n'}
                                         N25,000.00 from MOGAJI, OLATUNBONSUN
                                     </Text>
@@ -80,7 +82,7 @@ export default function NotificationsScreen({ navigation }) {
                         <View style={{ paddingHorizontal: 10, }}>
                             <View style={{ justifyContent: 'center', alignItems: 'center' }}>
 
-                                <Text style={{ paddingVertical: 20, fontSize: 18 }}>2023-09-16 22:03</Text>
+                                <Text style={{ paddingVertical: 20, fontSize: 15 }}>2023-09-16 22:03</Text>
                             </View>
                             <TouchableOpacity style={{ backgroundColor: '#C6E2FF', borderRadius: 10, padding: 10 }}>
                                 <View style={{ alignItems: 'center', flexDirection: 'row' }}>
@@ -88,7 +90,7 @@ export default function NotificationsScreen({ navigation }) {
                                     <Text> Account Credited Successfully</Text>
                                 </View>
                                 <View style={styles.viewnotify}>
-                                    <Text style={{ fontSize: 12 }}> Your GBG Account has been credited wid
+                                    <Text style={{ fontSize: 10 }}> Your GBG Account has been credited wid
                                         {'\n'}
                                         N25,000.00 from MOGAJI, OLATUNBONSUN
                                     </Text>
@@ -99,7 +101,7 @@ export default function NotificationsScreen({ navigation }) {
                         <View style={{ paddingHorizontal: 10, }}>
                             <View style={{ justifyContent: 'center', alignItems: 'center' }}>
 
-                                <Text style={{ paddingVertical: 20, fontSize: 18 }}>2023-09-16 22:03</Text>
+                                <Text style={{ paddingVertical: 20, fontSize: 15 }}>2023-09-16 22:03</Text>
                             </View>
                             <TouchableOpacity style={{ backgroundColor: '#C6E2FF', borderRadius: 10, padding: 10 }}>
                                 <View style={{ alignItems: 'center', flexDirection: 'row' }}>
@@ -107,7 +109,7 @@ export default function NotificationsScreen({ navigation }) {
                                     <Text> Account Credited Successfully</Text>
                                 </View>
                                 <View style={styles.viewnotify}>
-                                    <Text style={{ fontSize: 12 }}> Your GBG Account has been credited wid
+                                    <Text style={{ fontSize: 10 }}> Your GBG Account has been credited wid
                                         {'\n'}
                                         N25,000.00 from MOGAJI, OLATUNBONSUN
                                     </Text>
@@ -120,7 +122,7 @@ export default function NotificationsScreen({ navigation }) {
                         }}>
                             <View style={{ justifyContent: 'center', alignItems: 'center' }}>
 
-                                <Text style={{ paddingVertical: 20, fontSize: 18 }}>2023-09-16 22:03</Text>
+                                <Text style={{ paddingVertical: 20, fontSize: 15 }}>2023-09-16 22:03</Text>
                             </View>
                             <TouchableOpacity style={{ backgroundColor: '#C6E2FF', borderRadius: 10, padding: 10 }}>
                                 <View style={{ alignItems: 'center', flexDirection: 'row' }}>
@@ -128,7 +130,7 @@ export default function NotificationsScreen({ navigation }) {
                                     <Text> Account Credited Successfully</Text>
                                 </View>
                                 <View style={styles.viewnotify}>
-                                    <Text style={{ fontSize: 12 }}> Your GBG Account has been credited wid
+                                    <Text style={{ fontSize: 10 }}> Your GBG Account has been credited wid
                                         {'\n'}
                                         N25,000.00 from MOGAJI, OLATUNBONSUN
                                     </Text>
@@ -147,10 +149,11 @@ export default function NotificationsScreen({ navigation }) {
 const styles = StyleSheet.create({
     viewposition: {
         backgroundColor: '#9966FF',
-        paddingHorizontal: 10,
-        paddingVertical: 4,
+        paddingHorizontal: 5,
+        paddingVertical: 2,
         borderRadius: 20,
         color: '#ffffff',
+        fontSize: 14,
         fontWeight: 'bold',
         position: 'absolute',
         top: 0,

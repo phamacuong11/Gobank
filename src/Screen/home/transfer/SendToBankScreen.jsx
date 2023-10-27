@@ -38,7 +38,7 @@ export default function SendToBankScreen({ navigation, route }) {
                     <TouchableOpacity onPress={() => {
                         navigation.goBack()
                     }}>
-                        <Ionicons name='chevron-back' color='black' size={30} />
+                        <Ionicons name='chevron-back' color='black' size={20} />
                     </TouchableOpacity>
                     <View style={styles.viewtext}>
                         <Text style={styles.textheader}> Send to Bank</Text>
@@ -46,23 +46,23 @@ export default function SendToBankScreen({ navigation, route }) {
                 </View>
             </View>
             <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
-                <Text style={{ fontSize: 20 }}> Select Bank</Text>
+                <Text style={{ fontSize: 16 }}> Select Bank</Text>
             </View>
             <View style={{ marginTop: 20, paddingHorizontal: 10 }}>
                 <View style={styles.viewmain}>
                     <Image style={{ width: 80, height: 30 }}
                         source={logo} />
 
-                    <Text style={{ paddingLeft: 10, fontSize: 15 }}>{bankName} </Text>
+                    <Text style={{ paddingLeft: 10, fontSize: 14 }}>{bankName} </Text>
                 </View>
             </View>
             <View style={styles.view}>
-                <Text style={{ color: '#000000', fontSize: 18 }}> Enter Account Number</Text>
+                <Text style={{ color: '#000000', fontSize: 16 }}> Enter Account Number</Text>
 
             </View>
             <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
                 <View style={styles.view1}>
-                    <Ionicons name='person-outline' size={30} color='blue' />
+                    <Ionicons name='person-outline' size={20} color='blue' />
                     <TextInput style={{ paddingHorizontal: 10 }}
                         placeholder='Enter 10 digit numbers'
                         placeholderTextColor='grey'
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     textheader: {
-        fontSize: 22,
+        fontSize: 16,
         color: 'black',
         fontWeight: 'bold'
     },
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     viewmain: {
         backgroundColor: '#e3f0fa',
         borderRadius: 20,
-        paddingHorizontal: 20,
+        paddingHorizontal: 8,
         paddingVertical: 10,
         flexDirection: 'row',
         alignItems: 'center',

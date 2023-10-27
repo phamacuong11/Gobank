@@ -224,7 +224,7 @@ const styles = StyleSheet.create({
     },
     viewButton: {
         backgroundColor: '#e3f0fa',
-        width: 50, height: 50,
+        width: 40, height: 40,
         borderRadius: 30,
         alignItems: 'center',
         justifyContent: 'center'

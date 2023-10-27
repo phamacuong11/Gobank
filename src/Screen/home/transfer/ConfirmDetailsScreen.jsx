@@ -37,14 +37,7 @@ export default function ConfirmDetailsScreen({ navigation, route }) {
                     <Text style={{ fontSize: 20 }}> Select Bank</Text>
                 </View>
                 <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
-                    <View style={{
-                        backgroundColor: '#e3f0fa',
-                        borderRadius: 20,
-                        paddingHorizontal: 30,
-                        paddingVertical: 10,
-                        flexDirection: 'row',
-                        alignItems: 'center',
-                    }}>
+                    <View style={styles.viewSelectBank}>
 
                         <View style={{
 
@@ -140,6 +133,14 @@ export default function ConfirmDetailsScreen({ navigation, route }) {
 }
 
 const styles = StyleSheet.create({
+    viewSelectBank: {
+        backgroundColor: '#e3f0fa',
+        borderRadius: 90,
+        paddingHorizontal: 30,
+        paddingVertical: 10,
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
     viewmain: {
         flexDirection: 'row',
         justifyContent: 'space-between',

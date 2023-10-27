@@ -30,7 +30,9 @@ export default function TransferScreen({ navigation }) {
                             </TouchableOpacity>
                             <View style={{
                                 alignItems: 'center',
-                                width: '100%', paddingRight: 40, justifyContent: 'center'
+                                width: '100%',
+                                paddingRight: 40,
+                                justifyContent: 'center'
                             }}>
                                 <Text style={{
                                     fontSize: 20,

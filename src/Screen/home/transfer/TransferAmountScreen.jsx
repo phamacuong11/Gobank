@@ -5,6 +5,7 @@ import { Ionicons } from '@expo/vector-icons'
 import Button from '../../../component/Button'
 import { ScrollView } from 'react-native'
 import { StatusBar } from 'expo-status-bar'
+import { ToastAndroid } from 'react-native'
 
 export default function TransferAmountScreen({ navigation, route }) {
 
@@ -26,7 +27,13 @@ export default function TransferAmountScreen({ navigation, route }) {
         if (enterAmount === '') {
             alert('Vui lòng nhập số tiền')
         } else if (remark === '') {
-            alert('Bạn chưa nhập nội dung')
+            ToastAndroid.showWithGravityAndOffset(
+                'Vui lòng điền đầy đủ thông tin',
+                ToastAndroid.LONG,
+                ToastAndroid.TOP,
+                25,
+                50
+            );
 
         } else {
             navigation.navigate('ConfirmDetails', { account: { bankName, logo, remark, accountNumber, enterAmount, balance } })
@@ -44,14 +51,14 @@ export default function TransferAmountScreen({ navigation, route }) {
                             <TouchableOpacity onPress={() => {
                                 navigation.goBack()
                             }}>
-                                <Ionicons name='chevron-back' color='black' size={30} />
+                                <Ionicons name='chevron-back' color='black' size={20} />
                             </TouchableOpacity>
                             <View style={{
                                 alignItems: 'center',
                                 width: '100%', paddingRight: 40, justifyContent: 'center'
                             }}>
                                 <Text style={{
-                                    fontSize: 22,
+                                    fontSize: 16,
                                     color: 'black',
                                     fontWeight: 'bold'
                                 }}> Transfer Amount</Text>
@@ -59,15 +66,12 @@ export default function TransferAmountScreen({ navigation, route }) {
                         </View>
                     </View>
                     <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
-                        <Text style={{ fontSize: 20 }}> Select Bank</Text>
+                        <Text style={{ fontSize: 16 }}> Select Bank</Text>
                     </View>
-                    <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
+                    <View style={{ marginTop: 20, paddingHorizontal: 10 }}>
                         <View style={styles.view}>
 
-                            <View style={{
-
-                                flexDirection: 'row',
-                            }} >
+                            <View  >
                                 <Image style={{
                                     width: 80,
                                     height: 30
@@ -75,7 +79,7 @@ export default function TransferAmountScreen({ navigation, route }) {
 
                             </View>
                             <View style={{ paddingHorizontal: 10 }}>
-                                <Text style={{ paddingLeft: 10, fontSize: 18, paddingBottom: 10 }}>Mogaji Olatubosun Ojo </Text>
+                                <Text style={{ paddingLeft: 10, fontSize: 14, paddingBottom: 10 }}>Mogaji Olatubosun Ojo </Text>
                                 <Text style={{ paddingLeft: 10, fontSize: 12 }}> 9033554931</Text>
                             </View>
                         </View>
@@ -83,7 +87,7 @@ export default function TransferAmountScreen({ navigation, route }) {
                     <View>
 
                         <View style={{ marginTop: 50, paddingHorizontal: 20, flexDirection: 'row', justifyContent: 'space-between' }}>
-                            <Text style={{ color: '#000000', fontSize: 18 }}> Enter Amount</Text>
+                            <Text style={{ color: '#000000', fontSize: 16 }}> Enter Amount</Text>
 
                         </View>
                         <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
@@ -91,7 +95,7 @@ export default function TransferAmountScreen({ navigation, route }) {
                                 <TextInput style={{
                                     paddingHorizontal: 10,
                                     fontWeight: 'bold',
-                                    fontSize: 20,
+                                    fontSize: 16,
 
                                 }}
                                     value={enterAmount}
@@ -106,7 +110,7 @@ export default function TransferAmountScreen({ navigation, route }) {
                     </View>
                     <View>
                         <View style={{ marginTop: 20, paddingHorizontal: 20, flexDirection: 'row', justifyContent: 'space-between' }}>
-                            <Text style={{ color: '#000000', fontSize: 18 }}> Remark(Optional)</Text>
+                            <Text style={{ color: '#000000', fontSize: 16 }}> Remark(Optional)</Text>
 
                         </View>
                         <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
@@ -119,8 +123,9 @@ export default function TransferAmountScreen({ navigation, route }) {
                                 />
                             </View>
                             <View style={{ borderBottomWidth: 1, paddingVertical: 10 }}></View>
-                            <View style={{ paddingVertical: 40 }} >
+                            <View style={{ paddingVertical: 40, paddingHorizontal: 10 }} >
                                 <TouchableOpacity style={{
+                                    width: '100%',
                                     alignItems: 'center',
                                     justifyContent: 'center'
                                 }} onPress={hanldeClickConfirm} >
@@ -142,7 +147,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#e3f0fa',
         borderRadius: 20,
         paddingHorizontal: 30,
-        paddingVertical: 10,
+        paddingVertical: 5,
         flexDirection: 'row',
         alignItems: 'center',
     }
