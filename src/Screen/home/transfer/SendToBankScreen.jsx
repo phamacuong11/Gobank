@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Ionicons } from '@expo/vector-icons'
 import Button from '../../../component/Button'
+import { RFPercentage } from 'react-native-responsive-fontsize'
+import { ToastAndroid } from 'react-native'
 
 export default function SendToBankScreen({ navigation, route }) {
 
@@ -23,7 +25,7 @@ export default function SendToBankScreen({ navigation, route }) {
 
     const hanldeClicknextSendtoBank = () => {
         if (accountNumber === '') {
-            alert('Không được bỏ trống thông tin')
+            ToastAndroid.show('Không được bỏ trống thông tin', ToastAndroid.SHORT);
         } else {
 
             navigation.navigate('TransferAmount', { account: { bankName, logo, accountNumber, balance } })
@@ -38,7 +40,7 @@ export default function SendToBankScreen({ navigation, route }) {
                     <TouchableOpacity onPress={() => {
                         navigation.goBack()
                     }}>
-                        <Ionicons name='chevron-back' color='black' size={20} />
+                        <Ionicons name='chevron-back' color='black' size={RFPercentage(4)} />
                     </TouchableOpacity>
                     <View style={styles.viewtext}>
                         <Text style={styles.textheader}> Send to Bank</Text>
@@ -46,24 +48,24 @@ export default function SendToBankScreen({ navigation, route }) {
                 </View>
             </View>
             <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
-                <Text style={{ fontSize: 16 }}> Select Bank</Text>
+                <Text style={{ fontSize: RFPercentage(2.5) }}> Select Bank</Text>
             </View>
             <View style={{ marginTop: 20, paddingHorizontal: 10 }}>
                 <View style={styles.viewmain}>
                     <Image style={{ width: 80, height: 30 }}
                         source={logo} />
 
-                    <Text style={{ paddingLeft: 10, fontSize: 14 }}>{bankName} </Text>
+                    <Text style={{ paddingLeft: 10, fontSize: RFPercentage(2.5) }}>{bankName} </Text>
                 </View>
             </View>
             <View style={styles.view}>
-                <Text style={{ color: '#000000', fontSize: 16 }}> Enter Account Number</Text>
+                <Text style={{ color: '#000000', fontSize: RFPercentage(2.5) }}> Enter Account Number</Text>
 
             </View>
             <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
                 <View style={styles.view1}>
-                    <Ionicons name='person-outline' size={20} color='blue' />
-                    <TextInput style={{ paddingHorizontal: 10 }}
+                    <Ionicons name='person-outline' size={RFPercentage(4)} color='blue' />
+                    <TextInput style={{ paddingHorizontal: 10, fontSize: RFPercentage(2.5) }}
                         placeholder='Enter 10 digit numbers'
                         placeholderTextColor='grey'
                         value={accountNumber}
@@ -96,14 +98,13 @@ const styles = StyleSheet.create({
     },
     viewtext: {
         alignItems: 'center',
-        width: '100%',
-        paddingRight: 40,
         justifyContent: 'center'
     },
     textheader: {
-        fontSize: 16,
+        fontSize: RFPercentage(3),
         color: 'black',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        marginLeft: '35%'
     },
     // select bank
     viewmain: {

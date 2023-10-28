@@ -2,6 +2,7 @@ import { Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'r
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
 import { ScrollView } from 'react-native';
+import { RFPercentage } from 'react-native-responsive-fontsize'
 
 export default function ConfirmDetailsScreen({ navigation, route }) {
 
@@ -18,25 +19,25 @@ export default function ConfirmDetailsScreen({ navigation, route }) {
                         <TouchableOpacity onPress={() => {
                             navigation.goBack()
                         }}>
-                            <Ionicons name='chevron-back' color='black' size={30} />
+                            <Ionicons name='chevron-back' color='black' size={RFPercentage(4)} />
                         </TouchableOpacity>
                         <View style={{
                             alignItems: 'center',
-                            width: '100%', paddingRight: 20, justifyContent: 'center'
+                            justifyContent: 'center'
                         }}>
 
                             <Text style={{
-                                fontSize: 22,
+                                fontSize: RFPercentage(3),
                                 color: 'black',
-                                fontWeight: 'bold'
+                                fontWeight: 'bold', marginLeft: '28%'
                             }}> Comfirm Details</Text>
                         </View>
                     </View>
                 </View>
                 <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
-                    <Text style={{ fontSize: 20 }}> Select Bank</Text>
+                    <Text style={{ fontSize: RFPercentage(3) }}> Select Bank</Text>
                 </View>
-                <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
+                <View style={{ marginTop: 20, paddingHorizontal: 5 }}>
                     <View style={styles.viewSelectBank}>
 
                         <View style={{
@@ -51,8 +52,8 @@ export default function ConfirmDetailsScreen({ navigation, route }) {
                         </View>
                         <View style={{ paddingHorizontal: 10 }}>
 
-                            <Text style={{ paddingLeft: 10, fontSize: 18, paddingBottom: 10 }}>Mogaji Olatubosun Ojo </Text>
-                            <Text style={{ paddingLeft: 10, fontSize: 12 }}> {accountNumber}</Text>
+                            <Text style={{ paddingLeft: 10, fontSize: RFPercentage(3), paddingBottom: 10 }}>Mogaji Olatubosun Ojo </Text>
+                            <Text style={{ paddingLeft: 10, fontSize: RFPercentage(2.3) }}> {accountNumber}</Text>
                         </View>
                     </View>
                 </View>
@@ -62,15 +63,16 @@ export default function ConfirmDetailsScreen({ navigation, route }) {
                         height: '80%',
                         borderRadius: 20
                     }}>
-                        <TouchableOpacity style={{ padding: 10 }}>
-                            <Ionicons name='close' color='grey' size={30} />
+                        <TouchableOpacity style={{ padding: 10 }}
+                            onPress={() => { navigation.push('Home') }}>
+                            <Ionicons name='close' color='grey' size={RFPercentage(4)} />
                         </TouchableOpacity>
                         <View style={{ alignItems: 'center' }}>
-                            <Text style={{ fontSize: 30, fontWeight: 'bold' }}>{enterAmount}</Text>
+                            <Text style={{ fontSize: RFPercentage(4), fontWeight: 'bold' }}>{enterAmount}</Text>
                         </View>
                         <View style={styles.viewmain}>
                             <View>
-                                <Text style={{ fontSize: 16 }}> Bank</Text>
+                                <Text style={styles.textSize}> Bank</Text>
                             </View>
                             <View style={{ flexDirection: 'row' }}>
                                 <Image style={{
@@ -83,7 +85,7 @@ export default function ConfirmDetailsScreen({ navigation, route }) {
                         </View>
                         <View style={styles.viewmain}>
                             <View>
-                                <Text style={{ fontSize: 16 }}> Account Number</Text>
+                                <Text style={styles.textSize}> Account Number</Text>
                             </View>
                             <View style={{ flexDirection: 'row' }}>
                                 <Text style={styles.text}> {accountNumber}</Text>
@@ -91,7 +93,7 @@ export default function ConfirmDetailsScreen({ navigation, route }) {
                         </View>
                         <View style={styles.viewmain}>
                             <View>
-                                <Text style={{ fontSize: 16 }}> Name</Text>
+                                <Text style={styles.textSize}> Name</Text>
                             </View>
                             <View style={{ flexDirection: 'row' }}>
                                 <Text style={styles.text}> MogaJi Olatubosun Oji</Text>
@@ -99,7 +101,7 @@ export default function ConfirmDetailsScreen({ navigation, route }) {
                         </View>
                         <View style={styles.viewmain}>
                             <View>
-                                <Text style={{ fontSize: 16 }}> Amount</Text>
+                                <Text style={styles.textSize}> Amount</Text>
                             </View>
                             <View style={{ flexDirection: 'row' }}>
                                 <Text style={styles.text}> {accountNumber}</Text>
@@ -107,22 +109,22 @@ export default function ConfirmDetailsScreen({ navigation, route }) {
                         </View>
                         <View style={styles.viewmain}>
                             <View>
-                                <Text style={{ fontSize: 16 }}> Transaction Fee</Text>
+                                <Text style={styles.textSize}> Transaction Fee</Text>
                             </View>
                             <View style={{ flexDirection: 'row' }}>
                                 <Text style={styles.text}> 10.000</Text>
                             </View>
                         </View>
                         <View style={{ paddingHorizontal: 20, marginTop: 30 }}>
-                            <View style={{ flexDirection: 'row', backgroundColor: 'hsl(188, 78%, 85%)', padding: 10, borderRadius: 10 }}>
-                                <Ionicons name='card-outline' size={30} color='blue' />
-                                <Text style={{ fontSize: 25 }}> Balance({balance})</Text>
+                            <View style={styles.viewBalance}>
+                                <Ionicons name='card-outline' size={RFPercentage(6)} color='blue' />
+                                <Text style={{ fontSize: RFPercentage(4) }}> Balance({balance})</Text>
                             </View>
                         </View>
                         <View style={{ paddingHorizontal: 20, paddingVertical: 30 }} >
                             <TouchableOpacity style={styles.buttonPay}
                                 onPress={handleClickEnterYourCode}>
-                                <Text style={{ color: 'white', fontSize: 20 }}> Pay</Text>
+                                <Text style={{ color: 'white', fontSize: RFPercentage(4) }}> Pay</Text>
                             </TouchableOpacity>
                         </View>
                     </View>
@@ -136,8 +138,8 @@ const styles = StyleSheet.create({
     viewSelectBank: {
         backgroundColor: '#e3f0fa',
         borderRadius: 90,
-        paddingHorizontal: 30,
-        paddingVertical: 10,
+        paddingHorizontal: 20,
+        paddingVertical: 5,
         flexDirection: 'row',
         alignItems: 'center',
     },
@@ -149,14 +151,26 @@ const styles = StyleSheet.create({
         paddingTop: 10
     },
     text: {
-        fontSize: 16,
+        fontSize: RFPercentage(2.5),
         fontWeight: 'bold'
     },
     buttonPay: {
         backgroundColor: 'blue',
-        padding: 15,
+        padding: 10,
         borderRadius: 20,
         alignItems: 'center',
         justifyContent: 'center'
+    },
+    textSize: {
+        fontSize: RFPercentage(2.5)
+
+    },
+    viewBalance: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'hsl(188, 78%, 85%)',
+        padding: 10,
+        borderRadius: 10
     }
 })

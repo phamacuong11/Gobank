@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TouchableOpacity, TextInput, Button, Alert, StyleSheet, Text } from 'react-native';
+import { View, TouchableOpacity, TextInput, Button, Alert, StyleSheet, Text, ToastAndroid } from 'react-native';
 
 export default function App({ navigation, route }) {
     const [passcode, setPasscode] = useState('');
@@ -12,10 +12,22 @@ export default function App({ navigation, route }) {
 
         if (updatedPasscode.length === 4) {
             if (updatedPasscode === '1234') {
-                Alert.alert('Thành công', 'Mật khẩu chính xác');
+                ToastAndroid.showWithGravityAndOffset(
+                    'Mật khẩu chính xác',
+                    ToastAndroid.LONG,
+                    ToastAndroid.TOP,
+                    25,
+                    50
+                );
                 navigation.navigate('PaymentSuccess', { account: { enterAmount } });
             } else {
-                Alert.alert('Lỗi', 'Mật khẩu không chính xác');
+                ToastAndroid.showWithGravityAndOffset(
+                    'Mật khẩu không chính xác',
+                    ToastAndroid.LONG,
+                    ToastAndroid.TOP,
+                    25,
+                    50
+                );
                 resetPasscode();
             }
         }
@@ -31,102 +43,104 @@ export default function App({ navigation, route }) {
 
     return (
         <View style={styles.container}>
-            <View style={styles.dotsContainer}>
-                {dots.map((dot, index) => (
-                    <View
-                        key={index}
-                        style={[styles.dot, dot === 'shape' ? styles.shapeDot : styles.outlineDot]}
-                    />
-                ))}
-            </View>
-            <View style={styles.keyboardContainer}>
-                <View style={{ flexDirection: 'row', padding: 10 }}>
-                    <TouchableOpacity
-                        style={styles.numberButton}
-                        onPress={() => handleNumberPress('1')}
-                    >
-                        <Text style={styles.numberButtonText}>1</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.numberButton}
-                        onPress={() => handleNumberPress('2')}
-                    >
-                        <Text style={styles.numberButtonText}>2</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.numberButton}
-                        onPress={() => handleNumberPress('3')}
-                    >
-                        <Text style={styles.numberButtonText}>3</Text>
-                    </TouchableOpacity>
+            <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 100 }}>
+                <View style={styles.dotsContainer}>
+                    {dots.map((dot, index) => (
+                        <View
+                            key={index}
+                            style={[styles.dot, dot === 'shape' ? styles.shapeDot : styles.outlineDot]}
+                        />
+                    ))}
                 </View>
-                <View style={{ flexDirection: 'row', padding: 10 }}>
-                    <TouchableOpacity
-                        style={styles.numberButton}
-                        onPress={() => handleNumberPress('4')}
-                    >
-                        <Text style={styles.numberButtonText}>4</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.numberButton}
-                        onPress={() => handleNumberPress('5')}
-                    >
-                        <Text style={styles.numberButtonText}>5</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.numberButton}
-                        onPress={() => handleNumberPress('6')}
-                    >
-                        <Text style={styles.numberButtonText}>6</Text>
-                    </TouchableOpacity>
-                </View>
-                <View style={{ flexDirection: 'row', width: '100%', padding: 10 }}>
-                    <TouchableOpacity
-                        style={styles.numberButton}
-                        onPress={() => handleNumberPress('7')}
-                    >
-                        <Text style={styles.numberButtonText}>7</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.numberButton}
-                        onPress={() => handleNumberPress('8')}
-                    >
-                        <Text style={styles.numberButtonText}>8</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.numberButton}
-                        onPress={() => handleNumberPress('9')}
-                    >
-                        <Text style={styles.numberButtonText}>9</Text>
-                    </TouchableOpacity>
-                </View>
-                <View style={{ flex: 1, flexDirection: 'row', padding: 10 }} >
-                    <TouchableOpacity
-                        style={styles.numberButton}
-                        onPress={resetPasscode}
-                    >
-                        <Text style={styles.numberButtonText}>Reset</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.numberButton}
-                        onPress={() => handleNumberPress('0')}
-                    >
-                        <Text style={styles.numberButtonText}>0</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.numberButton}
-                        onPress={() => {
-                            if (passcode.length > 0) {
-                                const updatedPasscode = passcode.slice(0, -1);
-                                const updatedDots = dots.slice(0, -1);
+                <View style={styles.keyboardContainer}>
+                    <View style={{ flexDirection: 'row', padding: 10 }}>
+                        <TouchableOpacity
+                            style={styles.numberButton}
+                            onPress={() => handleNumberPress('1')}
+                        >
+                            <Text style={styles.numberButtonText}>1</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.numberButton}
+                            onPress={() => handleNumberPress('2')}
+                        >
+                            <Text style={styles.numberButtonText}>2</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.numberButton}
+                            onPress={() => handleNumberPress('3')}
+                        >
+                            <Text style={styles.numberButtonText}>3</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View style={{ flexDirection: 'row', padding: 10 }}>
+                        <TouchableOpacity
+                            style={styles.numberButton}
+                            onPress={() => handleNumberPress('4')}
+                        >
+                            <Text style={styles.numberButtonText}>4</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.numberButton}
+                            onPress={() => handleNumberPress('5')}
+                        >
+                            <Text style={styles.numberButtonText}>5</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.numberButton}
+                            onPress={() => handleNumberPress('6')}
+                        >
+                            <Text style={styles.numberButtonText}>6</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View style={{ flexDirection: 'row', width: '100%', padding: 10 }}>
+                        <TouchableOpacity
+                            style={styles.numberButton}
+                            onPress={() => handleNumberPress('7')}
+                        >
+                            <Text style={styles.numberButtonText}>7</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.numberButton}
+                            onPress={() => handleNumberPress('8')}
+                        >
+                            <Text style={styles.numberButtonText}>8</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.numberButton}
+                            onPress={() => handleNumberPress('9')}
+                        >
+                            <Text style={styles.numberButtonText}>9</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View style={{ flex: 1, flexDirection: 'row', padding: 10 }} >
+                        <TouchableOpacity
+                            style={styles.numberButton}
+                            onPress={resetPasscode}
+                        >
+                            <Text style={styles.numberButtonText}>Reset</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.numberButton}
+                            onPress={() => handleNumberPress('0')}
+                        >
+                            <Text style={styles.numberButtonText}>0</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.numberButton}
+                            onPress={() => {
+                                if (passcode.length > 0) {
+                                    const updatedPasscode = passcode.slice(0, -1);
+                                    const updatedDots = dots.slice(0, -1);
 
-                                setPasscode(updatedPasscode);
-                                setDots(updatedDots);
-                            }
-                        }}
-                    >
-                        <Text style={styles.numberButtonText}>X</Text>
-                    </TouchableOpacity>
+                                    setPasscode(updatedPasscode);
+                                    setDots(updatedDots);
+                                }
+                            }}
+                        >
+                            <Text style={styles.numberButtonText}>X</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
             </View>
         </View>
@@ -136,7 +150,6 @@ export default function App({ navigation, route }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginTop: 200,
         justifyContent: 'center',
         alignItems: 'center',
     },

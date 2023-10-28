@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Image } from 'react-native'
 import { TouchableOpacity } from 'react-native'
+import { RFPercentage } from 'react-native-responsive-fontsize'
 
 export default function PaymentSuccessScreen({ navigation, route }) {
 
@@ -19,7 +20,7 @@ export default function PaymentSuccessScreen({ navigation, route }) {
     }, [])
     return (
         <SafeAreaView>
-            <View style={{ justifyContent: 'center', alignContent: 'center', marginTop: 100 }}>
+            <View style={{ justifyContent: 'center', alignContent: 'center', marginTop: 70 }}>
                 <View style={{
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -31,18 +32,18 @@ export default function PaymentSuccessScreen({ navigation, route }) {
                 </View>
                 <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
                     <Text style={styles.enterAmount}>N{enterAmount}</Text>
-                    <Text style={{ color: 'green', fontWeight: 'bold', fontSize: 20 }}>Payment Successful</Text>
-                    <Text style={{ paddingVertical: 10 }}> Transaction Number: - #26377628</Text>
+                    <Text style={{ color: 'green', fontWeight: 'bold', fontSize: RFPercentage(4) }}>Payment Successful</Text>
+                    <Text style={{ paddingVertical: 10, fontSize: RFPercentage(2.5) }}> Transaction Number: - #26377628</Text>
                 </View>
                 <View>
-                    <View style={{ marginTop: 50, paddingHorizontal: 20 }}>
+                    <View style={{ marginTop: 30, paddingHorizontal: 20 }}>
                         <TouchableOpacity style={styles.buttonDone} onPress={Paymentsuccess}>
-                            <Text style={{ fontSize: 20 }}> Done</Text>
+                            <Text style={{ fontSize: RFPercentage(3) }}> Done</Text>
                         </TouchableOpacity>
                     </View>
                     <View style={{ marginTop: 10, paddingHorizontal: 20 }}>
                         <TouchableOpacity style={styles.buttonDownload} >
-                            <Text style={{ fontSize: 20, color: 'white' }}> Download Receipt</Text>
+                            <Text style={{ fontSize: RFPercentage(3), color: 'white' }}> Download Receipt</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -62,7 +63,7 @@ const styles = StyleSheet.create({
     },
     enterAmount: {
         color: '#000000',
-        fontSize: 35,
+        fontSize: RFPercentage(6),
         fontWeight: 'bold',
         paddingVertical: 10
     },

@@ -3,6 +3,7 @@ import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from 'reac
 import { SafeAreaView } from 'react-native-safe-area-context';
 import logovpbank from '../../../../assets/logovpbank.png'
 import { StyleSheet } from 'react-native';
+import { RFPercentage } from 'react-native-responsive-fontsize'
 
 export default function SelectBankScreen({ navigation, route }) {
     const logovpbank = require('../../../../assets/logovpbank.png')
@@ -26,49 +27,32 @@ export default function SelectBankScreen({ navigation, route }) {
                             <TouchableOpacity onPress={() => {
                                 navigation.goBack()
                             }}>
-                                <Ionicons name='close' color='black' size={20} />
+                                <Ionicons name='close' color='black' size={RFPercentage(4)} />
                             </TouchableOpacity>
                             <View style={{
                                 alignItems: 'center',
-                                width: '100%', paddingRight: 40, justifyContent: 'center'
+                                justifyContent: 'center'
                             }}>
-                                <Text style={{
-                                    fontSize: 16,
-                                    color: 'black',
-                                    fontWeight: 'bold'
-                                }}> Select Bank</Text>
+                                <Text style={styles.textSelectBank}> Select Bank</Text>
                             </View>
                         </View>
                     </View>
                     {/* ******Search Bar*********** */}
                     <View style={{ flexDirection: 'row', paddingHorizontal: 15, paddingVertical: 40 }} >
-                        <View style={{
-                            width: '100%',
-                            flexDirection: 'row',
-                            backgroundColor: '#e3f0fa',
-                            padding: 10,
-                            borderRadius: 20
-                        }}>
+                        <View style={styles.viewSearch}>
 
-                            <Ionicons name='search' color='blue' size={20} />
-                            <TextInput placeholder='Search here for Bank' placeholderTextColor='grey' fontSize={15} />
+                            <Ionicons name='search' color='blue' size={RFPercentage(4)} />
+                            <TextInput
+                                style={{ paddingLeft: 5 }}
+                                placeholder='Search here for Bank'
+                                placeholderTextColor='grey'
+                                fontSize={RFPercentage(3)} />
                         </View>
                     </View>
                     <View style={{ paddingHorizontal: 15 }}>
-                        <View style={{
-                            width: '100%',
-                            height: 180,
-                            backgroundColor: '#e3f0fa',
-                            padding: 10,
-                            borderRadius: 20
-                        }}>
-                            <Text style={{ color: '#000000', fontSize: 17, fontWeight: 'bold' }} > Frequently Used Bank</Text>
-                            <View style={{
-                                flexDirection: 'row',
-                                justifyContent: 'space-between',
-                                alignItems: 'center',
-                                paddingHorizontal: 10, marginTop: 40
-                            }}>
+                        <View style={styles.viewUsed}>
+                            <Text style={{ color: '#000000', fontSize: RFPercentage(2.5), fontWeight: 'bold' }} > Frequently Used Bank</Text>
+                            <View style={styles.viewUsed1}>
                                 <TouchableOpacity
                                     onPress={() => handleSelect('NH Việt Nam thịnh vượng', logovpbank)}>
                                     <View style={{ alignItems: 'center' }}>
@@ -76,7 +60,7 @@ export default function SelectBankScreen({ navigation, route }) {
                                             width: 80,
                                             height: 15
                                         }} source={logovpbank} />
-                                        <Text style={{ fontSize: 16, fontWeight: 'bold', paddingTop: 30 }}> VP Bank</Text>
+                                        <Text style={{ fontSize: RFPercentage(2.5), fontWeight: 'bold', paddingTop: 30 }}> VP Bank</Text>
                                     </View>
                                 </TouchableOpacity>
                                 <TouchableOpacity
@@ -88,7 +72,7 @@ export default function SelectBankScreen({ navigation, route }) {
                                             height: 20
 
                                         }} source={logosacombank} />
-                                        <Text style={{ fontSize: 16, fontWeight: 'bold', paddingTop: 30 }}> SacomBank</Text>
+                                        <Text style={{ fontSize: RFPercentage(2.5), fontWeight: 'bold', paddingTop: 30 }}> SacomBank</Text>
                                     </View>
                                 </TouchableOpacity>
                                 <TouchableOpacity
@@ -99,7 +83,7 @@ export default function SelectBankScreen({ navigation, route }) {
                                             width: 60,
                                             height: 15
                                         }} source={logomb} />
-                                        <Text style={{ fontSize: 16, fontWeight: 'bold', paddingTop: 30 }}> VP Bank</Text>
+                                        <Text style={{ fontSize: RFPercentage(2.5), fontWeight: 'bold', paddingTop: 30 }}> VP Bank</Text>
                                     </View>
                                 </TouchableOpacity>
                             </View>
@@ -216,7 +200,7 @@ const styles = StyleSheet.create({
 
     },
     textNH: {
-        fontSize: 14,
+        fontSize: RFPercentage(2.5),
         paddingLeft: 10
     },
     iamge1: {
@@ -230,5 +214,31 @@ const styles = StyleSheet.create({
     image3: {
         width: 80,
         height: 30
+    },
+    textSelectBank: {
+        fontSize: RFPercentage(3),
+        color: 'black',
+        fontWeight: 'bold',
+        marginLeft: '35%'
+    },
+    viewSearch: {
+        width: '100%',
+        flexDirection: 'row',
+        backgroundColor: '#e3f0fa',
+        padding: 10,
+        borderRadius: 20
+    },
+    viewUsed: {
+        width: '100%',
+        height: 180,
+        backgroundColor: '#e3f0fa',
+        padding: 10,
+        borderRadius: 20
+    },
+    viewUsed1: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingHorizontal: 10, marginTop: 40
     }
 })

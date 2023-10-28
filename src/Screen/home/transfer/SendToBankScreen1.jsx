@@ -2,6 +2,7 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Ionicons } from '@expo/vector-icons'
+import { RFPercentage } from 'react-native-responsive-fontsize'
 
 export default function SendToBankScreen1({ navigation, route }) {
 
@@ -17,40 +18,36 @@ export default function SendToBankScreen1({ navigation, route }) {
                     <TouchableOpacity onPress={() => {
                         navigation.navigate('Transfer')
                     }}>
-                        <Ionicons name='chevron-back' color='black' size={30} />
+                        <Ionicons name='chevron-back' color='black' size={RFPercentage(4)} />
                     </TouchableOpacity>
                     <View style={{
                         alignItems: 'center',
-                        width: '100%', paddingRight: 40, justifyContent: 'center'
+                        justifyContent: 'center'
                     }}>
                         <Text style={{
-                            fontSize: 22,
+                            fontSize: RFPercentage(3),
                             color: 'black',
-                            fontWeight: 'bold'
+                            fontWeight: 'bold',
+                            marginLeft: '30%'
                         }}> Send to Bank</Text>
                     </View>
                 </View>
             </View>
             <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
-                <Text style={{ fontSize: 16 }}> Select Bank</Text>
+                <Text style={{
+                    fontSize: RFPercentage(2.5)
+                }}> Select Bank</Text>
             </View>
             <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
-                <TouchableOpacity style={{
-                    backgroundColor: '#e3f0fa',
-                    borderRadius: 20,
-                    paddingHorizontal: 30,
-                    paddingVertical: 10,
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                }} onPress={handleSelect}>
-                    <Ionicons name='podium' size={30} color='black' />
+                <TouchableOpacity style={styles.buttonSelectbank} onPress={handleSelect}>
+                    <Ionicons name='podium' size={RFPercentage(4)} color='black' />
 
-                    <Text style={{ paddingLeft: 10, fontSize: 15 }}>Select Bank </Text>
-                    <Ionicons style={{ position: 'absolute', right: 20 }} name='chevron-forward-outline' size={30} color='black' />
+                    <Text style={{ paddingLeft: 10, fontSize: RFPercentage(2.5) }}>Select Bank </Text>
+                    <Ionicons style={{ position: 'absolute', right: 20 }} name='chevron-forward-outline' size={RFPercentage(4)} color='black' />
                 </TouchableOpacity>
             </View>
             <View style={{ marginTop: 50, paddingHorizontal: 20, flexDirection: 'row', justifyContent: 'space-between' }}>
-                <Text style={{ color: '#000000', fontSize: 16 }}> Saved Beneficiary</Text>
+                <Text style={{ color: '#000000', fontSize: RFPercentage(2.5) }}> Saved Beneficiary</Text>
                 <TouchableOpacity>
                     <Text style={{ color: '#0540F2' }}>See all</Text>
                 </TouchableOpacity>
@@ -63,7 +60,7 @@ export default function SendToBankScreen1({ navigation, route }) {
                     }} source={require('../../../../assets/logosacombank.png')} />
                 </View>
                 <View style={{ marginLeft: 30 }}>
-                    <Text style={{ fontSize: 16, color: '#0540F2' }}>Mogaji Olatubosun ojo</Text>
+                    <Text style={{ fontSize: RFPercentage(2.5), color: '#0540F2' }}>Mogaji Olatubosun ojo</Text>
                     <Text>9033554931</Text>
                 </View>
             </View>
@@ -75,7 +72,7 @@ export default function SendToBankScreen1({ navigation, route }) {
                     }} source={require('../../../../assets/logosacombank.png')} />
                 </View>
                 <View style={{ marginLeft: 30 }}>
-                    <Text style={{ fontSize: 16, color: '#0540F2' }}>Mogaji Olatubosun ojo</Text>
+                    <Text style={{ fontSize: RFPercentage(2.5), color: '#0540F2' }}>Mogaji Olatubosun ojo</Text>
                     <Text>9033554931</Text>
                 </View>
             </View>
@@ -87,7 +84,7 @@ export default function SendToBankScreen1({ navigation, route }) {
                     }} source={require('../../../../assets/logosacombank.png')} />
                 </View>
                 <View style={{ marginLeft: 30 }}>
-                    <Text style={{ fontSize: 16, color: '#0540F2' }}>Mogaji Olatubosun ojo</Text>
+                    <Text style={{ fontSize: RFPercentage(2.5), color: '#0540F2' }}>Mogaji Olatubosun ojo</Text>
                     <Text>9033554931</Text>
                 </View>
             </View>
@@ -95,4 +92,13 @@ export default function SendToBankScreen1({ navigation, route }) {
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    buttonSelectbank: {
+        backgroundColor: '#e3f0fa',
+        borderRadius: 20,
+        paddingHorizontal: 30,
+        paddingVertical: 10,
+        flexDirection: 'row',
+        alignItems: 'center',
+    }
+})

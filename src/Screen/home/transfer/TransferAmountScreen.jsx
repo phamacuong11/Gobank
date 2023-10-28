@@ -6,6 +6,7 @@ import Button from '../../../component/Button'
 import { ScrollView } from 'react-native'
 import { StatusBar } from 'expo-status-bar'
 import { ToastAndroid } from 'react-native'
+import { RFPercentage } from 'react-native-responsive-fontsize'
 
 export default function TransferAmountScreen({ navigation, route }) {
 
@@ -25,7 +26,13 @@ export default function TransferAmountScreen({ navigation, route }) {
     const { balance } = route.params.account
     const hanldeClickConfirm = () => {
         if (enterAmount === '') {
-            alert('Vui lòng nhập số tiền')
+            ToastAndroid.showWithGravityAndOffset(
+                'Vui lòng nhập số tiền',
+                ToastAndroid.LONG,
+                ToastAndroid.TOP,
+                25,
+                50
+            );
         } else if (remark === '') {
             ToastAndroid.showWithGravityAndOffset(
                 'Vui lòng điền đầy đủ thông tin',
@@ -51,22 +58,23 @@ export default function TransferAmountScreen({ navigation, route }) {
                             <TouchableOpacity onPress={() => {
                                 navigation.goBack()
                             }}>
-                                <Ionicons name='chevron-back' color='black' size={20} />
+                                <Ionicons name='chevron-back' color='black' size={RFPercentage(4)} />
                             </TouchableOpacity>
                             <View style={{
                                 alignItems: 'center',
-                                width: '100%', paddingRight: 40, justifyContent: 'center'
+                                justifyContent: 'center'
                             }}>
                                 <Text style={{
-                                    fontSize: 16,
+                                    fontSize: RFPercentage(3),
                                     color: 'black',
-                                    fontWeight: 'bold'
+                                    fontWeight: 'bold',
+                                    marginLeft: '28%'
                                 }}> Transfer Amount</Text>
                             </View>
                         </View>
                     </View>
                     <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
-                        <Text style={{ fontSize: 16 }}> Select Bank</Text>
+                        <Text style={{ fontSize: RFPercentage(2.5) }}> Select Bank</Text>
                     </View>
                     <View style={{ marginTop: 20, paddingHorizontal: 10 }}>
                         <View style={styles.view}>
@@ -79,23 +87,24 @@ export default function TransferAmountScreen({ navigation, route }) {
 
                             </View>
                             <View style={{ paddingHorizontal: 10 }}>
-                                <Text style={{ paddingLeft: 10, fontSize: 14, paddingBottom: 10 }}>Mogaji Olatubosun Ojo </Text>
-                                <Text style={{ paddingLeft: 10, fontSize: 12 }}> 9033554931</Text>
+                                <Text style={{ paddingLeft: 10, fontSize: RFPercentage(3), paddingBottom: 10 }}>Mogaji Olatubosun Ojo </Text>
+                                <Text style={{ paddingLeft: 10, fontSize: RFPercentage(2) }}> 9033554931</Text>
                             </View>
                         </View>
                     </View>
                     <View>
 
                         <View style={{ marginTop: 50, paddingHorizontal: 20, flexDirection: 'row', justifyContent: 'space-between' }}>
-                            <Text style={{ color: '#000000', fontSize: 16 }}> Enter Amount</Text>
+                            <Text style={{ color: '#000000', fontSize: RFPercentage(3) }}> Enter Amount</Text>
 
                         </View>
                         <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
                             <View style={styles.view}>
                                 <TextInput style={{
+                                    width: '100%',
                                     paddingHorizontal: 10,
                                     fontWeight: 'bold',
-                                    fontSize: 16,
+                                    fontSize: RFPercentage(3),
 
                                 }}
                                     value={enterAmount}
@@ -110,7 +119,7 @@ export default function TransferAmountScreen({ navigation, route }) {
                     </View>
                     <View>
                         <View style={{ marginTop: 20, paddingHorizontal: 20, flexDirection: 'row', justifyContent: 'space-between' }}>
-                            <Text style={{ color: '#000000', fontSize: 16 }}> Remark(Optional)</Text>
+                            <Text style={{ color: '#000000', fontSize: RFPercentage(3) }}> Remark(Optional)</Text>
 
                         </View>
                         <View style={{ marginTop: 20, paddingHorizontal: 20 }}>

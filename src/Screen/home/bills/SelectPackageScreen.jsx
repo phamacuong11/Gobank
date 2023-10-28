@@ -2,6 +2,7 @@ import { ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 
 import React from 'react'
 import { SafeAreaView } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
+import { RFPercentage } from 'react-native-responsive-fontsize'
 
 
 export default function SelectPackageScreen({ navigation }) {
@@ -13,22 +14,22 @@ export default function SelectPackageScreen({ navigation }) {
                         <TouchableOpacity onPress={() => {
                             navigation.goBack()
                         }}>
-                            <Ionicons name='chevron-back' color='black' size={30} />
+                            <Ionicons name='chevron-back' color='black' size={RFPercentage(4)} />
                         </TouchableOpacity>
                         <View style={{
                             alignItems: 'center',
-                            width: '100%', paddingRight: 40, justifyContent: 'center'
+                            justifyContent: 'center'
                         }}>
                             <Text style={{
-                                fontSize: 22,
+                                fontSize: RFPercentage(3),
                                 color: 'black',
-                                fontWeight: 'bold'
+                                fontWeight: 'bold', marginLeft: '30%'
                             }}> Select Package</Text>
                         </View>
                     </View>
                     <View style={{ padding: 20 }}>
                         <View style={{ padding: 5, backgroundColor: '#e3f0fa', borderRadius: 10, flexDirection: 'row', alignItems: 'center' }}>
-                            <Ionicons name='search' color='#0540F2' size={20} />
+                            <Ionicons name='search' color='#0540F2' size={RFPercentage(4)} />
                             <TextInput
                                 placeholder='Search here for package'
                                 style={{ color: 'grey', paddingLeft: 5 }} />
@@ -37,9 +38,9 @@ export default function SelectPackageScreen({ navigation }) {
                     <View>
                         <View style={{ paddingHorizontal: 20, paddingVertical: 10 }}>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                <Text style={{ fontSize: 16 }}> DSTV Premium</Text>
+                                <Text style={{ fontSize: RFPercentage(2.5) }}> DSTV Premium</Text>
                                 <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-                                    <Text style={{ paddingRight: 5, fontSize: 16 }}>N24,500</Text>
+                                    <Text style={{ paddingRight: 5, fontSize: RFPercentage(2.5) }}>N24,500</Text>
                                     <Ionicons name='ellipse-outline' color='#000000' size={15} />
                                 </View>
                             </View>
@@ -47,73 +48,73 @@ export default function SelectPackageScreen({ navigation }) {
                         <View style={{ paddingHorizontal: 20, paddingVertical: 15 }}>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between', }}>
                                 <Text style={{
-                                    fontSize: 16, color: '#0540F2'
+                                    fontSize: RFPercentage(2.5), color: '#0540F2'
                                 }}> DSTV Compact Plus</Text>
                                 <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-                                    <Text style={{ paddingRight: 5, fontSize: 16, color: 'blue' }}>N24,500</Text>
+                                    <Text style={{ paddingRight: 5, fontSize: RFPercentage(2.5), color: 'blue' }}>N24,500</Text>
                                     <Ionicons name='ellipse-outline' color='blue' size={15} />
                                 </View>
                             </View>
                         </View>
                         <View style={{ paddingHorizontal: 20, paddingVertical: 15 }}>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                <Text style={{ fontSize: 16 }}> DSTV Compact</Text>
+                                <Text style={{ fontSize: RFPercentage(2.5) }}> DSTV Compact</Text>
                                 <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-                                    <Text style={{ paddingRight: 5, fontSize: 16 }}>N24,500</Text>
+                                    <Text style={{ paddingRight: 5, fontSize: RFPercentage(2.5) }}>N24,500</Text>
                                     <Ionicons name='ellipse-outline' color='#000000' size={15} />
                                 </View>
                             </View>
                         </View>
                         <View style={{ paddingHorizontal: 20, paddingVertical: 15 }}>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                <Text style={{ fontSize: 16 }}> DSTV Comfram</Text>
+                                <Text style={{ fontSize: RFPercentage(2.5) }}> DSTV Comfram</Text>
                                 <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-                                    <Text style={{ paddingRight: 5, fontSize: 16 }}>N24,500</Text>
+                                    <Text style={{ paddingRight: 5, fontSize: RFPercentage(2.5) }}>N24,500</Text>
                                     <Ionicons name='ellipse-outline' color='#000000' size={15} />
                                 </View>
                             </View>
                         </View>
                         <View style={{ paddingHorizontal: 20, paddingVertical: 15 }}>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                <Text style={{ fontSize: 16 }}> DSTV Yanga</Text>
+                                <Text style={{ fontSize: RFPercentage(2.5) }}> DSTV Yanga</Text>
                                 <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-                                    <Text style={{ paddingRight: 5, fontSize: 16 }}>N24,500</Text>
+                                    <Text style={{ paddingRight: 5, fontSize: RFPercentage(2.5) }}>N24,500</Text>
                                     <Ionicons name='ellipse-outline' color='#000000' size={15} />
                                 </View>
                             </View>
                         </View>
                         <View style={{ paddingHorizontal: 20, paddingVertical: 15 }}>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                <Text style={{ fontSize: 16 }}> DSTV Padi</Text>
+                                <Text style={{ fontSize: RFPercentage(2.5) }}> DSTV Padi</Text>
                                 <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-                                    <Text style={{ paddingRight: 5, fontSize: 16 }}>N24,500</Text>
+                                    <Text style={{ paddingRight: 5, fontSize: RFPercentage(2.5) }}>N24,500</Text>
                                     <Ionicons name='ellipse-outline' color='#000000' size={15} />
                                 </View>
                             </View>
                         </View>
                         <View style={{ paddingHorizontal: 20, paddingVertical: 15 }}>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                <Text style={{ fontSize: 16 }}> DSTV Premium Asia</Text>
+                                <Text style={{ fontSize: RFPercentage(2.5) }}> DSTV Premium Asia</Text>
                                 <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-                                    <Text style={{ paddingRight: 5, fontSize: 16 }}>N24,500</Text>
+                                    <Text style={{ paddingRight: 5, fontSize: RFPercentage(2.5) }}>N24,500</Text>
                                     <Ionicons name='ellipse-outline' color='#000000' size={15} />
                                 </View>
                             </View>
                         </View>
                         <View style={{ paddingHorizontal: 20, paddingVertical: 15 }}>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                <Text style={{ fontSize: 16 }}> DSTV Premium + French</Text>
+                                <Text style={{ fontSize: RFPercentage(2.5) }}> DSTV Premium + French</Text>
                                 <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-                                    <Text style={{ paddingRight: 5, fontSize: 16 }}>N24,500</Text>
+                                    <Text style={{ paddingRight: 5, fontSize: RFPercentage(2.5) }}>N24,500</Text>
                                     <Ionicons name='ellipse-outline' color='#000000' size={15} />
                                 </View>
                             </View>
                         </View>
                         <View style={{ paddingHorizontal: 20, paddingVertical: 15 }}>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                <Text style={{ fontSize: 16 }}> DSTV CompactPlus + Xtra</Text>
+                                <Text style={{ fontSize: RFPercentage(2.5) }}> DSTV CompactPlus + Xtra</Text>
                                 <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-                                    <Text style={{ paddingRight: 5, fontSize: 16 }}>N24,500</Text>
+                                    <Text style={{ paddingRight: 5, fontSize: RFPercentage(2.5) }}>N24,500</Text>
                                     <Ionicons name='ellipse-outline' color='#000000' size={15} />
                                 </View>
                             </View>

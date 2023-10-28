@@ -2,8 +2,11 @@ import { ScrollView, StyleSheet, Text, Touchable, TouchableOpacity, View } from 
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import { RFPercentage } from 'react-native-responsive-fontsize'
 
 export default function TransactionScreen({ navigation }) {
+
+    const sizeIcon = RFPercentage(4)
 
     return (
         <SafeAreaView>
@@ -14,18 +17,18 @@ export default function TransactionScreen({ navigation }) {
                             <TouchableOpacity onPress={() => {
                                 navigation.goBack()
                             }}>
-                                <Ionicons name='arrow-back-outline' color='black' size={40} />
+                                <Ionicons name='arrow-back-outline' color='black' size={RFPercentage(4)} />
                             </TouchableOpacity>
                             <Text style={styles.textheader}>Transaction History </Text>
                         </View>
                     </View>
                     <View >
                         {/* *********************111111111111111111********************* */}
-                        <View style={{ flexDirection: 'row', paddingHorizontal: 20, marginTop: 30, }}>
+                        <View style={styles.viewbody}>
                             <View style={styles.view}>
-                                <Ionicons name='podium' color='blue' size={30} />
+                                <Ionicons name='podium' color='blue' size={sizeIcon} />
                             </View>
-                            <View style={{ paddingLeft: 10 }}>
+                            <View style={{ paddingLeft: 5 }}>
                                 <Text style={styles.texttitle} > Transfer to Mogaji Olatubosun</Text>
                                 <Text style={styles.textday}> Mar 12th, 14:11</Text>
                             </View>
@@ -35,11 +38,11 @@ export default function TransactionScreen({ navigation }) {
                             </View>
                         </View>
                         {/* ***************************222222222222222222******************* */}
-                        <View style={{ flexDirection: 'row', paddingHorizontal: 20, marginTop: 30, }}>
+                        <View style={styles.viewbody}>
                             <View style={styles.view}>
-                                <Ionicons name='reader' color='blue' size={30} />
+                                <Ionicons name='reader' color='blue' size={sizeIcon} />
                             </View>
-                            <View style={{ paddingLeft: 10 }}>
+                            <View style={{ paddingLeft: 5 }}>
                                 <Text style={styles.texttitle} > Sporty-Betting</Text>
                                 <Text style={styles.textday}> Mar 12th, 14:11</Text>
                             </View>
@@ -51,9 +54,9 @@ export default function TransactionScreen({ navigation }) {
                         {/* ****************3333333333333333*********************** */}
                         <View style={styles.viewbody}>
                             <View style={styles.view}>
-                                <Ionicons name='reader' color='blue' size={30} />
+                                <Ionicons name='reader' color='blue' size={sizeIcon} />
                             </View>
-                            <View style={{ paddingLeft: 10 }}>
+                            <View style={{ paddingLeft: 5 }}>
                                 <Text style={styles.texttitle} > Sporty-Betting</Text>
                                 <Text style={styles.textday}> Mar 12th, 14:11</Text>
                             </View>
@@ -65,10 +68,10 @@ export default function TransactionScreen({ navigation }) {
                         {/* ******************4444444444444444444444************** */}
                         <View style={styles.viewbody}>
                             <View style={styles.view}>
-                                <Ionicons name='podium' color='blue' size={30} />
+                                <Ionicons name='podium' color='blue' size={sizeIcon} />
                             </View>
-                            <View style={{ paddingLeft: 10 }}>
-                                <Text style={styles.texttitle} > Transfer to Mogaji Olatubosun</Text>
+                            <View style={{ paddingLeft: 5 }}>
+                                <Text style={styles.texttitle} > Transfer to Mogaji Olatubosun </Text>
                                 <Text style={styles.textday}> Mar 12th, 14:11</Text>
                             </View>
                             <View style={{ position: 'absolute', top: 0, right: 10 }}>
@@ -79,9 +82,9 @@ export default function TransactionScreen({ navigation }) {
                         {/* **********************55555555555**************** */}
                         <View style={styles.viewbody}>
                             <View style={styles.view}>
-                                <Ionicons name='podium' color='blue' size={30} />
+                                <Ionicons name='podium' color='blue' size={sizeIcon} />
                             </View>
-                            <View style={{ paddingLeft: 10 }}>
+                            <View style={{ paddingLeft: 5 }}>
                                 <Text style={styles.texttitle} > Transfer to Mogaji Olatubosun</Text>
                                 <Text style={styles.textday}> Mar 12th, 14:11</Text>
                             </View>
@@ -93,9 +96,9 @@ export default function TransactionScreen({ navigation }) {
                         {/* ****************6666666666666**************** */}
                         <View style={styles.viewbody}>
                             <View style={styles.view}>
-                                <Ionicons name='radio' color='blue' size={30} />
+                                <Ionicons name='radio' color='blue' size={sizeIcon} />
                             </View>
-                            <View style={{ paddingLeft: 10 }}>
+                            <View style={{ paddingLeft: 5 }}>
                                 <Text style={styles.texttitle} > Data to 09033554931</Text>
                                 <Text style={styles.textday}> Mar 12th, 14:11</Text>
                             </View>
@@ -107,9 +110,9 @@ export default function TransactionScreen({ navigation }) {
                         {/* ***************77777777777*************** */}
                         <View style={{ flexDirection: 'row', paddingHorizontal: 20, marginTop: 30, paddingBottom: 20 }}>
                             <View style={styles.view}>
-                                <Ionicons name='reader' color='blue' size={30} />
+                                <Ionicons name='reader' color='blue' size={sizeIcon} />
                             </View>
-                            <View style={{ paddingLeft: 10 }}>
+                            <View style={{ paddingLeft: 5 }}>
                                 <Text style={styles.texttitle} > Dstv 7038718834</Text>
                                 <Text style={styles.textday}> Mar 12th, 14:11</Text>
                             </View>
@@ -128,40 +131,43 @@ export default function TransactionScreen({ navigation }) {
 
 const styles = StyleSheet.create({
     textheader: {
-        fontSize: 25,
+        fontSize: RFPercentage(3),
         fontWeight: 'bold',
-        paddingLeft: 40
+        paddingLeft: '22%'
     },
     view: {
         backgroundColor: '#99CCFF',
         borderRadius: 10,
         padding: 5,
-        width: 50,
+        width: 40,
+        height: 40,
         justifyContent: 'center',
         alignItems: 'center'
     },
     texttarget: {
         color: 'red',
         fontWeight: 'bold',
-        fontSize: 16
+        fontSize: RFPercentage(2.5)
     },
     textsuccess: {
         color: 'green',
         fontWeight: 'bold',
-        fontSize: 13
+        fontSize: RFPercentage(2)
     },
     textday: {
         color: 'grey',
-        fontSize: 14,
+        fontSize: RFPercentage(2.5),
         marginTop: 10
     },
     viewbody: {
         flexDirection: 'row',
-        paddingHorizontal: 20,
-        marginTop: 30
+        paddingHorizontal: 15,
+        marginTop: 30,
+        alignItems: 'center'
     },
     texttitle: {
+        width: '100%',
         color: '#000000',
-        fontSize: 15
+        fontSize: RFPercentage(2.5)
     }
 })

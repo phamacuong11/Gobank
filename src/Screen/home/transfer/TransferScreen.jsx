@@ -1,6 +1,8 @@
 import { Image, SafeAreaView, StatusBar, StyleSheet, Text, Touchable, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import { Ionicons } from '@expo/vector-icons'
+import { RFPercentage, RFValue } from 'react-native-responsive-fontsize'
+
 
 export default function TransferScreen({ navigation }) {
     const [showBalance, setShowBalance] = useState(true)
@@ -17,7 +19,9 @@ export default function TransferScreen({ navigation }) {
                 />
                 <View style={{ flexDirection: "row", justifyContent: 'space-between', position: 'absolute', }}>
                     <View style={styles.view1}>
-                        <View style={styles.view2}>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                            <View style={styles.view2}>
+                            </View>
                             <View style={styles.view3}>
 
                             </View>
@@ -26,17 +30,16 @@ export default function TransferScreen({ navigation }) {
                             <TouchableOpacity onPress={() => {
                                 navigation.goBack()
                             }}>
-                                <Ionicons name='chevron-back' color='white' size={30} />
+                                <Ionicons name='chevron-back' color='white' size={RFPercentage(3)} />
                             </TouchableOpacity>
                             <View style={{
                                 alignItems: 'center',
-                                width: '100%',
-                                paddingRight: 40,
                                 justifyContent: 'center'
                             }}>
                                 <Text style={{
-                                    fontSize: 20,
+                                    fontSize: RFPercentage(3),
                                     color: 'white',
+                                    marginLeft: '40%'
                                 }}> Tranfer</Text>
                             </View>
                         </View>
@@ -71,7 +74,7 @@ export default function TransferScreen({ navigation }) {
 
                             </View>
                             <View style={{ marginTop: 50 }}>
-                                <Text style={{ color: 'black', fontSize: 17 }}> Choose a way to send money</Text>
+                                <Text style={{ color: 'black', fontSize: RFPercentage(2.5), }}> Choose a way to send money</Text>
                             </View>
                             <View>
                                 <View style={{ paddingHorizontal: 5, paddingVertical: 20, }}>
@@ -81,7 +84,10 @@ export default function TransferScreen({ navigation }) {
                                         </View>
                                         <View style={{ justifyContent: 'center', }}>
                                             <Text style={styles.text}>  Send to Go Bank</Text>
-                                            <Text style={{ marginLeft: 10, color: 'black' }}> Send money to GBG account </Text>
+                                            <Text style={{
+                                                marginLeft: 10, color: 'black',
+                                                fontSize: RFPercentage(2),
+                                            }}> Send money to GBG account </Text>
                                         </View>
                                     </TouchableOpacity>
                                 </View>
@@ -92,7 +98,10 @@ export default function TransferScreen({ navigation }) {
                                         </View>
                                         <View style={{ justifyContent: 'center', }}>
                                             <Text style={styles.text}>  Send to Go Other Bank</Text>
-                                            <Text style={{ marginLeft: 10, color: 'black' }}> Send money to Other banks </Text>
+                                            <Text style={{
+                                                marginLeft: 10, color: 'black',
+                                                fontSize: RFPercentage(2),
+                                            }}> Send money to Other banks </Text>
                                         </View>
                                     </TouchableOpacity>
                                 </View>
@@ -115,7 +124,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10
     },
     text: {
-        fontSize: 20,
+        fontSize: RFPercentage(3),
         color: 'blue',
         fontWeight: 'bold'
     },
@@ -126,25 +135,23 @@ const styles = StyleSheet.create({
     },
     view1: {
         width: '100%',
-        height: 250,
+        height: 210,
         backgroundColor: '#10142E',
         borderBottomLeftRadius: 30,
-        borderBottomRightRadius: 30
+        borderBottomRightRadius: 30,
     },
     view2: {
-        width: 160,
-        height: 90,
+        width: '40%',
+        height: 70,
         backgroundColor: '#000055',
         borderBottomRightRadius: 80,
         borderBottomLeftRadius: 80,
-        marignRight: 20
     },
     view3: {
-        width: 160,
-        height: 90,
+        width: '40%',
+        height: 70,
         backgroundColor: '#000099',
         borderBottomRightRadius: 80,
         borderBottomLeftRadius: 80,
-        marginLeft: 250
     }
 })

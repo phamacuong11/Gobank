@@ -7,6 +7,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { ScrollView } from 'react-native';
 import Button from '../../component/Button'
 import { useRef } from 'react'
+import { RFPercentage, RFValue } from 'react-native-responsive-fontsize'
 
 
 export default function SignUpScreen({ navigation }) {
@@ -102,7 +103,7 @@ export default function SignUpScreen({ navigation }) {
                         <View style={styles.view}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 20 }}>
                                 <Ionicons name='person-outline' size={32} color='#0540F2' />
-                                <Text> Full name</Text>
+                                <Text style={{ fontSize: RFPercentage(2.5) }}> Full name</Text>
                             </View>
                             <View style={{ alignItems: 'center', paddingHorizontal: 10 }}>
                                 <TextInput style={styles.textinput}
@@ -115,7 +116,7 @@ export default function SignUpScreen({ navigation }) {
                         <View style={styles.view}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 20 }}>
                                 <Ionicons name='mail-outline' size={32} color='#0540F2' />
-                                <Text> Email</Text>
+                                <Text style={{ fontSize: RFPercentage(2.5) }}> Email</Text>
                             </View>
                             <View style={{ alignItems: 'center', paddingHorizontal: 10 }}>
                                 <TextInput style={styles.textinput}
@@ -128,7 +129,7 @@ export default function SignUpScreen({ navigation }) {
                         <View style={styles.view}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 20 }}>
                                 <Ionicons name='lock-closed-outline' size={32} color='#0540F2' />
-                                <Text> Password</Text>
+                                <Text style={{ fontSize: RFPercentage(2.5) }}> Password</Text>
                             </View>
                             <View style={{ alignItems: 'center', paddingHorizontal: 10 }}>
                                 <TextInput style={styles.textinput}
@@ -151,7 +152,7 @@ export default function SignUpScreen({ navigation }) {
                         <View style={styles.view}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 20 }}>
                                 <Ionicons name='lock-closed-outline' size={32} color='#0540F2' />
-                                <Text> Confirm password</Text>
+                                <Text style={{ fontSize: RFPercentage(2.5) }}> Confirm password</Text>
                             </View>
                             <View style={{ alignItems: 'center', paddingHorizontal: 10 }}>
                                 <TextInput style={styles.textinput}
@@ -177,9 +178,9 @@ export default function SignUpScreen({ navigation }) {
                             <Button text='Sign Up' />
                         </TouchableOpacity>
                         <View style={{ flexDirection: 'row', marginTop: 20 }}>
-                            <Text> Have an account?</Text>
+                            <Text style={{ fontSize: RFPercentage(2.5) }}> Have an account?</Text>
                             <TouchableOpacity onPress={() => navigation.navigate("Login")}>
-                                <Text style={{ color: '#0540F2', textDecorationLine: 'underline', fontWeight: 'bold' }}> Sign in</Text>
+                                <Text style={{ color: '#0540F2', textDecorationLine: 'underline', fontWeight: 'bold', fontSize: RFPercentage(2.5) }}> Sign in</Text>
                             </TouchableOpacity>
                         </View>
                     </View>

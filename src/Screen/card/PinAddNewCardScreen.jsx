@@ -6,6 +6,8 @@ import { Ionicons } from '@expo/vector-icons'
 
 export default function PinAddNewCardScreen({ navigation }) {
 
+    const sizeIcon = 20
+
 
 
     return (
@@ -15,32 +17,32 @@ export default function PinAddNewCardScreen({ navigation }) {
                     <TouchableOpacity onPress={() => {
                         navigation.goBack()
                     }}>
-                        <Ionicons name='arrow-back-outline' color='black' size={30} />
+                        <Ionicons name='arrow-back-outline' color='black' size={20} />
                     </TouchableOpacity>
-                    <Text style={{ fontSize: 20, fontWeight: 'bold', paddingLeft: 100 }}>Add New Card </Text>
+                    <Text style={{ fontSize: 20, fontWeight: 'bold', marginLeft: '27%' }}>Add New Card </Text>
                 </View>
                 <View style={{ paddingHorizontal: 20, marginTop: 30 }}>
-                    <Text style={{ fontSize: 20, fontWeight: 'bold' }}> Enter Your Pin</Text>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold' }}> Enter Your Pin</Text>
                     <Text style={{ width: '90%', fontWeight: 'bold', paddingVertical: 5 }}> Please enter your four digit pin that we confirm its you</Text>
                 </View>
                 <View style={{ justifyContent: 'space-between', flexDirection: 'row', paddingHorizontal: 40, marginTop: 50 }}>
                     <View style={styles.viewEllipse}>
-                        <Ionicons name='ellipse' color='grey' size={25} />
+                        <Ionicons name='ellipse' color='grey' size={sizeIcon} />
                     </View>
                     <View style={styles.viewEllipse}>
-                        <Ionicons name='ellipse' color='grey' size={25} />
+                        <Ionicons name='ellipse' color='grey' size={sizeIcon} />
                     </View>
                     <View style={styles.viewEllipse}>
-                        <Ionicons name='ellipse' color='grey' size={25} />
+                        <Ionicons name='ellipse' color='grey' size={sizeIcon} />
                     </View>
                     <View style={styles.viewEllipse}>
-                        <Ionicons name='ellipse' color='grey' size={25} />
+                        <Ionicons name='ellipse' color='grey' size={sizeIcon} />
                     </View>
                 </View>
-                <View style={{ paddingHorizontal: 20, marginTop: 100 }}>
+                <View style={{ paddingHorizontal: 10, marginTop: 100 }}>
                     <TouchableOpacity
                         style={styles.buttonConfirm}>
-                        <Text style={{ color: 'white', fontSize: 20 }}>Confirm</Text>
+                        <Text style={{ color: 'white', fontSize: 16 }}>Confirm</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -51,11 +53,13 @@ export default function PinAddNewCardScreen({ navigation }) {
 const styles = StyleSheet.create({
     viewEllipse: {
         width: '20%',
+        height: '45%',
         borderWidth: 1,
         borderRadius: 5,
         padding: 15,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        padding: 5
     },
     buttonConfirm: {
         flexDirection: 'row',

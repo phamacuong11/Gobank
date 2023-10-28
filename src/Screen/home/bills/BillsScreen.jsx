@@ -6,6 +6,7 @@ import { StatusBar } from 'react-native'
 import { Image } from 'react-native'
 import { ScrollView } from 'react-native'
 import { useState } from 'react'
+import { RFPercentage } from 'react-native-responsive-fontsize'
 
 export default function BillsScreen({ navigation }) {
 
@@ -26,7 +27,9 @@ export default function BillsScreen({ navigation }) {
                     <StatusBar barStyle='light-content' />
                     <View style={{ flexDirection: "row", justifyContent: 'space-between', position: 'absolute', }}>
                         <View style={styles.view1}>
-                            <View style={styles.view2}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                                <View style={styles.view2}>
+                                </View>
                                 <View style={styles.view3}>
                                 </View>
                             </View>
@@ -36,45 +39,47 @@ export default function BillsScreen({ navigation }) {
                         <TouchableOpacity onPress={() => {
                             navigation.goBack()
                         }}>
-                            <Ionicons name='chevron-back' color='white' size={30} />
+                            <Ionicons name='chevron-back' color='white' size={RFPercentage(4)} />
                         </TouchableOpacity>
                         <View style={{
                             alignItems: 'center',
-                            width: '100%', paddingRight: 60, justifyContent: 'center'
+                            justifyContent: 'center'
                         }}>
                             <Text style={{
-                                fontSize: 20, color: 'white',
+                                fontSize: RFPercentage(3), color: 'white', marginLeft: '45%'
                             }}> Bills</Text>
                         </View>
                     </View>
-                    <View style={{ paddingHorizontal: 20 }}>
+                    <View style={{}}>
+                        <View style={{ paddingHorizontal: 10 }}>
+                            <View style={{ paddingHorizontal: 15, flexDirection: 'row', marginTop: 40 }}>
+                                <Image style={{
+                                    width: 30, height: 30,
+                                }}
+                                    source={logovn} />
+                                <Ionicons name='chevron-down-outline' size={RFPercentage(5)} color='white' />
+                            </View>
+                            <Text style={{ color: 'white', fontSize: RFPercentage(2.5) }}> Current Balance</Text>
+                            <View style={styles.viewCurrentBalance}>
+                                {showBalance ? <Text
+                                    style={{ color: 'white', fontSize: RFPercentage(4.5), fontWeight: 'bold' }} >{balance}</Text> : <Text
+                                        style={{ color: 'white', fontSize: RFPercentage(4.5), fontWeight: 'bold' }} >***********</Text>}
 
-                        <View style={{ paddingHorizontal: 5, flexDirection: 'row', marginTop: 40 }}>
-                            <Image style={{
-                                width: 30, height: 30,
-                            }}
-                                source={logovn} />
-                            <Ionicons name='chevron-down-outline' size={30} color='white' />
-                        </View>
-                        <Text style={{ color: 'white' }}> Current Balance</Text>
-                        <View style={styles.viewCurrentBalance}>
-                            {showBalance ? <Text
-                                style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} >{balance}</Text> : <Text
-                                    style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }} >***********</Text>}
+                                <TouchableOpacity onPress={() => {
+                                    setShowBalance(!showBalance)
+                                }}>
+                                    {showBalance ? <Ionicons name='eye-outline' color='white' size={RFPercentage(6)} /> : <Ionicons name='eye-off-outline' color='white' size={30} />}
+                                </TouchableOpacity>
 
-                            <TouchableOpacity onPress={() => {
-                                setShowBalance(!showBalance)
-                            }}>
-                                {showBalance ? <Ionicons name='eye-outline' color='white' size={30} /> : <Ionicons name='eye-off-outline' color='white' size={30} />}
-                            </TouchableOpacity>
+                            </View>
+                        </View>
 
+                        <View style={{ marginTop: 50, paddingHorizontal: 10 }}>
+                            <Text style={{ color: 'black', fontSize: RFPercentage(3) }}> Select Bill Type</Text>
                         </View>
-                        <View style={{ marginTop: 50 }}>
-                            <Text style={{ color: 'black', fontSize: 17 }}> Select Bill Type</Text>
-                        </View>
-                        <View>
+                        <View style={{ width: '100%', paddingHorizontal: 10 }}>
                             <View style={{
-                                paddingHorizontal: 5, paddingVertical: 5, marginTop: 30
+                                paddingVertical: 5, marginTop: 30
                             }}>
                                 <TouchableOpacity style={styles.button} onPress={NextBills} >
                                     <View style={styles.viewbutton}>
@@ -85,7 +90,7 @@ export default function BillsScreen({ navigation }) {
                                     </View>
                                 </TouchableOpacity>
                             </View>
-                            <View style={{ paddingHorizontal: 5, paddingVertical: 10, }}>
+                            <View style={{ paddingVertical: 10, }}>
                                 <TouchableOpacity style={styles.button} >
                                     <View style={styles.viewbutton}>
                                         <Text style={{ fontWeight: 'bold' }}>MTN</Text>
@@ -96,7 +101,7 @@ export default function BillsScreen({ navigation }) {
                                 </TouchableOpacity>
                             </View>
                             <View style={{
-                                paddingHorizontal: 5, paddingVertical: 10,
+                                paddingVertical: 0,
                             }}>
                                 <TouchableOpacity style={styles.button} >
                                     <View style={styles.viewbutton}>
@@ -108,7 +113,7 @@ export default function BillsScreen({ navigation }) {
                                 </TouchableOpacity>
                             </View>
                             <View style={{
-                                paddingHorizontal: 5, paddingVertical: 10,
+                                paddingVertical: 10,
                             }}>
                                 <TouchableOpacity style={styles.button} >
                                     <View style={styles.viewbutton}>
@@ -120,7 +125,7 @@ export default function BillsScreen({ navigation }) {
                                 </TouchableOpacity>
                             </View>
                             <View style={{
-                                paddingHorizontal: 5, paddingVertical: 10,
+                                paddingVertical: 10,
                             }}>
                                 <TouchableOpacity style={styles.button} >
                                     <View style={styles.viewbutton}>
@@ -132,7 +137,7 @@ export default function BillsScreen({ navigation }) {
                                 </TouchableOpacity>
                             </View>
                             <View style={{
-                                paddingHorizontal: 5, paddingVertical: 10,
+                                paddingVertical: 10,
                             }}>
                                 <TouchableOpacity style={styles.button} >
                                     <View style={styles.viewbutton}>
@@ -144,7 +149,7 @@ export default function BillsScreen({ navigation }) {
                                 </TouchableOpacity>
                             </View>
                             <View style={{
-                                paddingHorizontal: 5, paddingVertical: 10, paddingBottom: 60
+                                paddingVertical: 10, paddingBottom: 60
                             }}>
                                 <TouchableOpacity style={styles.button} >
                                     <View style={styles.viewbutton}>
@@ -168,26 +173,25 @@ export default function BillsScreen({ navigation }) {
 const styles = StyleSheet.create({
     view1: {
         width: '100%',
-        height: 250,
+        height: 230,
         backgroundColor: '#10142E',
         borderBottomLeftRadius: 30,
         borderBottomRightRadius: 30
     },
     view2: {
-        width: 160,
-        height: 90,
+        width: '40%',
+        height: 70,
         backgroundColor: '#000055',
         borderBottomRightRadius: 80,
         borderBottomLeftRadius: 80,
         marignRight: 20
     },
     view3: {
-        width: 160,
-        height: 90,
+        width: '40%',
+        height: 70,
         backgroundColor: '#000099',
         borderBottomRightRadius: 80,
         borderBottomLeftRadius: 80,
-        marginLeft: 250
     },
     button: {
         backgroundColor: '#e3f0fa',
@@ -206,7 +210,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     text: {
-        fontSize: 16,
+        fontSize: RFPercentage(3),
         color: '#000000',
         fontWeight: 'bold'
     },

@@ -2,6 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { StyleSheet } from 'react-native';
 import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { RFPercentage } from 'react-native-responsive-fontsize'
 
 export default function SelectProviderScreen({ navigation, route }) {
 
@@ -23,16 +24,17 @@ export default function SelectProviderScreen({ navigation, route }) {
                             <TouchableOpacity onPress={() => {
                                 navigation.goBack()
                             }}>
-                                <Ionicons name='close' color='black' size={30} />
+                                <Ionicons name='close' color='black' size={RFPercentage(4)} />
                             </TouchableOpacity>
                             <View style={{
                                 alignItems: 'center',
-                                width: '100%', paddingRight: 50, justifyContent: 'center'
+                                justifyContent: 'center'
                             }}>
                                 <Text style={{
-                                    fontSize: 22,
+                                    fontSize: RFPercentage(3),
                                     color: 'black',
-                                    fontWeight: 'bold'
+                                    fontWeight: 'bold',
+                                    marginLeft: '30%'
                                 }}> Select Provider</Text>
                             </View>
                         </View>
@@ -41,15 +43,15 @@ export default function SelectProviderScreen({ navigation, route }) {
                     <View style={{ flexDirection: 'row', paddingHorizontal: 15, paddingVertical: 40 }} >
                         <View style={styles.viewsearch}>
 
-                            <Ionicons name='search' color='blue' size={30} />
+                            <Ionicons name='search' color='blue' size={RFPercentage(4)} />
                             <TextInput placeholder='Search here for Provider'
                                 placeholderTextColor='grey'
-                                fontSize={14} />
+                                fontSize={RFPercentage(2.5)} />
                         </View>
                     </View>
 
                     <View>
-                        <View style={{ paddingVertical: 0, paddingHorizontal: 20 }} >
+                        <View style={{ paddingHorizontal: 10 }} >
                             <TouchableOpacity style={styles.button}
                                 onPress={() => handleSelect('NH SG Thương tín Sacombank', logosacombank)}
                             >
@@ -153,7 +155,7 @@ const styles = StyleSheet.create({
     button: {
         flexDirection: 'row',
         alignItems: 'center',
-        paddingVertical: 20
+        paddingVertical: 10
     },
     image1: {
         width: 80,
@@ -168,7 +170,7 @@ const styles = StyleSheet.create({
         height: 30
     },
     text: {
-        fontSize: 16,
-        paddingLeft: 30
+        fontSize: RFPercentage(2.5),
+        paddingLeft: 10
     }
 })

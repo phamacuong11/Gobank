@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { ScrollView } from 'react-native';
 import { StyleSheet } from 'react-native';
+import { RFPercentage } from 'react-native-responsive-fontsize'
 
 
 
@@ -37,19 +38,19 @@ export default function CardsScreen({ navigation }) {
                 <View  >
                     <View style={styles.cardView}>
 
-                        <Ionicons name='information-circle-outline' color='black' size={30} />
+                        <Ionicons name='information-circle-outline' color='black' size={RFPercentage(4)} />
                         <View style={styles.cardView1}>
 
                             <TouchableOpacity style={styles.cardButton1}>
-                                <Text style={{ color: '#000000', fontWeight: 'bold', fontSize: 13 }}> NGN Cards</Text>
+                                <Text style={{ color: '#000000', fontWeight: 'bold', fontSize: RFPercentage(2.5) }}> NGN Cards</Text>
                             </TouchableOpacity>
                             <TouchableOpacity style={styles.cardButton2}>
-                                <Text style={{ color: '#000000', fontWeight: 'bold', fontSize: 13 }}> USD Cards</Text>
+                                <Text style={{ color: '#000000', fontWeight: 'bold', fontSize: RFPercentage(2.5) }}> USD Cards</Text>
                             </TouchableOpacity>
 
 
                         </View>
-                        <Ionicons name='ellipsis-horizontal-outline' color='black' size={30} />
+                        <Ionicons name='ellipsis-horizontal-outline' color='black' size={RFPercentage(5)} />
                     </View>
                     {/* cards  */}
                     <View style={{ alignItems: 'center', paddingVertical: 20 }}>
@@ -66,10 +67,10 @@ export default function CardsScreen({ navigation }) {
                             </View>
                             <View style={styles.viewName}>
 
-                                <Text style={{ color: 'white', fontSize: 25, }}> 1092 8738 8372 7685 </Text>
+                                <Text style={{ color: 'white', fontSize: RFPercentage(4.5), }}> 1092 8738 8372 7685 </Text>
                                 <Ionicons name='copy-outline' color='white' size={30} />
                             </View>
-                            <Text style={{ color: 'white', fontSize: 18, }}> Adam J. Smith</Text>
+                            <Text style={{ color: 'white', fontSize: RFPercentage(3), }}> Adam J. Smith</Text>
                         </View>
 
                     </View>
@@ -79,9 +80,9 @@ export default function CardsScreen({ navigation }) {
                     <Text style={styles.textCard}> Yours Saved Cards</Text>
                 </View>
                 {/* --------------------------- 2 Cards---------------------------- */}
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between', }}>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
                     {/* *********************************Cards 1****************************** */}
-                    <View style={{ alignItems: 'center', paddingVertical: 20, paddingHorizontal: 10 }}>
+                    <View style={{ alignItems: 'center', paddingVertical: 20, paddingHorizontal: 10, flex: 1 }}>
 
                         <View style={styles.viewCard1}>
 
@@ -94,14 +95,14 @@ export default function CardsScreen({ navigation }) {
                             </View>
                             <View style={styles.viewCard4}>
 
-                                <Text style={{ color: 'white', fontSize: 14, }}> 1092 8738 8372 7685 </Text>
+                                <Text style={{ color: 'white', fontSize: 12, paddingLeft: 5 }}> 1092 8738 8372 7685 </Text>
                             </View>
-                            <Text style={{ color: 'white', fontSize: 10, paddingTop: 5 }}> Adam J. Smith</Text>
+                            <Text style={{ color: 'white', fontSize: 10, paddingTop: 5, paddingLeft: 5 }}> Adam J. Smith</Text>
                         </View>
 
                     </View>
                     {/* ***********************Cards 2********************************** */}
-                    <View style={{ alignItems: 'center', paddingVertical: 20, paddingRight: 10 }}>
+                    <View style={{ alignItems: 'center', paddingVertical: 20, paddingRight: 10, flex: 1 }}>
 
                         <View style={styles.viewCard5}>
 
@@ -115,9 +116,9 @@ export default function CardsScreen({ navigation }) {
                             </View>
                             <View style={styles.viewCard8}>
 
-                                <Text style={{ color: 'white', fontSize: 14, }}> 1092 8738 8372 7685 </Text>
+                                <Text style={{ color: 'white', fontSize: 12, paddingLeft: 5 }}> 1092 8738 8372 7685 </Text>
                             </View>
-                            <Text style={{ color: 'white', fontSize: 10, paddingTop: 5 }}> Adam J. Smith</Text>
+                            <Text style={{ color: 'white', fontSize: 10, paddingTop: 5, paddingLeft: 5 }}> Adam J. Smith</Text>
                         </View>
 
                     </View>
@@ -125,8 +126,8 @@ export default function CardsScreen({ navigation }) {
                 <View style={{ paddingVertical: 60, paddingHorizontal: 20 }}>
                     <TouchableOpacity style={styles.buttonAddNewcard}
                         onPress={() => { navigation.navigate('AddNewCard') }}>
-                        <Ionicons name='add-outline' color='#0540F2' size={40} />
-                        <Text style={{ fontSize: 20, color: '#0540F2' }}> Add New Cards</Text>
+                        <Ionicons name='add-outline' color='#0540F2' size={RFPercentage(6)} />
+                        <Text style={{ fontSize: RFPercentage(4), color: '#0540F2' }}> Add New Cards</Text>
                     </TouchableOpacity>
                 </View>
             </ScrollView>
@@ -176,12 +177,12 @@ const styles = StyleSheet.create({
         backgroundColor: '#0540F21A',
         paddingHorizontal: 10,
         paddingVertical: 1,
-        borderRadius: 10
-        ,
+        borderRadius: 10,
         width: 230,
         height: 30,
         justifyContent: 'space-between'
-    }, cardButton1: {
+    },
+    cardButton1: {
         backgroundColor: 'white',
         borderRadius: 10,
         width: 100,
@@ -197,8 +198,8 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end'
     },
     viewMain: {
-        width: 380,
-        height: 250,
+        width: "100%",
+        height: 200,
         backgroundColor: '#10142E',
         borderRadius: 30,
         paddingHorizontal: 20
@@ -206,7 +207,7 @@ const styles = StyleSheet.create({
     viewMain1: {
         paddingHorizontal: 10,
         flexDirection: 'row',
-        marginTop: 40,
+        marginTop: 20,
         justifyContent: 'space-between'
     },
     viewMain2: {
@@ -227,17 +228,16 @@ const styles = StyleSheet.create({
     },
     textCard: {
         paddingHorizontal: 20,
-        fontSize: 25,
+        fontSize: RFPercentage(3),
         fontWeight: 'bold',
         paddingBottom: 0
     },
     // Card 1
     viewCard1: {
-        width: 190,
-        height: 140,
+        width: "100%",
+        height: 120,
         backgroundColor: '#10142E',
         borderRadius: 30,
-        paddingHorizontal: 10
     },
     viewCard2: {
         paddingHorizontal: 10,
@@ -262,11 +262,10 @@ const styles = StyleSheet.create({
     },
     // Card 2
     viewCard5: {
-        width: 190,
-        height: 140,
+        width: '100%',
+        height: 120,
         backgroundColor: '#dd75f0',
         borderRadius: 30,
-        paddingHorizontal: 10
     },
     viewCard6: {
         paddingHorizontal: 10,
@@ -297,6 +296,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#0540F2',
         borderRadius: 30,
-        padding: 2
+        padding: 2,
+        paddingVertical: 5
     }
 })

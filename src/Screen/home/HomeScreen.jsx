@@ -3,6 +3,7 @@ import { Image, Text, View, Picker, TouchableOpacity, ScrollView, StyleSheet } f
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
+import { RFPercentage, RFValue } from 'react-native-responsive-fontsize'
 
 
 
@@ -28,21 +29,18 @@ export default function HomeScreen({ navigation, route }) {
             />
             <ScrollView>
                 <View style={{ flexDirection: "row", justifyContent: 'space-between', zIndex: 1, position: 'absolute', }}>
-
-                    <View style={styles.viewImage1}>
-                        <View style={styles.viewImage2}>
-
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                        <View style={styles.viewImage1}>
                         </View>
-
+                        <View style={styles.viewImage2}>
+                        </View>
                     </View>
-
-
                 </View>
                 {/* Cards */}
                 <View  >
                     <View style={styles.cardHeader}>
 
-                        <Text style={{ fontSize: 25, color: '#10142E', zIndex: 100 }}>Hi,Fitsbyfunmi</Text>
+                        <Text style={{ fontSize: RFPercentage(3.5), color: '#10142E', zIndex: 100 }}>Hi,Fitsbyfunmi</Text>
                         <View style={{ flexDirection: 'row', alignItems: 'center', zIndex: 1000 }}>
 
                             <Image
@@ -84,7 +82,7 @@ export default function HomeScreen({ navigation, route }) {
                                 </TouchableOpacity>
 
                             </View>
-                            <Text style={{ color: 'white', fontSize: 18, marginTop: 20 }}> Account Number: 335493112</Text>
+                            <Text style={{ color: 'white', fontSize: RFPercentage(2.5), marginTop: 20 }}> Account Number: 335493112</Text>
                         </View>
 
                     </View>
@@ -98,14 +96,14 @@ export default function HomeScreen({ navigation, route }) {
                         }}>
                             <Ionicons name='swap-horizontal-outline' size={25} color='#0540F2' fontWeight='bold' />
                         </TouchableOpacity>
-                        <Text style={{ fontSize: 16, color: '#000000' }}> Transfer</Text>
+                        <Text style={{ fontSize: RFPercentage(2), color: '#000000' }}> Transfer</Text>
                     </View>
                     {/* Airtime */}
                     <View style={{ alignItems: 'center' }}>
                         <TouchableOpacity style={styles.viewButton}>
                             <Ionicons name='call-outline' size={25} color='#0540F2' fontWeight='bold' />
                         </TouchableOpacity>
-                        <Text style={{ fontSize: 16, color: '#000000' }}> Airtime</Text>
+                        <Text style={{ fontSize: RFPercentage(2), color: '#000000' }}> Airtime</Text>
                     </View>
                     {/* Data */}
                     <View style={{ alignItems: 'center' }}>
@@ -114,7 +112,7 @@ export default function HomeScreen({ navigation, route }) {
                         }}>
                             <Ionicons name='trending-up-outline' size={25} color='#0540F2' fontWeight='bold' />
                         </TouchableOpacity>
-                        <Text style={{ fontSize: 16, color: '#000000' }}> Data</Text>
+                        <Text style={{ fontSize: RFPercentage(2), color: '#000000' }}> Data</Text>
                     </View>
                     {/* Bills */}
                     <View style={{ alignItems: 'center' }}>
@@ -123,7 +121,7 @@ export default function HomeScreen({ navigation, route }) {
                         }}>
                             <Ionicons name='clipboard-outline' size={25} color='#0540F2' fontWeight='bold' />
                         </TouchableOpacity>
-                        <Text style={{ fontSize: 16, color: '#000000' }}> Bills</Text>
+                        <Text style={{ fontSize: RFPercentage(2), color: '#000000' }}> Bills</Text>
                     </View>
                     {/* More */}
                     <View style={{ alignItems: 'center' }}>
@@ -132,11 +130,11 @@ export default function HomeScreen({ navigation, route }) {
                         }}>
                             <Ionicons name='arrow-forward-outline' size={25} color='#0540F2' fontWeight='bold' />
                         </TouchableOpacity>
-                        <Text style={{ fontSize: 16, color: '#000000' }}> More</Text>
+                        <Text style={{ fontSize: RFPercentage(2), color: '#000000' }}> More</Text>
                     </View>
                 </View>
                 <View style={{ marginTop: 30 }}>
-                    <Text style={{ paddingHorizontal: 20, fontSize: 25, fontWeight: 'bold', paddingBottom: 0 }}> Others</Text>
+                    <Text style={{ paddingHorizontal: 20, fontSize: RFPercentage(3), fontWeight: 'bold', paddingBottom: 0 }}> Others</Text>
                 </View>
                 <View>
                     <View style={{ paddingHorizontal: 30, paddingVertical: 10 }}>
@@ -145,8 +143,8 @@ export default function HomeScreen({ navigation, route }) {
                                 <Ionicons name='reload-outline' color='#0540F2' size={30} fontWeight='bold' />
                             </View>
                             <View style={{ justifyContent: 'center', }}>
-                                <Text style={{ fontSize: 20, color: '#0540F2', fontWeight: 'bold' }}>  Transaction History</Text>
-                                <Text style={{ marginLeft: 10, color: 'black' }}> See your recent transactions </Text>
+                                <Text style={{ fontSize: RFPercentage(3), color: '#0540F2', fontWeight: 'bold' }}>  Transaction History</Text>
+                                <Text style={{ marginLeft: 10, color: 'black', fontSize: RFPercentage(2) }}> See your recent transactions </Text>
                             </View>
                         </TouchableOpacity>
                     </View>
@@ -158,48 +156,46 @@ export default function HomeScreen({ navigation, route }) {
                                 <Ionicons name='analytics-outline' color='#0540F2' size={30} fontWeight='bold' />
                             </View>
                             <View style={{}}>
-                                <Text style={{ fontSize: 20, color: '#0540F2', fontWeight: 'bold' }}>  Savings Investment</Text>
-                                <Text style={{ color: 'black' }}> See how you've invest and earn </Text>
+                                <Text style={{ fontSize: RFPercentage(3), color: '#0540F2', fontWeight: 'bold' }}>  Savings Investment</Text>
+                                <Text style={{ color: 'black', fontSize: RFPercentage(2) }}> See how you've invest and earn </Text>
                             </View>
                         </TouchableOpacity>
                     </View>
-                </View>
-                <View style={{ paddingBottom: 50 }}>
-                    <View style={{ paddingHorizontal: 30, paddingVertical: 10, }}>
+                </View >
+                <View style={{ paddingBottom: 50, }}>
+                    <View style={{ paddingHorizontal: 30, paddingVertical: 10, width: '100%' }}>
                         <TouchableOpacity style={styles.button}>
                             <View>
                                 <Ionicons name='nuclear-outline' color='#0540F2' size={30} fontWeight='bold' />
                             </View>
                             <View style={{ justifyContent: 'center', }}>
-                                <Text style={{ fontSize: 20, color: '#0540F2', fontWeight: 'bold' }}>  Savings Goals</Text>
-                                <Text style={{ color: 'black' }}> See the goals you set yourself </Text>
+                                <Text style={{ fontSize: RFPercentage(3), color: '#0540F2', fontWeight: 'bold' }}>  Savings Goals</Text>
+                                <Text style={{ color: 'black', fontSize: RFPercentage(2) }}> See the goals you set yourself </Text>
                             </View>
                         </TouchableOpacity>
                     </View>
                 </View>
-            </ScrollView>
+            </ScrollView >
         </View >
     )
 }
 const styles = StyleSheet.create({
     viewImage1: {
         zIndex: 1,
-        width: 160,
-        height: 90,
+        width: '50%',
+        height: 70,
         backgroundColor: '#e3f0fa',
         borderBottomRightRadius: 80,
         borderBottomLeftRadius: 80,
-        marignRight: 20
 
     },
     viewImage2: {
         zIndex: 1,
-        width: 160,
-        height: 90,
+        width: '50%',
+        height: 70,
         backgroundColor: '#e3f0fa',
         borderBottomRightRadius: 80,
         borderBottomLeftRadius: 80,
-        marginLeft: 250
 
     },
     cardHeader: {

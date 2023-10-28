@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View, Image, Touchable, TouchableOpacity, StatusBar } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import { RFPercentage, RFValue } from 'react-native-responsive-fontsize'
+
 
 
 
@@ -30,7 +32,7 @@ export default function WelcomeScreen({ navigation }) {
                         width: 200, height: 200, marginTop: 100,
                     }} source={inconWelcome} ></Image>
                     <Text style={{
-                        fontSize: 30, color: 'black', fontWeight: 'bold', paddingVertical: 10
+                        fontSize: RFPercentage(5), color: 'black', fontWeight: 'bold', paddingVertical: 10
                     }}> WELCOME</Text>
                     <Text style={{ paddingHorizontal: 30, color: '#000000', paddingBottom: 50 }}> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, ullam accusantium.</Text>
                 </View>

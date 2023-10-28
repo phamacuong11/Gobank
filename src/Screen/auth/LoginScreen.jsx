@@ -6,6 +6,8 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { ScrollView } from 'react-native';
 import InputText from '../../component/InputText';
 import Button from '../../component/Button';
+import { RFPercentage, RFValue } from 'react-native-responsive-fontsize'
+
 
 
 export default function LoginScreen({ navigation, route }) {
@@ -74,7 +76,7 @@ export default function LoginScreen({ navigation, route }) {
                         <View style={styles.view}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 20 }}>
                                 <Ionicons name='mail-outline' size={32} color='#0540F2' />
-                                <Text> Email</Text>
+                                <Text style={{ fontSize: RFPercentage(2.5) }}> Email</Text>
                             </View>
                             <View style={{ alignItems: 'center', paddingHorizontal: 10 }}>
                                 <TextInput style={styles.textinput}
@@ -87,7 +89,7 @@ export default function LoginScreen({ navigation, route }) {
                         <View style={styles.view}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 20 }}>
                                 <Ionicons name='lock-closed-outline' size={32} color='#0540F2' />
-                                <Text> Password</Text>
+                                <Text style={{ fontSize: RFPercentage(2.5) }}> Password</Text>
                             </View>
                             <View style={{ alignItems: 'center', paddingHorizontal: 10, }}>
                                 <TextInput style={styles.textinput}
@@ -108,7 +110,7 @@ export default function LoginScreen({ navigation, route }) {
                             </TouchableOpacity>
                             <TouchableOpacity>
 
-                                <Text style={{ marginTop: 10, marginLeft: 5, color: '#000000' }}> Forgot Password?</Text>
+                                <Text style={{ marginTop: 10, marginLeft: 5, color: '#000000', fontSize: RFPercentage(2.5) }}> Forgot Password?</Text>
                             </TouchableOpacity>
                         </View>
                         {/* Button Login */}
@@ -119,13 +121,13 @@ export default function LoginScreen({ navigation, route }) {
                                 <Button text='Login' />
                             </TouchableOpacity>
                             <TouchableOpacity onPress={handleCreateAccount}>
-                                <Text style={{ marginTop: 15 }}> Create Account</Text>
+                                <Text style={{ marginTop: 15, fontSize: RFPercentage(2.5) }}> Create Account</Text>
                             </TouchableOpacity>
                         </View>
                     </View>
                 </View>
             </ScrollView>
-        </SafeAreaView>
+        </SafeAreaView >
     )
 }
 
