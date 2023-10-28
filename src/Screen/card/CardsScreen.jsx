@@ -42,10 +42,10 @@ export default function CardsScreen({ navigation }) {
                         <View style={styles.cardView1}>
 
                             <TouchableOpacity style={styles.cardButton1}>
-                                <Text style={{ color: '#000000', fontWeight: 'bold', fontSize: RFPercentage(2.5) }}> NGN Cards</Text>
+                                <Text style={{ color: '#000000', fontWeight: 'bold', fontSize: RFPercentage(2) }}> NGN Cards</Text>
                             </TouchableOpacity>
                             <TouchableOpacity style={styles.cardButton2}>
-                                <Text style={{ color: '#000000', fontWeight: 'bold', fontSize: RFPercentage(2.5) }}> USD Cards</Text>
+                                <Text style={{ color: '#000000', fontWeight: 'bold', fontSize: RFPercentage(2) }}> USD Cards</Text>
                             </TouchableOpacity>
 
 
@@ -59,7 +59,7 @@ export default function CardsScreen({ navigation }) {
 
                             <View style={styles.viewMain1}>
 
-                                <Ionicons name='logo-react' size={30} color='yellow' />
+                                <Ionicons name='logo-react' size={RFPercentage(4)} color='yellow' />
                                 <View
                                     style={styles.viewMain2}>
                                     <Text style={{ color: 'white' }}>02/25</Text>
@@ -67,10 +67,10 @@ export default function CardsScreen({ navigation }) {
                             </View>
                             <View style={styles.viewName}>
 
-                                <Text style={{ color: 'white', fontSize: RFPercentage(4.5), }}> 1092 8738 8372 7685 </Text>
+                                <Text style={{ color: 'white', fontSize: RFPercentage(3.5), }}> 1092 8738 8372 7685 </Text>
                                 <Ionicons name='copy-outline' color='white' size={30} />
                             </View>
-                            <Text style={{ color: 'white', fontSize: RFPercentage(3), }}> Adam J. Smith</Text>
+                            <Text style={{ color: 'white', fontSize: RFPercentage(2.5), }}> Adam J. Smith</Text>
                         </View>
 
                     </View>
@@ -95,9 +95,9 @@ export default function CardsScreen({ navigation }) {
                             </View>
                             <View style={styles.viewCard4}>
 
-                                <Text style={{ color: 'white', fontSize: 12, paddingLeft: 5 }}> 1092 8738 8372 7685 </Text>
+                                <Text style={{ color: 'white', fontSize: RFPercentage(2), paddingLeft: 5 }}> 1092 8738 8372 7685 </Text>
                             </View>
-                            <Text style={{ color: 'white', fontSize: 10, paddingTop: 5, paddingLeft: 5 }}> Adam J. Smith</Text>
+                            <Text style={{ color: 'white', fontSize: RFPercentage(1.5), paddingTop: 5, paddingLeft: 5 }}> Adam J. Smith</Text>
                         </View>
 
                     </View>
@@ -116,9 +116,9 @@ export default function CardsScreen({ navigation }) {
                             </View>
                             <View style={styles.viewCard8}>
 
-                                <Text style={{ color: 'white', fontSize: 12, paddingLeft: 5 }}> 1092 8738 8372 7685 </Text>
+                                <Text style={{ color: 'white', fontSize: RFPercentage(2), paddingLeft: 5 }}> 1092 8738 8372 7685 </Text>
                             </View>
-                            <Text style={{ color: 'white', fontSize: 10, paddingTop: 5, paddingLeft: 5 }}> Adam J. Smith</Text>
+                            <Text style={{ color: 'white', fontSize: RFPercentage(1.5), paddingTop: 5, paddingLeft: 5 }}> Adam J. Smith</Text>
                         </View>
 
                     </View>
@@ -126,8 +126,8 @@ export default function CardsScreen({ navigation }) {
                 <View style={{ paddingVertical: 60, paddingHorizontal: 20 }}>
                     <TouchableOpacity style={styles.buttonAddNewcard}
                         onPress={() => { navigation.navigate('AddNewCard') }}>
-                        <Ionicons name='add-outline' color='#0540F2' size={RFPercentage(6)} />
-                        <Text style={{ fontSize: RFPercentage(4), color: '#0540F2' }}> Add New Cards</Text>
+                        <Ionicons name='add-outline' color='#0540F2' size={RFPercentage(5)} />
+                        <Text style={{ fontSize: RFPercentage(3), color: '#0540F2' }}> Add New Cards</Text>
                     </TouchableOpacity>
                 </View>
             </ScrollView>
@@ -222,13 +222,13 @@ const styles = StyleSheet.create({
     viewName: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        paddingVertical: 10,
-        marginTop: 50,
+        paddingVertical: 8,
+        marginTop: 30,
         alignItems: 'center',
     },
     textCard: {
         paddingHorizontal: 20,
-        fontSize: RFPercentage(3),
+        fontSize: RFPercentage(2.5),
         fontWeight: 'bold',
         paddingBottom: 0
     },

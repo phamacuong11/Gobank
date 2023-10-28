@@ -12,7 +12,7 @@ export default function DataScreen({ navigation }) {
     }
     return (
         <SafeAreaView>
-            <View style={{ flex: 1, }}>
+            <View >
                 <StatusBar
                     barStyle='light-content'
                 />
@@ -22,73 +22,81 @@ export default function DataScreen({ navigation }) {
                             <View style={styles.view2}>
                             </View>
                             <View style={styles.view3}>
-
-                            </View>
-                        </View>
-                        <View style={{ paddingHorizontal: 10, flexDirection: 'row', alignItems: 'center', marginTop: -40 }}>
-                            <TouchableOpacity onPress={() => {
-                                navigation.goBack()
-                            }}>
-                                <Ionicons name='chevron-back' color='white' size={RFPercentage(4)} />
-                            </TouchableOpacity>
-                            <Text style={styles.textData}> Data</Text>
-                        </View>
-
-
-                        <View style={{ paddingHorizontal: 20 }}>
-
-                            <View style={{ paddingHorizontal: 5, flexDirection: 'row', marginTop: 40 }}>
-                                <Image
-                                    style={{
-                                        width: 30,
-                                        height: 30,
-                                    }}
-                                    source={require('../../../assets/VN.png')} />
-                                <Ionicons name='chevron-down-outline' size={RFPercentage(4)} color='white' />
-                            </View>
-                            <Text style={{ color: 'white', fontSize: RFPercentage(2.5) }}> Current Balance</Text>
-                            <View style={styles.view4}>
-                                {showBalance ? <Text
-                                    style={{ color: 'white', fontSize: RFPercentage(4.5), fontWeight: 'bold' }} >{balance}</Text> : <Text
-                                        style={{ color: 'white', fontSize: RFPercentage(4.5), fontWeight: 'bold' }} >***********</Text>}
-
-                                <TouchableOpacity onPress={() => {
-                                    setShowBalance(!showBalance)
-                                }}>
-                                    {showBalance ? <Ionicons name='eye-outline' color='white' size={RFPercentage(6)} /> : <Ionicons name='eye-off-outline' color='white' size={30} />}
-                                </TouchableOpacity>
-
-                            </View>
-                            <View style={{ marginTop: 50 }}>
-                                <Text style={{ color: 'black', fontSize: RFPercentage(3) }}> Choose a way to send money</Text>
-                            </View>
-                            <View>
-                                <View style={{ paddingHorizontal: 5, paddingVertical: 20, }}>
-                                    <TouchableOpacity style={styles.button} >
-                                        <View>
-                                            <Ionicons name='reload-outline' color='#0540F2' size={RFPercentage(5)} fontWeight='bold' />
-                                        </View>
-                                        <View style={{ justifyContent: 'center', }}>
-                                            <Text style={styles.textSendto}>  Send to GBG</Text>
-                                            <Text style={{ marginLeft: 10, color: 'black', fontSize: RFPercentage(2.5) }}> Send money to GBG account </Text>
-                                        </View>
-                                    </TouchableOpacity>
-                                </View>
-                                <View style={{ paddingHorizontal: 5, paddingVertical: 5, }}>
-                                    <TouchableOpacity style={styles.button}>
-                                        <View>
-                                            <Ionicons name='reload-outline' color='#0540F2' size={RFPercentage(5)} fontWeight='bold' />
-                                        </View>
-                                        <View style={{ justifyContent: 'center', }}>
-                                            <Text style={styles.textSendto}>  Send to Go Other Bank</Text>
-                                            <Text style={{ marginLeft: 10, color: 'black', fontSize: RFPercentage(2.5) }}> Send money to Other banks </Text>
-                                        </View>
-                                    </TouchableOpacity>
-                                </View>
                             </View>
                         </View>
                     </View>
                 </View>
+                <View style={{ paddingHorizontal: 10, flexDirection: 'row', alignItems: 'center', marginTop: 40 }}>
+                    <TouchableOpacity onPress={() => {
+                        navigation.goBack()
+                    }}>
+                        <Ionicons name='chevron-back' color='white' size={RFPercentage(4)} />
+                    </TouchableOpacity>
+                    <View style={{
+                        width: '100%',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }}>
+                        <Text style={styles.textData}> Data</Text>
+                    </View>
+                </View>
+
+
+                <View style={{ paddingHorizontal: 20 }}>
+
+                    <View style={{ paddingHorizontal: 5, flexDirection: 'row', marginTop: 20 }}>
+                        <Image
+                            style={{
+                                width: 30,
+                                height: 30,
+                            }}
+                            source={require('../../../assets/VN.png')} />
+                        <Ionicons name='chevron-down-outline' size={RFPercentage(4)} color='white' />
+                    </View>
+                    <Text style={{ color: 'white', fontSize: RFPercentage(2) }}> Current Balance</Text>
+                    <View style={styles.view4}>
+                        {showBalance ? <Text
+                            style={{ color: 'white', fontSize: RFPercentage(4), fontWeight: 'bold' }} >{balance}</Text> : <Text
+                                style={{ color: 'white', fontSize: RFPercentage(4), fontWeight: 'bold' }} >***********</Text>}
+
+                        <TouchableOpacity onPress={() => {
+                            setShowBalance(!showBalance)
+                        }}>
+                            {showBalance ? <Ionicons name='eye-outline' color='white' size={RFPercentage(5)} />
+                                : <Ionicons name='eye-off-outline' color='white' size={RFPercentage(5)} />}
+                        </TouchableOpacity>
+
+                    </View>
+                    <View style={{ marginTop: 80 }}>
+                        <Text style={{ color: 'black', fontSize: RFPercentage(3) }}> Choose a way to send money</Text>
+                    </View>
+                    <View>
+                        <View style={{ paddingHorizontal: 5, paddingVertical: 20, }}>
+                            <TouchableOpacity style={styles.button} >
+                                <View>
+                                    <Ionicons name='reload-outline' color='#0540F2' size={RFPercentage(5)} fontWeight='bold' />
+                                </View>
+                                <View style={{ justifyContent: 'center', }}>
+                                    <Text style={styles.textSendto}>  Send to GBG</Text>
+                                    <Text style={{ marginLeft: 10, color: 'black', fontSize: RFPercentage(2.5) }}> Send money to GBG account </Text>
+                                </View>
+                            </TouchableOpacity>
+                        </View>
+                        <View style={{ paddingHorizontal: 5, paddingVertical: 5, }}>
+                            <TouchableOpacity style={styles.button}>
+                                <View>
+                                    <Ionicons name='reload-outline' color='#0540F2' size={RFPercentage(5)} fontWeight='bold' />
+                                </View>
+                                <View style={{ justifyContent: 'center', }}>
+                                    <Text style={styles.textSendto}>  Send to Go Other Bank</Text>
+                                    <Text style={{ marginLeft: 10, color: 'black', fontSize: RFPercentage(2.5) }}> Send money to Other banks </Text>
+                                </View>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+
+                </View>
+
             </View>
         </SafeAreaView>
     )
@@ -121,7 +129,8 @@ const styles = StyleSheet.create({
     textData: {
         fontSize: RFPercentage(3),
         color: 'white',
-        marginLeft: "35%"
+        marginRight: '18%'
+
     },
     view4: {
         flexDirection: 'row',
@@ -129,6 +138,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10
     },
     button: {
+        width: '100%',
         backgroundColor: '#e3f0fa',
         height: 70,
         flexDirection: 'row',

@@ -115,9 +115,13 @@ export default function LoginScreen({ navigation, route }) {
                         </View>
                         {/* Button Login */}
                         <View style={{
-                            flex: 1, paddingVertical: 50, alignItems: 'center'
+                            flex: 1, paddingVertical: 50, alignItems: 'center', paddingHorizontal: 20
                         }}>
-                            <TouchableOpacity onPress={handleClickHome}>
+                            <TouchableOpacity style={{
+                                width: '100%',
+                                alignItems: 'center',
+                                justifyContent: 'center'
+                            }} onPress={handleClickHome}>
                                 <Button text='Login' />
                             </TouchableOpacity>
                             <TouchableOpacity onPress={handleCreateAccount}>

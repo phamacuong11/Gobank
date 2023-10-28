@@ -31,7 +31,8 @@ export default function SelectBankScreen({ navigation, route }) {
                             </TouchableOpacity>
                             <View style={{
                                 alignItems: 'center',
-                                justifyContent: 'center'
+                                justifyContent: 'center',
+                                width: '100%',
                             }}>
                                 <Text style={styles.textSelectBank}> Select Bank</Text>
                             </View>
@@ -46,7 +47,7 @@ export default function SelectBankScreen({ navigation, route }) {
                                 style={{ paddingLeft: 5 }}
                                 placeholder='Search here for Bank'
                                 placeholderTextColor='grey'
-                                fontSize={RFPercentage(3)} />
+                                fontSize={RFPercentage(2.5)} />
                         </View>
                     </View>
                     <View style={{ paddingHorizontal: 15 }}>
@@ -219,7 +220,7 @@ const styles = StyleSheet.create({
         fontSize: RFPercentage(3),
         color: 'black',
         fontWeight: 'bold',
-        marginLeft: '35%'
+        marginRight: '15%'
     },
     viewSearch: {
         width: '100%',

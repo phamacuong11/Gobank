@@ -6,6 +6,7 @@ import { Ionicons } from '@expo/vector-icons'
 import { TextInput } from 'react-native'
 import { useSafeAreaFrame } from 'react-native-safe-area-context'
 import { ScrollView } from 'react-native'
+import { RFPercentage } from 'react-native-responsive-fontsize'
 
 export default function AddNewCardScreen({ navigation }) {
 

@@ -22,13 +22,14 @@ export default function SendToBankScreen1({ navigation, route }) {
                     </TouchableOpacity>
                     <View style={{
                         alignItems: 'center',
-                        justifyContent: 'center'
+                        justifyContent: 'center',
+                        width: '100%'
                     }}>
                         <Text style={{
                             fontSize: RFPercentage(3),
                             color: 'black',
                             fontWeight: 'bold',
-                            marginLeft: '30%'
+                            marginRight: '15%'
                         }}> Send to Bank</Text>
                     </View>
                 </View>

@@ -18,21 +18,23 @@ export default function SelectPackageScreen({ navigation }) {
                         </TouchableOpacity>
                         <View style={{
                             alignItems: 'center',
-                            justifyContent: 'center'
+                            justifyContent: 'center',
+                            width: '100%'
                         }}>
                             <Text style={{
                                 fontSize: RFPercentage(3),
                                 color: 'black',
-                                fontWeight: 'bold', marginLeft: '30%'
+                                fontWeight: 'bold',
+                                marginRight: '15%'
                             }}> Select Package</Text>
                         </View>
                     </View>
                     <View style={{ padding: 20 }}>
                         <View style={{ padding: 5, backgroundColor: '#e3f0fa', borderRadius: 10, flexDirection: 'row', alignItems: 'center' }}>
-                            <Ionicons name='search' color='#0540F2' size={RFPercentage(4)} />
+                            <Ionicons name='search' color='#0540F2' size={RFPercentage(3.5)} />
                             <TextInput
                                 placeholder='Search here for package'
-                                style={{ color: 'grey', paddingLeft: 5 }} />
+                                style={{ color: 'grey', paddingLeft: 5, fontSize: RFPercentage(2) }} />
                         </View>
                     </View>
                     <View>

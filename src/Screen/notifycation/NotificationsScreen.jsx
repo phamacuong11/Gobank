@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20
     },
     text: {
-        fontSize: RFPercentage(2)
+        fontSize: RFPercentage(2.5)
     },
     text1: {
         fontSize: RFPercentage(1.5)

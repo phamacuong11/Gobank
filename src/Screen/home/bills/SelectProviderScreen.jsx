@@ -34,7 +34,7 @@ export default function SelectProviderScreen({ navigation, route }) {
                                     fontSize: RFPercentage(3),
                                     color: 'black',
                                     fontWeight: 'bold',
-                                    marginLeft: '30%'
+                                    marginLeft: '20%'
                                 }}> Select Provider</Text>
                             </View>
                         </View>

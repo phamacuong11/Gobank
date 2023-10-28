@@ -108,7 +108,7 @@ export default function TransactionScreen({ navigation }) {
                             </View>
                         </View>
                         {/* ***************77777777777*************** */}
-                        <View style={{ flexDirection: 'row', paddingHorizontal: 20, marginTop: 30, paddingBottom: 20 }}>
+                        <View style={styles.viewbody}>
                             <View style={styles.view}>
                                 <Ionicons name='reader' color='blue' size={sizeIcon} />
                             </View>
@@ -133,21 +133,21 @@ const styles = StyleSheet.create({
     textheader: {
         fontSize: RFPercentage(3),
         fontWeight: 'bold',
-        paddingLeft: '22%'
+        paddingLeft: '15%'
     },
     view: {
         backgroundColor: '#99CCFF',
         borderRadius: 10,
         padding: 5,
-        width: 40,
-        height: 40,
+        width: 50,
+        height: 50,
         justifyContent: 'center',
         alignItems: 'center'
     },
     texttarget: {
         color: 'red',
         fontWeight: 'bold',
-        fontSize: RFPercentage(2.5)
+        fontSize: RFPercentage(2.2)
     },
     textsuccess: {
         color: 'green',
@@ -156,8 +156,7 @@ const styles = StyleSheet.create({
     },
     textday: {
         color: 'grey',
-        fontSize: RFPercentage(2.5),
-        marginTop: 10
+        fontSize: RFPercentage(2),
     },
     viewbody: {
         flexDirection: 'row',
@@ -168,6 +167,6 @@ const styles = StyleSheet.create({
     texttitle: {
         width: '100%',
         color: '#000000',
-        fontSize: RFPercentage(2.5)
+        fontSize: RFPercentage(2.1)
     }
 })

@@ -96,10 +96,10 @@ export default function SignUpScreen({ navigation }) {
                         <View style={{
                             paddingVertical: 10, marginLeft: 15, paddingBottom: 20
                         }}>
-                            <Text style={{ fontSize: 30 }}>Sign Up</Text>
+                            <Text style={{ fontSize: RFPercentage(4) }}>Sign Up</Text>
                         </View>
                     </View>
-                    <View >
+                    <View  >
                         <View style={styles.view}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 20 }}>
                                 <Ionicons name='person-outline' size={32} color='#0540F2' />
@@ -174,7 +174,13 @@ export default function SignUpScreen({ navigation }) {
                         </View>
                     </View>
                     <View style={styles.viewBottom}>
-                        <TouchableOpacity onPress={handleClickSingin}>
+                        <TouchableOpacity
+                            style={{
+                                width: '100%',
+                                alignItems: 'center',
+                                justifyContent: 'center'
+                            }}
+                            onPress={handleClickSingin}>
                             <Button text='Sign Up' />
                         </TouchableOpacity>
                         <View style={{ flexDirection: 'row', marginTop: 20 }}>
@@ -204,9 +210,11 @@ const styles = StyleSheet.create({
     },
     viewBottom: {
         flex: 1,
+        width: '100%',
         marginTop: 60,
         justifyContent: 'center',
         alignItems: 'center',
-        paddingBottom: 50
+        paddingBottom: 50,
+        paddingHorizontal: 20
     }
 })

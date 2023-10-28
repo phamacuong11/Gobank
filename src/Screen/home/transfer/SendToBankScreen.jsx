@@ -98,13 +98,14 @@ const styles = StyleSheet.create({
     },
     viewtext: {
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        width: '100%'
     },
     textheader: {
         fontSize: RFPercentage(3),
         color: 'black',
         fontWeight: 'bold',
-        marginLeft: '35%'
+        marginRight: '15%'
     },
     // select bank
     viewmain: {

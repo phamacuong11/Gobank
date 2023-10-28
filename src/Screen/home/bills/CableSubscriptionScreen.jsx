@@ -29,7 +29,7 @@ export default function CableSubscriptionScreen({ navigation, route }) {
                         </View>
                     </View>
 
-                    <View style={{ paddingHorizontal: 10, flexDirection: 'row', alignItems: 'center', marginTop: -40 }}>
+                    <View style={{ paddingHorizontal: 10, flexDirection: 'row', alignItems: 'center', marginTop: -30 }}>
                         <TouchableOpacity onPress={() => {
                             navigation.push('Bils')
                         }}>
@@ -37,12 +37,14 @@ export default function CableSubscriptionScreen({ navigation, route }) {
                         </TouchableOpacity>
                         <View style={{
                             alignItems: 'center',
-                            justifyContent: 'center'
+                            justifyContent: 'center',
+                            width: '100%',
                         }}>
                             <Text style={{
                                 fontSize: RFPercentage(3),
                                 color: 'white',
-                                marginLeft: '25%'
+                                paddingRight: '15%'
+
                             }}> Cable Subscription</Text>
                         </View>
                     </View>
@@ -66,13 +68,14 @@ export default function CableSubscriptionScreen({ navigation, route }) {
                             paddingVertical: 10
                         }}>
                             {showBalance ? <Text
-                                style={{ color: 'white', fontSize: RFPercentage(5), fontWeight: 'bold' }} >{balance}</Text> : <Text
-                                    style={{ color: 'white', fontSize: RFPercentage(5), fontWeight: 'bold' }} >***********</Text>}
+                                style={{ color: 'white', fontSize: RFPercentage(4), fontWeight: 'bold' }} >{balance}</Text> : <Text
+                                    style={{ color: 'white', fontSize: RFPercentage(4), fontWeight: 'bold' }} >***********</Text>}
 
                             <TouchableOpacity onPress={() => {
                                 setShowBalance(!showBalance)
                             }}>
-                                {showBalance ? <Ionicons name='eye-outline' color='white' size={RFPercentage(6)} /> : <Ionicons name='eye-off-outline' color='white' size={30} />}
+                                {showBalance ? <Ionicons name='eye-outline' color='white' size={RFPercentage(5)} />
+                                    : <Ionicons name='eye-off-outline' color='white' size={RFPercentage(5)} />}
                             </TouchableOpacity>
 
                         </View>
@@ -89,13 +92,13 @@ export default function CableSubscriptionScreen({ navigation, route }) {
                                         width: 70,
                                         height: 30
                                     }} source={logo} />
-                                    <Text style={{ color: 'grey', paddingLeft: 5, fontSize: RFPercentage(2.3) }}> {bankName}</Text>
+                                    <Text style={{ color: 'grey', paddingLeft: 5, fontSize: RFPercentage(2) }}> {bankName}</Text>
                                     <Ionicons style={{ position: 'absolute', right: 5 }} name='chevron-forward' size={RFPercentage(4)} color='grey' />
                                 </TouchableOpacity>
                             </View>
                             <View style={styles.viewtextinput}>
-                                <Text style={{ fontWeight: 'bold', fontSize: RFPercentage(3) }}> Smartcard Number</Text>
-                                <Text style={{ fontSize: RFPercentage(2.5) }}> Beneficiaries</Text>
+                                <Text style={{ fontWeight: 'bold', fontSize: RFPercentage(2.2) }}> Smartcard Number</Text>
+                                <Text style={{ fontSize: RFPercentage(2) }}> Beneficiaries</Text>
                             </View>
                             <View style={{
                                 paddingHorizontal: 5, paddingVertical: 10,
@@ -107,19 +110,19 @@ export default function CableSubscriptionScreen({ navigation, route }) {
                                 </View>
                             </View>
                             <View style={styles.viewtextinput}>
-                                <Text style={{ fontWeight: 'bold', fontSize: RFPercentage(3) }}> Smartcard Number</Text>
+                                <Text style={{ fontWeight: 'bold', fontSize: RFPercentage(2.5) }}> Smartcard Number</Text>
                             </View>
                             <View style={{
                                 paddingHorizontal: 5, paddingVertical: 10,
                             }}>
                                 <TouchableOpacity style={styles.button30day} >
 
-                                    <Text style={{ fontWeight: 'bold', fontSize: RFPercentage(3), color: '#0540F2' }}>30 Days</Text>
+                                    <Text style={{ fontWeight: 'bold', fontSize: RFPercentage(2.5), color: '#0540F2' }}>30 Days</Text>
 
                                 </TouchableOpacity>
                             </View>
                             <View style={styles.viewsmartcardnumber1}>
-                                <Text style={{ fontWeight: 'bold', fontSize: RFPercentage(3) }}> Smartcard Number</Text>
+                                <Text style={{ fontWeight: 'bold', fontSize: RFPercentage(2.5) }}> Smartcard Number</Text>
                             </View>
                             <View style={{
                                 paddingHorizontal: 5, paddingVertical: 10,
@@ -156,7 +159,7 @@ const styles = StyleSheet.create({
     view1: {
         position: 'absolute',
         width: '100%',
-        height: 220,
+        height: '30%',
         backgroundColor: '#10142E',
         borderBottomLeftRadius: 30,
         borderBottomRightRadius: 30
@@ -205,7 +208,7 @@ const styles = StyleSheet.create({
     },
     button30day: {
         backgroundColor: '#e3f0fa',
-        width: 100,
+        width: 120,
         height: 50,
         flexDirection: 'row',
         alignItems: 'center',
@@ -231,7 +234,7 @@ const styles = StyleSheet.create({
     },
     buttonconfirm: {
         backgroundColor: '#0540F2',
-        height: 40,
+        height: 50,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',

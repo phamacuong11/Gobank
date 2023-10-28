@@ -62,8 +62,8 @@ export default function BillsScreen({ navigation }) {
                             <Text style={{ color: 'white', fontSize: RFPercentage(2.5) }}> Current Balance</Text>
                             <View style={styles.viewCurrentBalance}>
                                 {showBalance ? <Text
-                                    style={{ color: 'white', fontSize: RFPercentage(4.5), fontWeight: 'bold' }} >{balance}</Text> : <Text
-                                        style={{ color: 'white', fontSize: RFPercentage(4.5), fontWeight: 'bold' }} >***********</Text>}
+                                    style={{ color: 'white', fontSize: RFPercentage(4), fontWeight: 'bold' }} >{balance}</Text> : <Text
+                                        style={{ color: 'white', fontSize: RFPercentage(4), fontWeight: 'bold' }} >***********</Text>}
 
                                 <TouchableOpacity onPress={() => {
                                     setShowBalance(!showBalance)
@@ -173,7 +173,7 @@ export default function BillsScreen({ navigation }) {
 const styles = StyleSheet.create({
     view1: {
         width: '100%',
-        height: 230,
+        height: 270,
         backgroundColor: '#10142E',
         borderBottomLeftRadius: 30,
         borderBottomRightRadius: 30
@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     text: {
-        fontSize: RFPercentage(3),
+        fontSize: RFPercentage(2.5),
         color: '#000000',
         fontWeight: 'bold'
     },

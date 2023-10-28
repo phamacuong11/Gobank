@@ -22,32 +22,37 @@ export default function WelcomeScreen({ navigation }) {
                 flex: 1,
             }}>
                 <View style={{
-                    flex: 4,
+                    flex: 3,
                     alignItems: 'center',
                     justifyContent: 'center',
                     backgroundColor: 'white'
                 }}>
                     {/* iMAGE */}
                     <Image style={{
-                        width: 200, height: 200, marginTop: 100,
+                        width: 200, height: 200, marginTop: 50,
                     }} source={inconWelcome} ></Image>
                     <Text style={{
                         fontSize: RFPercentage(5), color: 'black', fontWeight: 'bold', paddingVertical: 10
                     }}> WELCOME</Text>
-                    <Text style={{ paddingHorizontal: 30, color: '#000000', paddingBottom: 50 }}> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, ullam accusantium.</Text>
+                    <Text style={{
+                        paddingHorizontal: 30,
+                        color: '#000000',
+                        paddingBottom: 10,
+                        fontSize: RFPercentage(2)
+                    }}> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, ullam accusantium.</Text>
                 </View>
 
                 <View style={styles.viewmain}>
                     <View style={{ width: '50%', paddingLeft: 5 }}>
                         <TouchableOpacity style={styles.buttonLogin}
                             onPress={handleClickLogin}>
-                            <Text style={{ color: '#0540F2', fontWeight: 'bold' }}> LOGIN</Text>
+                            <Text style={{ color: '#0540F2', fontWeight: 'bold', fontSize: RFPercentage(2.5) }}> LOGIN</Text>
                         </TouchableOpacity>
                     </View>
                     <View style={{ width: '50%', paddingLeft: 5 }}>
                         <TouchableOpacity style={styles.buttonSignup}
                             onPress={handleClickSingup}>
-                            <Text style={{ color: '#ffffff', fontWeight: 'bold' }}> SIGNUP</Text>
+                            <Text style={{ color: '#ffffff', fontWeight: 'bold', fontSize: RFPercentage(2.5) }}> SIGNUP</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -59,6 +64,7 @@ export default function WelcomeScreen({ navigation }) {
 
 const styles = StyleSheet.create({
     viewmain: {
+        flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingVertical: 40,

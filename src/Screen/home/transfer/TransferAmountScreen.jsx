@@ -62,13 +62,14 @@ export default function TransferAmountScreen({ navigation, route }) {
                             </TouchableOpacity>
                             <View style={{
                                 alignItems: 'center',
-                                justifyContent: 'center'
+                                justifyContent: 'center',
+                                width: '100%'
                             }}>
                                 <Text style={{
                                     fontSize: RFPercentage(3),
                                     color: 'black',
                                     fontWeight: 'bold',
-                                    marginLeft: '28%'
+                                    marginRight: '15%'
                                 }}> Transfer Amount</Text>
                             </View>
                         </View>
@@ -124,7 +125,7 @@ export default function TransferAmountScreen({ navigation, route }) {
                         </View>
                         <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
                             <View style={styles.view}>
-                                <TextInput style={{ paddingHorizontal: 10 }}
+                                <TextInput style={{ paddingHorizontal: 10, fontSize: RFPercentage(3) }}
                                     placeholder='Transaction remark(Optional)'
                                     placeholderTextColor='grey'
                                     value={remark}
@@ -132,7 +133,7 @@ export default function TransferAmountScreen({ navigation, route }) {
                                 />
                             </View>
                             <View style={{ borderBottomWidth: 1, paddingVertical: 10 }}></View>
-                            <View style={{ paddingVertical: 40, paddingHorizontal: 10 }} >
+                            <View style={{ paddingVertical: 40, }} >
                                 <TouchableOpacity style={{
                                     width: '100%',
                                     alignItems: 'center',

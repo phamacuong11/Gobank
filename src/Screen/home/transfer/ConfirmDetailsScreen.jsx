@@ -23,13 +23,15 @@ export default function ConfirmDetailsScreen({ navigation, route }) {
                         </TouchableOpacity>
                         <View style={{
                             alignItems: 'center',
-                            justifyContent: 'center'
+                            justifyContent: 'center',
+                            width: '100%'
                         }}>
 
                             <Text style={{
                                 fontSize: RFPercentage(3),
                                 color: 'black',
-                                fontWeight: 'bold', marginLeft: '28%'
+                                fontWeight: 'bold',
+                                marginRight: '15%'
                             }}> Comfirm Details</Text>
                         </View>
                     </View>
@@ -75,11 +77,8 @@ export default function ConfirmDetailsScreen({ navigation, route }) {
                                 <Text style={styles.textSize}> Bank</Text>
                             </View>
                             <View style={{ flexDirection: 'row' }}>
-                                <Image style={{
-                                    width: 60,
-                                    height: 20
-                                }}
-                                    source={logo} />
+
+
                                 <Text style={styles.text}> {bankName}</Text>
                             </View>
                         </View>
@@ -118,7 +117,7 @@ export default function ConfirmDetailsScreen({ navigation, route }) {
                         <View style={{ paddingHorizontal: 20, marginTop: 30 }}>
                             <View style={styles.viewBalance}>
                                 <Ionicons name='card-outline' size={RFPercentage(6)} color='blue' />
-                                <Text style={{ fontSize: RFPercentage(4) }}> Balance({balance})</Text>
+                                <Text style={{ fontSize: RFPercentage(3.5) }}> Balance({balance})</Text>
                             </View>
                         </View>
                         <View style={{ paddingHorizontal: 20, paddingVertical: 30 }} >
@@ -151,8 +150,9 @@ const styles = StyleSheet.create({
         paddingTop: 10
     },
     text: {
-        fontSize: RFPercentage(2.5),
-        fontWeight: 'bold'
+        fontSize: RFPercentage(2.3),
+        fontWeight: 'bold',
+        paddingRight: 10
     },
     buttonPay: {
         backgroundColor: 'blue',
